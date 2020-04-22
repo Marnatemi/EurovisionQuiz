@@ -1,0 +1,302 @@
+[
+  {
+  "id": 9,
+  "winner": {
+    "title": "Non ho l’età",
+    "artist": "Gigliola Cinquetti",
+    "year": 1964,
+    "country": "Włochy",
+    "place": "Kopenhaga (Dania)"
+    }
+  },
+  {
+  "id": 13,
+  "winner": {
+    "title": "La, la, la",
+    "artist": "Massiel",
+    "year": 1968,
+    "country": "Hiszpania",
+    "place": "Londyn (Anglia)"
+    }
+  },
+  {
+  "id": 18,
+  "winner": {
+    "title": "Waterloo",
+    "artist": "ABBA",
+    "year": 1974,
+    "country": "Szwecja",
+    "place": "Brighton (Anglia)"
+    }
+  },
+  {
+  "id": 19,
+  "winner": {
+    "title": "Ding-a-dong",
+    "artist": "Teach-In",
+    "year": 1975,
+    "country": "Holandia",
+    "place": "Sztokholm (Szwecja)"
+    }
+  },
+  {
+  "id": 20,
+  "winner": {
+    "title": "Save Your Kisses for Me",
+    "artist": "Brotherhood of Man",
+    "year": 1976,
+    "country": "Wielka Brytania",
+    "place": "Haga (Holandia)"
+    }
+  },
+  {
+  "id": 21,
+  "winner": {
+    "title": "L’oiseau et l’enfant",
+    "artist": "Marie Myriam",
+    "year": 1977,
+    "country": "Francja",
+    "place": "Londyn (Anglia)"
+    }
+  },
+  {
+  "id": 24,
+  "winner": {
+    "title": "What’s Another Year",
+    "artist": "Johnny Logan",
+    "year": 1980,
+    "country": "Irlandia",
+    "place": "Haga (Holandia)"
+    }
+  },
+  {
+  "id": 32,
+  "winner": {
+    "title": "Ne partez pas sans moi",
+    "artist": "Céline Dion",
+    "year": 1988,
+    "country": "Szwajcaria",
+    "place": "Dublin (Irlandia)"
+    }
+  },
+  {
+  "id": 42,
+  "winner": {
+    "title": "Diva",
+    "artist": "Dana International",
+    "year": 1998,
+    "country": "Izrael",
+    "place": "Birmingham (Anglia)"
+    }
+  },
+  {
+  "id": 44,
+  "winner": {
+    "title": "Fly on the Wings of Love",
+    "artist": "Olsen Brothers",
+    "year": 2000,
+    "country": "Dania",
+    "place": "Sztokholm (Szwecja)"
+    }
+  },
+  {
+  "id": 45,
+  "winner": {
+    "title": "Everybody",
+    "artist": "Tanel Padar, Dave Benton i 2XL",
+    "year": 2001,
+    "country": "Estonia",
+    "place": "Kopenhaga (Dania)"
+    }
+  },
+  {
+  "id": 46,
+  "winner": {
+    "title": "I Wanna",
+    "artist": "Marie N",
+    "year": 2002,
+    "country": "Łotwa",
+    "place": "Tallinn (Estonia)"
+    }
+  },
+  {
+  "id": 47,
+  "winner": {
+    "title": "Everyway That I Can",
+    "artist": "Sertab Erener",
+    "year": 2003,
+    "country": "Turcja",
+    "place": "Ryga (Łotwa)"
+    }
+  },
+  {
+  "id": 48,
+  "winner": {
+    "title": "Wild Dances",
+    "artist": "Rusłana",
+    "year": 2004,
+    "country": "Ukraina",
+    "place": "Stambuł (Turcja)"
+    }
+  },
+  {
+  "id": 49,
+  "winner": {
+    "title": "My Number One",
+    "artist": "Elena Paparizou",
+    "year": 2005,
+    "country": "Grecja",
+    "place": "Kijów (Ukraina)"
+    }
+  },
+  {
+  "id": 50,
+  "winner": {
+    "title": "Hard Rock Hallelujah",
+    "artist": "Lordi",
+    "year": 2006,
+    "country": "Finlandia",
+    "place": "Ateny (Grecja)"
+    }
+  },
+  {
+  "id": 51,
+  "winner": {
+    "title": "Molitva",
+    "artist": "Marija Šerifović",
+    "year": 2007,
+    "country": "Serbia",
+    "place": "Helsinki (Finlandia)"
+    }
+  },
+  {
+  "id": 52,
+  "winner": {
+    "title": "Believe",
+    "artist": "Dima Biłan",
+    "year": 2008,
+    "country": "Rosja",
+    "place": "Belgrad (Serbia)"
+    }
+  },
+  {
+  "id": 53,
+  "winner": {
+    "title": "Fairytale",
+    "artist": "Alexander Rybak",
+    "year": 2009,
+    "country": "Norwegia",
+    "place": "Moskwa (Rosja)"
+    }
+  },
+  {
+  "id": 54,
+  "winner": {
+    "title": "Satellite",
+    "artist": "Lena Meyer-Landrut",
+    "year": 2010,
+    "country": "Niemcy",
+    "place": "Oslo (Norwegia)"
+    }
+  },
+  {
+  "id": 55,
+  "winner": {
+    "title": "Running Scared",
+    "artist": "Ell i Nikki",
+    "year": 2011,
+    "country": "Azerbejdżan",
+    "place": "Düsseldorf (Niemcy)"
+    }
+  },
+  {
+  "id": 56,
+  "winner": {
+    "title": "Euphoria",
+    "artist": "Loreen",
+    "year": 2012,
+    "country": "Szwecja",
+    "place": "Baku (Azerbejdżan)"
+    }
+  },
+  {
+  "id": 57,
+  "winner": {
+    "title": "Only Teardrops",
+    "artist": "Emmelie de Forest",
+    "year": 2013,
+    "country": "Dania",
+    "place": "Malmö (Szwecja)"
+    }
+  },
+  {
+  "id": 58,
+  "winner": {
+    "title": "Rise Like a Phoenix",
+    "artist": "Conchita Wurst",
+    "year": 2014,
+    "country": "Austria",
+    "place": "Kopenhaga (Dania)"
+    }
+  },
+  {
+  "id": 59,
+  "winner": {
+    "title": "Heroes",
+    "artist": "Måns Zelmerlöw",
+    "year": 2015,
+    "country": "Szwecja",
+    "place": "Wiedeń (Austria)"
+    }
+  },
+  {
+  "id": 60,
+  "winner": {
+    "title": "1944",
+    "artist": "Jamala",
+    "year": 2016,
+    "country": "Ukraina",
+    "place": "Sztokholm (Szwecja)"
+    }
+  },
+  {
+  "id": 61,
+  "winner": {
+    "title": "Amar pelos dois",
+    "artist": "Salvador Sobral",
+    "year": 2017,
+    "country": "Portugalia",
+    "place": "Kijów (Ukraina)"
+    }
+  },
+  {
+  "id": 62,
+  "winner": {
+    "title": "Toy",
+    "artist": "Netta",
+    "year": 2018,
+    "country": "Izrael",
+    "place": "Lizbona (Portugalia)"
+    }
+  },
+  {
+  "id": 63,
+  "winner": {
+    "title": "Arcade",
+    "artist": "Duncan Laurence",
+    "year": 2019,
+    "country": "Holandia",
+    "place": "Tel Awiw-Jafa (Izrael)"
+    }
+  },
+  {
+  "id": 64,
+  "winner": {
+    "title": "To nie ja",
+    "artist": "Edyta Górniak",
+    "year": 1994,
+    "country": "Poland",
+    "place": "Tel Awiw-Jafa (Izrael)"
+    }
+  }
+]
