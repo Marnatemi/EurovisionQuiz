@@ -1,13 +1,12 @@
 import React from 'react';
-import Spiral from './components/common/Spiral/Spiral';
-import Player from '././components/common/Player/Player';
-import Answer from '././components/features/Answer/Answer'
+//import Answer from '././components/features/Answer/Answer'
+import Question from '././components/views/Question/Question'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Answer />
+      <Question />
     </div>
   );
 }
