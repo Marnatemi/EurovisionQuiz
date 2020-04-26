@@ -10,12 +10,12 @@ const useStyles = makeStyles(theme => ({
     display: 'inline-block',
     position: 'relative',
     width: '95vw',
-    backgroundColor: '#e4e4e4',
+    backgroundColor: theme.palette.primary.light,
     margin: '50px 0',
     overflow: 'initial',
   },
   header: {
-    background: '#deb445 ',
+    background: theme.palette.primary.main,
     color: 'white', 
     margin: '-30px 15px 20px',
     borderRadius: '3px',
@@ -34,16 +34,15 @@ const useStyles = makeStyles(theme => ({
     padding: '20px 0',
     width: '150px',
     fontSize: '15px',
-    background: '#97a6ab',
-    boxShadow: '0px 3px 5px #000',
+    boxShadow: '0px 3px 5px '+ theme.palette.primary.dark +'',
   },
   avatar: {
-    background: 'linear-gradient(45deg, #97a6ab 30%, #414c4f 90%)',
+    background: theme.palette.primary.light,
     padding: '30px',
     marginTop: '-55px',
     fontSize: '30px',
     position: 'absolute',
-    boxShadow: '0px 3px 5px #000',
+    boxShadow: '0px 3px 5px '+ theme.palette.primary.dark +'',
   },
 }));
 
@@ -88,7 +87,7 @@ const Question = () => {
           {demoContent.answers.map(answer => (
              <Chip key={answer.id} 
              className={classes.chip} 
-             color='primary'
+             color='primary.light'
              size='medium'
              avatar={<Avatar className={classes.avatar}><h1>{answer.id}</h1></Avatar>} 
              label={answer.answer} 

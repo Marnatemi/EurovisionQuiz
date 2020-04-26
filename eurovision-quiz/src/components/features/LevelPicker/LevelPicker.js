@@ -5,17 +5,19 @@ import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import Rating from '@material-ui/lab/Rating';
 import { makeStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles({
+
+const useStyles = makeStyles(theme => ({
   root: {
     width: 250,
   },
   labelsTop: {
     fontSize: 25,
-    color: '#deb445',
+    color: theme.palette.primary.main,
     textTransform: 'uppercase',
+    margin: 0,
   },
   labelsBottom: {
-    marginTop: 5,
+    margin: '5px 0',
   },
   rating: {
     display: 'flex',
@@ -24,12 +26,12 @@ const useStyles = makeStyles({
     fontSize: 50,
     margin: '15px 0 10px',
   },
-});
+}));
 
 const labelsBottom = {
-  1: 'Wskaż wykonawcę utworu',
-  2: 'Wybierz które państwo wygrało danym wkonaniem utworu',
-  3: 'W którym roku został wykonany utwór',
+  1: '" Wskaż wykonawcę utworu "',
+  2: '" Wybierz które państwo wygrało danym wkonaniem utworu "',
+  3: '" Wskaż rok z którego pochodzi wykonanie "',
 };
 
 const labelsTop = {

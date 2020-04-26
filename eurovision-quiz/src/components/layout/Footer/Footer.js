@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: 'url('+melodyLine+')',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: 90,
+    height: '15%',
     },
 }));
 
