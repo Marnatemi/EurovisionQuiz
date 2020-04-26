@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     overflow: 'initial',
   },
   header: {
-    background: '#2544b3 ',
+    background: '#deb445 ',
     color: 'white', 
     margin: '-30px 15px 20px',
     borderRadius: '3px',
@@ -34,10 +34,11 @@ const useStyles = makeStyles(theme => ({
     padding: '20px 0',
     width: '150px',
     fontSize: '15px',
+    background: '#97a6ab',
     boxShadow: '0px 3px 5px #000',
   },
   avatar: {
-    background: 'linear-gradient(45deg, #2544b3 30%, #1dbacc 90%)',
+    background: 'linear-gradient(45deg, #97a6ab 30%, #414c4f 90%)',
     padding: '30px',
     marginTop: '-55px',
     fontSize: '30px',

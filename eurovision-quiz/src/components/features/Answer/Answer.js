@@ -4,20 +4,19 @@ import Player from '../../common/Player/Player';
 import { Card, CardContent, Typography, CardActions, CardHeader, Button, Divider  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
-const demoContent = {
-  title: "L’oiseau et l’enfant",
-  artist: "Marie Myriam",
-  year: 1977,
-  country: "Francja",
-  place: "Londyn (Anglia)"
-}
-
 const useStyles = makeStyles(theme => ({
   root: {
     borderRadius: 12,
     minWidth: '250px',
     maxWidth: '300px',
+    width: '95%',
     textAlign: 'center',
+    background: '#deb445',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+
   },
   header: {
     textAlign: 'left',
