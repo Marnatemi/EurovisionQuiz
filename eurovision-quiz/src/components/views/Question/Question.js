@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     padding: '20px 0',
     width: '150px',
     fontSize: '15px',
-    boxShadow: '0px 3px 5px '+ theme.palette.primary.dark +'',
+    boxShadow: `0px 3px 5px ${theme.palette.primary.dark}`,
   },
   avatar: {
     background: theme.palette.primary.light,
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: '-55px',
     fontSize: '30px',
     position: 'absolute',
-    boxShadow: '0px 3px 5px '+ theme.palette.primary.dark +'',
+    boxShadow: `0px 3px 5px ${theme.palette.primary.dark}`,
   },
 }));
 

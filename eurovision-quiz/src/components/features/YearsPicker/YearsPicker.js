@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     padding: '10px 20px',
     background: 'inherit',
     color: '#fff',
-    border: '2px dashed '+theme.palette.primary.light+ '',
+    border: `2px dashed ${theme.palette.primary.light}` ,
     textAlign: 'left',
   },
 }));

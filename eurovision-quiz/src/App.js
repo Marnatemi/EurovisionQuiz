@@ -3,9 +3,10 @@ import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 //import Answer from '././components/features/Answer/Answer'
 import Question from '././components/views/Question/Question'
-//import Start from '././components/views/Start/Start';
+import Start from '././components/views/Start/Start';
 import Level from '././components/views/Level/Level';
 import Footer from '././components/layout/Footer/Footer';
+import melodyLine from './styles/Images/melody-line.png';
 import './App.css';
 
 
@@ -27,8 +28,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Level />
-        <Footer />
+        <Start />
+        {/* <Footer /> */}
+        {/* <img className="Img" src={melodyLine} /> */}
       </div>
     </ThemeProvider>
     

@@ -5,11 +5,12 @@ import melodyLine from '../../../styles/Images/melody-line.png';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '100vw',
-    backgroundImage: 'url('+melodyLine+')',
+    width: '100%',
+    backgroundImage: `url('${melodyLine}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '15%',
+    height: "15vh",
+    justifySelf: "flex-end",
     },
 }));
 

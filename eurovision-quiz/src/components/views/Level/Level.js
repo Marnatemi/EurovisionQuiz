@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, CardActions, CardHeader, Button, Divider  } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import LevelPicker from '../../features/LevelPicker/LevelPicker';
 import YearsPicker from '../../features/YearsPicker/YearsPicker';
@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    height: '100%',
+    height: '85%',
   },
   button: {
     width: 80,
@@ -22,7 +22,7 @@ const Start = () => {
 
   return (
     <div className={classes.root}>
-      <h2>Wybierz poziom</h2>
+    <h2>Wybierz poziom</h2>
     <LevelPicker />
     <YearsPicker />
     <Button className={classes.button} variant="outlined" size="large" color="primary">START</Button>
