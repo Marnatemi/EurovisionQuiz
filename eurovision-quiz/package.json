@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^7.1.2",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
+    "react-animated-text": "^0.1.4",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "react-youtube": "^7.11.2"

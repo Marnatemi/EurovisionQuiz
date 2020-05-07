@@ -22,6 +22,13 @@ const theme = createMuiTheme({
       dark: '#97a6ab',
     },
   },
+  typography: {
+    fontFamily: [
+      'Anton',
+      'Arial',
+      'sans-serif',
+    ].join(','),
+  },
 });
 
 function App() {
