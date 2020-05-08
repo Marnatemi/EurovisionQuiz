@@ -13,7 +13,6 @@ const subtitle = "subtitle";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    border: '2px solid white',
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -25,8 +24,8 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: '-.07em',
     fontSize: '2em',
     textTransform: 'uppercase',
-    //animation: `$${hero} 4s forwards`,
-    //animationDelay: '1.5s',
+    animation: `$${hero} 1.2s forwards`,
+    animationDelay: '4.3s',
     '&::before': {
       content: '""',
       width: '100%',
@@ -36,12 +35,10 @@ const useStyles = makeStyles(theme => ({
       position: 'absolute',
       background: '#000',
       zIndex: '-1',
-      //animation: `$${background} 2s forwards`,
-      //animationDelay: '1.5s',
+      animation: `$${background} 2.5s forwards`,
+      animationDelay: '3s',
     },
     '&>*': {
-      //animation: `$${text} 2s forwards`,
-      //animationDelay: '1.5s',
       fontFamily: 'Anton',
     },
     '&>span+span': {
@@ -49,52 +46,45 @@ const useStyles = makeStyles(theme => ({
      }
   },
   icon: {
-    transform: 'rotate(-20deg)',
-    animation: `$${icon} 1s forwards`,
+    animation: `$${icon} 2.8s forwards`,
+    animationTimingFunction: 'ease-in-out',
     opacity: 0,
-    //transition: 'all .3s  1.7s',
   },
   title: {
     fontSize: '2.2em',
     lineHeight: 1,
     marginTop: -11,
     letterSpacing: -1,
-    color: '#fc0',
-    animation: `$${title} 1s forwards cubic-bezier(.190, 1.000, .220, 1.000)`,
-    animationDelay: '3s',
-    //transition: 'all .3s  3s',
+    color: theme.palette.primary.main,
+    animation: `$${title} 0.7s forwards`,
+    animationDelay: '1.9s',
+    animationTimingFunction: 'cubic-bezier(.190, 1.000, .220, 1.000)',
     transform: 'translateX(-1000%)',
   },
   subtitle: {
-    animation: `$${subtitle} 1s forwards cubic-bezier(.190, 1.000, .220, 1.000)`,
-    animationDelay: '2s',
-    //transition: 'all .3s  2.3s',
+    animation: `$${subtitle} 0.7s forwards`,
+    animationDelay: '1.4s',
+    //animationTimingFunction: 'cubic-bezier(.190, 1.000, .220, 1.000)',
   },
   text: {
-    animation: `$${text} 1s forwards`,
-    animationDelay: '1s',
-    //transition: 'all .3s  2s',
+    animation: `$${text} 0.7s forwards`,
+    animationDelay: '0.7s',
+    animationTimingFunction: 'ease-in-out',
   },
   [`@keyframes ${hero}`]: {
     '100%': {
-      position: 'asolute',
-      height: '60%',
-      width: '60vw',
-      borderRadius: '20%', 
-      top: '20%',
-      background: 'inherit',
+      transform: 'scale(0.9) translate(-50%, -50%)',
+      top: '40%',
+      left: '25%',
     }
   },
   [`@keyframes ${background}`]: {
     '100%': {
       opacity: '0',
-      borderRadius: '20%', 
-
     }
   },
   [`@keyframes ${text}`]: {
     '100%': {
-      transform: 'scale(1.5,1.5)',
       opacity: 1,
       fontSize: '1.5em',
     }
@@ -106,16 +96,32 @@ const useStyles = makeStyles(theme => ({
   },
   [`@keyframes ${subtitle}`]: {
     '100%': {
-      transform: 'scale(1.5,1.5)',
       opacity: 1,
       fontSize: '1.7em',
     }
   },
   [`@keyframes ${icon}`]: {
-    '100%': {
-      transform: 'scale(1.5,1.5)',
+    '25%': {
+      opacity: 1,
+      transform: 'rotate(-20deg)',
+    },
+    '50%': {
       opacity: 1,
       fontSize: '1em',
+      transform: 'rotate(10deg)',
+      marginBottom: 5,
+    },
+    '85%': {
+      opacity: 1,
+      fontSize: '1.2em',
+      transform: 'rotate(-30deg)',
+      marginBottom: 10,
+    },
+    '100%': {
+      opacity: 1,
+      fontSize: '1.4em',
+      transform: 'rotate(20deg)',
+      marginBottom: 15,
     }
   }
 }));

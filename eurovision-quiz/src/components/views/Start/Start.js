@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     alignSelf: 'flex-end',
     opacity: '0',
     animation: `$${button} 2s forwards`,
-    animationDelay: '5s',
+    animationDelay: '9s',
   },
   hero: {
     position: 'absolute',
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
       transform: 'translate(-50%, -75%)',
       borderRadius: '40%',
       boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
-      backgroundImage: 'linear-gradient(326deg, #ce581f 0%, #deb445 74%)',
+      backgroundImage: 'linear-gradient(326deg, #1F95CE 0%, #ce581f 74%)',
       background: '#ce581f',  
       animation: `$${wave} 10s linear infinite`,
     },
