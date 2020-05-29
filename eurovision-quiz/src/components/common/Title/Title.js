@@ -25,24 +25,36 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     animation: `$${hero} 1.2s forwards`,
     animationDelay: '4.3s',
-    '&::before': {
-      content: '""',
-      width: '150%',
-      height: '150%',
-      top: 0,
-      left: 0,
-      position: 'absolute',
-      background: '#000',
-      zIndex: '-1',
-      animation: `$${background} 2.5s forwards`,
-      animationDelay: '3s',
-    },
+    // '&::before': {
+    //   content: '""',
+    //   width: '500%',
+    //   height: '150%',
+    //   top: 0,
+    //   left: 0,
+    //   position: 'absolute',
+    //   background: '#000',
+    //   zIndex: '-1',
+    //   animation: `$${background} 2.5s forwards`,
+    //   animationDelay: '3s',
+    // },
     '&>*': {
       fontFamily: 'Anton',
     },
     '&>span+span': {
       opacity: 0,
      }
+  },
+  background: {
+    width: '100%',
+    height: '100%',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    position: 'absolute',
+    background: '#000',
+    zIndex: '-1',
+    animation: `$${background} 2.5s forwards`,
+    animationDelay: '3s',
   },
   icon: {
     animation: `$${icon} 0.7s forwards`,
@@ -102,7 +114,6 @@ const useStyles = makeStyles(theme => ({
   [`@keyframes ${icon}`]: {
     '100%': {
       opacity: 1,
-      fontSize: '1.4em',
     }
   }
 }));
@@ -112,6 +123,7 @@ const Title = ({title, subtitle, text}) => {
 
   return (
     <div className={classes.root}>
+      <div className={classes.background}></div>
       <span ><AudiotrackOutlinedIcon className={classes.icon}/></span>
       <span className={classes.text}>{text}</span>
       <span className={classes.subtitle}>{subtitle}</span>

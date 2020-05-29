@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/styles';
 import Title from '../../common/Title/Title'
 
 const wave = "wave";
+const button = "button";
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,8 +45,16 @@ const useStyles = makeStyles(theme => ({
     },
   },
   button: {
-    height: 20,
+    height: 40,
     alignSelf: 'flex-end',
+    animation: `$${button} 2s forwards`,
+    animationDelay: '6s',
+    opacity: 0,
+  },
+  [`@keyframes ${button}`]: {
+    '100%': {
+      opacity: '1', 
+    }
   },
   [`@keyframes ${wave}`]: {
     '0%': {
