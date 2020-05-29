@@ -4,20 +4,12 @@ import { makeStyles } from '@material-ui/styles';
 import Title from '../../common/Title/Title'
 
 const wave = "wave";
-const button = "button";
 
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100vh', 
     width: '100vw ',
     overflow: 'hidden',
-  },
-  button : {
-    bottom: 0,
-    alignSelf: 'flex-end',
-    opacity: '0',
-    animation: `$${button} 2s forwards`,
-    animationDelay: '9s',
   },
   hero: {
     position: 'absolute',
@@ -60,11 +52,6 @@ const useStyles = makeStyles(theme => ({
       transform: "translate(-50%,-75%) rotate(360deg)",
     }
   },
-  [`@keyframes ${button}`]: {
-    '100%': {
-      opacity: '1', 
-    }
-  }
 }));
 
 const Start = () => {
@@ -75,7 +62,10 @@ const Start = () => {
     <header className={classes.wave} > 
       <div className={classes.hero}>
         <Title title={'Eurowizja'} subtitle={'Quiz'} text={'muzyczny'}/>
-        <Button  className={classes.button} variant="outlined" color="primary">
+        <Button className={classes.button}
+          variant="outlined"
+          color="primary"
+          size="large" >
           Graj
         </Button>
       </div>

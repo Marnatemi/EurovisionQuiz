@@ -1,6 +1,5 @@
 import React from 'react';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
-import {Button} from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
 const hero = "hero";
@@ -28,8 +27,8 @@ const useStyles = makeStyles(theme => ({
     animationDelay: '4.3s',
     '&::before': {
       content: '""',
-      width: '100%',
-      height: '100%',
+      width: '150%',
+      height: '150%',
       top: 0,
       left: 0,
       position: 'absolute',
@@ -46,9 +45,10 @@ const useStyles = makeStyles(theme => ({
      }
   },
   icon: {
-    animation: `$${icon} 2.8s forwards`,
+    animation: `$${icon} 0.7s forwards`,
     animationTimingFunction: 'ease-in-out',
     opacity: 0,
+    transform: 'rotate(30deg)',
   },
   title: {
     fontSize: '2.2em',
@@ -58,19 +58,18 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.primary.main,
     animation: `$${title} 0.7s forwards`,
     animationDelay: '1.9s',
-    animationTimingFunction: 'cubic-bezier(.190, 1.000, .220, 1.000)',
     transform: 'translateX(-1000%)',
   },
   subtitle: {
-    animation: `$${subtitle} 0.7s forwards`,
+    animation: `$${subtitle} 0.7s forwards cubic-bezier(0.02, 0.01, 0.21, 1) `,
     animationDelay: '1.4s',
-    //animationTimingFunction: 'cubic-bezier(.190, 1.000, .220, 1.000)',
   },
   text: {
-    animation: `$${text} 0.7s forwards`,
+    animation: `$${text} 0.7s forwards cubic-bezier(0.02, 0.01, 0.21, 1)`,
     animationDelay: '0.7s',
-    animationTimingFunction: 'ease-in-out',
   },
+
+
   [`@keyframes ${hero}`]: {
     '100%': {
       transform: 'scale(0.9) translate(-50%, -50%)',
@@ -101,27 +100,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   [`@keyframes ${icon}`]: {
-    '25%': {
-      opacity: 1,
-      transform: 'rotate(-20deg)',
-    },
-    '50%': {
-      opacity: 1,
-      fontSize: '1em',
-      transform: 'rotate(10deg)',
-      marginBottom: 5,
-    },
-    '85%': {
-      opacity: 1,
-      fontSize: '1.2em',
-      transform: 'rotate(-30deg)',
-      marginBottom: 10,
-    },
     '100%': {
       opacity: 1,
       fontSize: '1.4em',
-      transform: 'rotate(20deg)',
-      marginBottom: 15,
     }
   }
 }));

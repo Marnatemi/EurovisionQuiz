@@ -15,6 +15,7 @@
     "react-animated-text": "^0.1.4",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1",
     "react-youtube": "^7.11.2"
   },
   "scripts": {
