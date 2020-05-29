@@ -42,8 +42,10 @@ const useStyles = makeStyles(theme => ({
       animation: `$${wave} 10s linear infinite`,
     },
   },
-  
-  
+  button: {
+    height: 20,
+    alignSelf: 'flex-end',
+  },
   [`@keyframes ${wave}`]: {
     '0%': {
       transform: "translate(-50%,-75%) rotate(0deg)",
