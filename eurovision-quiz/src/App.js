@@ -36,7 +36,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         {/* <Start /> */}
-        <Level />
+        {/* <Level /> */}
+        <Question />
         {/* <Footer /> */}
         {/* <img className="Img" src={melodyLine} /> */}
       </div>

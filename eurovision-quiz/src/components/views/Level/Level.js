@@ -8,9 +8,13 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    height: '85%',
+    height: '95vh',
+    "&>h2": {
+      fontFamily: 'Anton',
+      textTransform: 'uppercase',
+    }
   },
   button: {
     width: 80,

@@ -9,6 +9,8 @@ import { makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles(theme => ({
   root: {
     width: 250,
+    height: 162,
+    margin: 0,
   },
   labelsTop: {
     fontSize: 25,
@@ -24,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     fontSize: 50,
-    margin: '15px 0 10px',
+    marginBottom: 10,
   },
 }));
 

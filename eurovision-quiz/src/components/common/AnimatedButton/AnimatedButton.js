@@ -10,7 +10,7 @@ const noteY = "noteY";
 const useStyles = makeStyles(theme => ({
   root: {
     bottom: 0,
-    alignSelf: 'flex-end',
+    width: 78,
   },
   button: {
     opacity: 0,
@@ -20,9 +20,8 @@ const useStyles = makeStyles(theme => ({
   noteAnimX: {
     width: 25,
     height: 25,
-    left: -17,
+    left: 'calc(50% - 40px)',
     position: 'absolute',
-    bottom: 10,
     animation: `$${noteX} 2s ease infinite alternate`,
     '&:nth-of-type(1)': {
       animationDelay: '8.5s',
@@ -107,7 +106,8 @@ const notes = [
   {id: 5, variant: 'outlined', color: '#fff', size: '1.5em', radius: '12'},
 ]
 
-const AnimatedButton = () => {
+const AnimatedButton = (props) => {
+  const {title} = props
   const classes = useStyles();
 
   return (
@@ -127,7 +127,7 @@ const AnimatedButton = () => {
        variant="outlined"
        color="primary"
        size="large" >
-      Graj
+      {title}
       </Button>
     </div>
     

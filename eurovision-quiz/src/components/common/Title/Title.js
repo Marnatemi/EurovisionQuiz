@@ -77,9 +77,6 @@ const useStyles = makeStyles(theme => ({
     '100%': {
       transform: 'scale(0.9) translate(-50%, -50%)',
       transformOrigin: '0 0',
-
-      // top: '50%',
-      // left: '50%',
     }
   },
   [`@keyframes ${background}`]: {
