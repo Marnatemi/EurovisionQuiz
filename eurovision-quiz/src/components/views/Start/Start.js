@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     height: '70%',
+    maxHeight: '460px',
     display: 'flex',
     zIndex: 99,
   },
@@ -28,7 +29,6 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     background: '#414c4f',
     boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
-
     '&::after': {
       content: "''",
       position: 'absolute',
@@ -43,6 +43,18 @@ const useStyles = makeStyles(theme => ({
       background: '#ce581f',  
       animation: `$${wave} 10s linear infinite`,
     },
+    // eslint-disable-next-line no-useless-computed-key
+    ['@media (min-width:650px)']: { 
+      '&::after': {
+        //display: 'none',
+        position: 'absolute',
+        width: '100%',
+        height: '100vw',
+        top: '20%',
+        borderRadius: '50%',
+      },
+    },
+
   },
   button: {
     height: 40,

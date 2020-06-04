@@ -25,18 +25,6 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     animation: `$${hero} 1.2s forwards`,
     animationDelay: '4.3s',
-    // '&::before': {
-    //   content: '""',
-    //   width: '500%',
-    //   height: '150%',
-    //   top: 0,
-    //   left: 0,
-    //   position: 'absolute',
-    //   background: '#000',
-    //   zIndex: '-1',
-    //   animation: `$${background} 2.5s forwards`,
-    //   animationDelay: '3s',
-    // },
     '&>*': {
       fontFamily: 'Anton',
     },
@@ -45,8 +33,8 @@ const useStyles = makeStyles(theme => ({
      }
   },
   background: {
-    width: '100%',
-    height: '100%',
+    width: '150%',
+    height: '150%',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
@@ -83,10 +71,15 @@ const useStyles = makeStyles(theme => ({
 
 
   [`@keyframes ${hero}`]: {
+    '10%': {
+      transformOrigin: '0 0',
+    },
     '100%': {
       transform: 'scale(0.9) translate(-50%, -50%)',
-      top: '40%',
-      left: '25%',
+      transformOrigin: '0 0',
+
+      // top: '50%',
+      // left: '50%',
     }
   },
   [`@keyframes ${background}`]: {

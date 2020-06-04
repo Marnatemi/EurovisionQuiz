@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     transition: '0.3s',
     display: 'inline-block',
     position: 'relative',
-    width: '95vw',
+    width: '95%',
     backgroundColor: theme.palette.primary.light,
     margin: '50px 0',
     overflow: 'initial',
@@ -69,7 +69,6 @@ const Question = () => {
     if(id === demoContent.artist){demoContent.message = "Dobrze!"; console.info('You clicked the', id, demoContent.message);
     }
     else{demoContent.message = "Błędna odpowiedź"; console.info('You clicked the', id, demoContent.message);}
-    
     setOpen(true);
   };
   
@@ -96,6 +95,7 @@ const Question = () => {
           <Modal
             open={open}
             onClose={handleClose}
+            disableBackdropClick='true'
           >
             <Answer message={demoContent.message} title={demoContent.title} artist={demoContent.artist} year={demoContent.year} country={demoContent.country} place={demoContent.place}   />
           </Modal>

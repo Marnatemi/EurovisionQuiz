@@ -7,7 +7,9 @@ const useStyles = makeStyles(theme => ({
   root: {
     borderRadius: 12,
     minWidth: 250,
-    maxWidth: 300,
+    maxWidth: 450,
+    maxHeight: '700px',
+    height: '95%',
     width: '95%',
     textAlign: 'center',
     background: theme.palette.primary.light,
@@ -15,13 +17,16 @@ const useStyles = makeStyles(theme => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
   },
   header: {
     textAlign: 'left',
     spacing: 10,
   },
   player: {
+    height: '200px',
     padding: '5px',
   },
   button: {
