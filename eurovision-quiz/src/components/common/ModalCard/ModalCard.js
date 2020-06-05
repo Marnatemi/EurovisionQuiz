@@ -19,6 +19,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
+    letterSpacing: 0.7,
+    "& p span": {
+      color: theme.palette.primary.main,
+    }
   },
   header: {
     textAlign: 'left',
@@ -33,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ModalCard = ({ message, button, children}) => {
+const ModalCard = ({ message, button, children, handler}) => {
   const classes = useStyles();
 
   return (
@@ -43,7 +47,7 @@ const ModalCard = ({ message, button, children}) => {
       {children}
       <Divider variant="middle" />
       <CardActions className={classes.action}>
-        <Button variant="contained" color="primary" size="large" className={classes.button}>
+        <Button variant="contained" color="primary" size="large" className={classes.button} onClick={handler} >
           {button}
         </Button>
       </CardActions>

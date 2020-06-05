@@ -45,7 +45,7 @@ const labelsBottom = {
 const labelsTop = {
   1: 'Łatwy',
   2: 'Średni',
-  3: 'Trudny',
+  3: 'Expert',
 };
 
 

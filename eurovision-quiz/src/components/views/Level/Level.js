@@ -1,10 +1,12 @@
 import React from 'react';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import InfoIcon from '@material-ui/icons/Info';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import LevelPicker from '../../features/LevelPicker/LevelPicker';
 import YearsPicker from '../../features/YearsPicker/YearsPicker';
+import Instruction from '../../features/Instruction/Instruction';
+import { Modal} from '@material-ui/core';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,12 +37,34 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Start = () => {
+const demoContent = {
+  instuction: ". "
+}
+
+const Level = () => {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+  
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <div className={classes.root}>
-    <h1>Wybierz poziom <HelpOutlineIcon className={classes.icon} /></h1>
+    <Modal
+          open={open}
+          onClose={handleClose}
+        >
+          <div>
+            <Instruction message="Instrukcja" button="OK" handler={handleClose}/>
+          </div>
+        </Modal>
+    <h1>Wybierz poziom <HelpOutlineIcon className={classes.icon} onClick={() => handleClick()}/></h1>
     <LevelPicker />
     <YearsPicker />
     <Button className={classes.button} variant="outlined" size="large" color="primary">START</Button>
@@ -48,4 +72,4 @@ const Start = () => {
   );
 }
 
-export default Start;
+export default Level;
