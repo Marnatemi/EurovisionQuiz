@@ -4,13 +4,19 @@ import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import Rating from '@material-ui/lab/Rating';
 import { makeStyles } from '@material-ui/styles';
+import {Paper} from  '@material-ui/core'
+
 
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: 250,
-    height: 162,
+    width: 252,
+    height: 182,
     margin: 0,
+    border: `2px dashed ${theme.palette.primary.light}` ,
+    padding: '10px 20px',
+    background: 'inherit',
+    color: '#fff',
   },
   labelsTop: {
     fontSize: 25,
@@ -49,7 +55,9 @@ const LevelPicker = () => {
   const classes = useStyles();
 
   return (
-      <Box className={classes.root} component="fieldset" mb={3} borderColor="transparent">
+    <Paper className={classes.root}>
+
+      <Box  component="fieldset" mb={3} borderColor="transparent">
         {/* <Typography component="legend">Custom empty icon</Typography> */}
         <Rating
           className={classes.rating}
@@ -72,6 +80,7 @@ const LevelPicker = () => {
         <Divider variant="middle" />
         {value !== null && <Box className={classes.labelsBottom} ml={2}>{labelsBottom[hover !== -1 ? hover : value]}</Box>}
       </Box>
+      </ Paper>
   );
 }
 

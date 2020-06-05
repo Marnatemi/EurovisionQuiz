@@ -8,7 +8,7 @@ import {Paper} from  '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   root: {
     width: 250,
-    padding: '10px 20px',
+    padding: '17px 20px 10px',
     background: 'inherit',
     color: '#fff',
     border: `2px dashed ${theme.palette.primary.light}` ,

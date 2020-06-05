@@ -86,7 +86,7 @@ const Question = () => {
           {demoContent.answers.map(answer => (
              <Chip key={answer.id} 
              className={classes.chip} 
-             color='primary.light'
+             color='default'
              size='medium'
              avatar={<Avatar className={classes.avatar}><h1>{answer.id}</h1></Avatar>} 
              label={answer.answer} 
@@ -95,9 +95,11 @@ const Question = () => {
           <Modal
             open={open}
             onClose={handleClose}
-            disableBackdropClick='true'
+            disableBackdropClick={true}
           >
-            <Answer message={demoContent.message} title={demoContent.title} artist={demoContent.artist} year={demoContent.year} country={demoContent.country} place={demoContent.place}   />
+            <div>
+              <Answer message={demoContent.message} title={demoContent.title} artist={demoContent.artist} year={demoContent.year} country={demoContent.country} place={demoContent.place}   />
+            </div>
           </Modal>
         </CardContent>
       </Card>
