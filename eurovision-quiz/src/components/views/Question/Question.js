@@ -96,6 +96,7 @@ const Question = () => {
             open={open}
             onClose={handleClose}
             disableBackdropClick={true}
+            disableEscapeKeyDown={true}
           >
             <div>
               <Answer message={demoContent.message} title={demoContent.title} artist={demoContent.artist} year={demoContent.year} country={demoContent.country} place={demoContent.place}   />

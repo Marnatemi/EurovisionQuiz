@@ -13,12 +13,12 @@ const subtitle = "subtitle";
 const useStyles = makeStyles(theme => ({
   root: {
     position: 'absolute',
-    top: '50%',
+    top: '20%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    height: '100vh',
-    width: '100vw',
-    paddingTop: '40vh',
+    // height: '100vh',
+    // width: '100vw',
+    //paddingTop: '40vh',
     lineHeight: 1,
     letterSpacing: '-.07em',
     fontSize: '2em',
@@ -30,11 +30,17 @@ const useStyles = makeStyles(theme => ({
     },
     '&>span+span': {
       opacity: 0,
-     }
+     },
+     //eslint-disable-next-line no-useless-computed-key
+    ['@media (min-width:650px)']: { 
+      '&': {
+        top: '30%',
+      },
+    },
   },
   background: {
-    width: '150%',
-    height: '150%',
+    width: '150vw',
+    height: '150vh',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',

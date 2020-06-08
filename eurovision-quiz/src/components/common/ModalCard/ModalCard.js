@@ -2,8 +2,11 @@ import React from 'react';
 import { Card, CardActions, CardHeader, Button, Divider  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
+const modal = "modal";
+
 const useStyles = makeStyles(theme => ({
   root: {
+    opacity: 0,
     borderRadius: 12,
     minWidth: 250,
     maxWidth: 450,
@@ -13,13 +16,14 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     background: theme.palette.primary.light,
     position: 'absolute',
-    top: '50%',
+    top: '60%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
     letterSpacing: 0.7,
+    animation: `$${modal} 0.3s ease-in forwards`,
     "& p span": {
       color: theme.palette.primary.main,
     }
@@ -34,6 +38,12 @@ const useStyles = makeStyles(theme => ({
   action: {
     display: 'flex',
     justifyContent: 'space-around',
+  },
+  [`@keyframes ${modal}`]: {
+    "100%": {
+      opacity: 1,
+      top: '50%',
+    }
   }
 }));
 
@@ -52,6 +62,7 @@ const ModalCard = ({ message, button, children, handler}) => {
         </Button>
       </CardActions>
     </Card>
+
   );
 }
 

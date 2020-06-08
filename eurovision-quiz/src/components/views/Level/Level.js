@@ -5,7 +5,7 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import LevelPicker from '../../features/LevelPicker/LevelPicker';
 import YearsPicker from '../../features/YearsPicker/YearsPicker';
 import Instruction from '../../features/Instruction/Instruction';
-import { Modal} from '@material-ui/core';
+import { Modal, Collapse, Grow, Backdrop, Slide} from '@material-ui/core';
 
 
 const useStyles = makeStyles(theme => ({
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
       fontFamily: 'Anton',
       textTransform: 'uppercase',
       letterSpacing: 0.8,
-    }
+    },
   },
   icon: {
     position: 'absolute',
@@ -37,14 +37,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const demoContent = {
-  instuction: ". "
-}
 
 const Level = () => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-
 
   const handleClick = () => {
     setOpen(true);
@@ -57,13 +53,16 @@ const Level = () => {
   return (
     <div className={classes.root}>
     <Modal
-          open={open}
-          onClose={handleClose}
-        >
-          <div>
-            <Instruction message="Instrukcja" button="OK" handler={handleClose}/>
-          </div>
-        </Modal>
+      className={classes.modal}
+      open={open}
+      onClose={handleClose}
+      closeAfterTransition={true}
+    >
+
+      <div>
+        <Instruction message="Instrukcja" button="OK" handler={handleClose}/>
+      </div>
+    </Modal>
     <h1>Wybierz poziom <HelpOutlineIcon className={classes.icon} onClick={() => handleClick()}/></h1>
     <LevelPicker />
     <YearsPicker />

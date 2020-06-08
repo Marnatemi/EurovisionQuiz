@@ -33,8 +33,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        {/* <Start /> */}
-        <Level />
+        <Start />
+        {/* <Level /> */}
         {/* <Question /> */}
         {/* <Footer /> */}
         {/* <img className="Img" src={melodyLine} /> */}
