@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.primary.light,
     margin: '50px 0',
     overflow: 'initial',
+    maxWidth: 500,
   },
   header: {
     background: theme.palette.primary.main,

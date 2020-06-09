@@ -69,19 +69,6 @@ const useStyles = makeStyles(theme => ({
   //eslint-disable-next-line no-useless-computed-key
   ['@media (min-width:650px)']: {
     'root':{
-      // '&:before': {
-      // content: "''",
-      // position: 'absolute',
-      // width: '600px',
-      // height: '600px',
-      // top: '50%',
-      // left: '50%',
-      // transform: 'translate(-50%, -50%)',
-      // //border: '1000px solid #414c4f',
-      // borderRadius: '50%',
-      // boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
-      // zIndex: 1,
-      // },
       '&:after': {
         content: "''",
         position: 'absolute',
@@ -98,11 +85,7 @@ const useStyles = makeStyles(theme => ({
     },
     'wave': {
       '&:after': {
-        //top: 'calc(50% + 100px)',
-        // width: 1200,
-        // height: 1300,
         top: '50%',
-        left: '50%',
         width: '600px',
         height: '600px',
       },

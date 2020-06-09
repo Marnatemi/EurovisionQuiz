@@ -1,10 +1,11 @@
 import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
-//import Answer from '././components/features/Answer/Answer'
 import Question from '././components/views/Question/Question'
 import Start from '././components/views/Start/Start';
 import Level from '././components/views/Level/Level';
+import Score from '././components/views/Score/Score';
+
 import './App.css';
 
 
@@ -33,7 +34,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Start />
+        {/* <Start /> */}
+        <Score />
         {/* <Level /> */}
         {/* <Question /> */}
         {/* <Footer /> */}
