@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: 6,
     position: 'relative',
     animation: `$${border} 0.1s forwards`,
-    animationDelay: props => `calc(8.1s + ${props.scoreNumber} * 0.3s)`,
+    animationDelay: props => `calc(6.5s + ${props.scoreNumber} * 0.3s)`,
     '& svg': {
       position: 'absolute',
       top: '-3px',
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
         strokeDasharray: 1000,
         strokeDashoffset: 1000,
         animation: `$${borderDraw} 3s forwards`,
-        animationDelay: props => `calc(7.1s + ${props.scoreNumber} * 0.3s)`,
+        animationDelay: props => `calc(5.5s + ${props.scoreNumber} * 0.3s)`,
       }    }, 
   },
   scoreWrapper: {
@@ -48,12 +48,12 @@ const useStyles = makeStyles(theme => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     animation: `$${show} 1s forwards`,
-    animationDelay: '5.8s',
+    animationDelay: '4.8s',
     '& span': {
       width: 0,
       opacity: 0,
       animation: `$${total} 1s forwards`,
-      animationDelay: props => `calc(6.5s + ${props.scoreNumber} * 0.3s)`,
+      animationDelay: props => `calc(5.3s + ${props.scoreNumber} * 0.3s)`,
     }
   },
   score: (props) => (
@@ -69,7 +69,7 @@ const useStyles = makeStyles(theme => ({
         content: "' 0\\A  1\\A  2\\A  3\\A  4\\A  5\\A  6\\A  7\\A  8\\A  9\\A 10'",
         animation: `$${counter} steps(${props.scoreNumber}) forwards`,
         animationDuration: `calc(${props.scoreNumber} * 0.3s)`,
-        animationDelay: '6s',
+        animationDelay: '5s',
         top: 0,
       },
     }

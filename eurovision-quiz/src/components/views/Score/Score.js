@@ -1,7 +1,10 @@
 import React from 'react';
+import {useEffect} from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Divider  } from '@material-ui/core';
 import ScoreCounter from '../../features/ScoreCounter/ScoreCounter';
+import Confetti from 'react-confetti'
+
 
 const divider = "divider";
 const header = "header";
@@ -59,8 +62,8 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: 1,
     opacity: 0,
     marginTop: 0,
-    animation: `$${title} 0.7s ease-in-out forwards`,
-    animationDelay: '3.5s',
+    animation: `$${title} 0.5s ease-in-out forwards`,
+    animationDelay: '3.3s',
   },
   score: {
     margin: 'auto',
@@ -107,12 +110,26 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const demoContent = {
-  score: 3,
+  score: 8,
 }
+
 
 const Score = () => {
   const classes = useStyles();
+  const [finish, setFinish] = React.useState(false);
 
+  // useEffect(()=> {
+  //   const timer = setTimeout(() => {
+  //     setFinish(true)
+  //   }, demoContent.score * 1000);
+  //   return () => clearTimeout(timer);
+  // })
+  useEffect(()=> {
+    const timer = setTimeout(() => {
+      setFinish(true)
+    }, 100);
+    return () => clearTimeout(timer);
+  })
 
   return (
     <div className={classes.root}>
@@ -128,6 +145,14 @@ const Score = () => {
         </div>
         <ScoreCounter  
           scoreNumber={demoContent.score}
+        />
+        <Confetti 
+          width={window.innerWidth}
+          height={window.innerHeight}
+          numberOfPieces={100}
+          gravity={0.03}
+          opacity={0.6}
+          run={finish}
         />
       </div>
     </div>
