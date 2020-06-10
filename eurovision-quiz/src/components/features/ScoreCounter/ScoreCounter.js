@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/styles';
 const border = 'border';
 const counter = 'counter';
 const borderDraw = 'borderDraw';
+const total = 'total';
+const show = 'show';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -13,8 +16,8 @@ const useStyles = makeStyles(theme => ({
     height: 100,
     letterSpacing: 6,
     position: 'relative',
-    animation: `$${border} 1s forwards`,
-    animationDelay: '6s',
+    animation: `$${border} 0.1s forwards`,
+    animationDelay: props => `calc(8.1s + ${props.scoreNumber} * 0.3s)`,
     '& svg': {
       position: 'absolute',
       top: '-3px',
@@ -30,11 +33,11 @@ const useStyles = makeStyles(theme => ({
         strokeDasharray: 1000,
         strokeDashoffset: 1000,
         animation: `$${borderDraw} 3s forwards`,
-        animationDelay: '5s',
-      }
-    }, 
+        animationDelay: props => `calc(7.1s + ${props.scoreNumber} * 0.3s)`,
+      }    }, 
   },
   scoreWrapper: {
+    opacity: 0,
     display: 'flex',
     fontSize: '2em',
     justifyContent: 'center',
@@ -44,21 +47,33 @@ const useStyles = makeStyles(theme => ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
+    animation: `$${show} 1s forwards`,
+    animationDelay: '5.8s',
+    '& span': {
+      width: 0,
+      opacity: 0,
+      animation: `$${total} 1s forwards`,
+      animationDelay: props => `calc(6.5s + ${props.scoreNumber} * 0.3s)`,
+    }
   },
-  score: {
-    color: theme.palette.primary.main,
-    height: '1em',
-    lineHeight: '1em',
-    overflow: 'hidden',
-    width: 42,
-    '&:after':{
-      position: 'relative',
-      whiteSpace: 'pre-wrap',
-      content: "' 00 01 02 03 04 05 06 07 08 09 10'",
-      animation: `$${counter} 5s steps(11) forwards`,
-      top: 0,
-    },
-  },
+  score: (props) => (
+    {
+      color: theme.palette.primary.main,
+      height: '1em',
+      lineHeight: '1em',
+      overflow: 'hidden',
+      width: 42,
+      '&:after': {
+        position: 'relative',
+        whiteSpace: 'pre-wrap',
+        content: "' 0\\A  1\\A  2\\A  3\\A  4\\A  5\\A  6\\A  7\\A  8\\A  9\\A 10'",
+        animation: `$${counter} steps(${props.scoreNumber}) forwards`,
+        animationDuration: `calc(${props.scoreNumber} * 0.3s)`,
+        animationDelay: '6s',
+        top: 0,
+      },
+    }
+  ),
   [`@keyframes ${borderDraw}`]: {
     '50%': {
       strokeDashoffset: 0,
@@ -73,13 +88,24 @@ const useStyles = makeStyles(theme => ({
   },
   [`@keyframes ${counter}`]: {
     '100%': {
-      top: '-11em',
+      top: props => `-${props.scoreNumber}em`,
+    }
+  },
+  [`@keyframes ${total}`]: {
+    '100%': {
+      opacity: 1,
+      width: 53,
+    },
+  },
+  [`@keyframes ${show}`]: {
+    '100%': {
+      opacity: 1,
     },
   },
 }));
 
-const ScoreCounter = ({score}) => {
-  const classes = useStyles();
+const ScoreCounter = (props) => {
+  const classes = useStyles(props);
 
   return (
     <div className={classes.root}>

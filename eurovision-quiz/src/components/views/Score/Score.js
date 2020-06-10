@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    height: '90vh',
+    height: '70vh',
     maxHeight: 550,
     fontFamily: 'Anton',
     '& hr': {
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     width: 'inherit',
     background: theme.palette.primary.main,
     position: 'absolute',
-    animation: `$${block} 2s cubic-bezier(.74, .06, .4, .92) forwards`,
+    animation: `$${block} 1s cubic-bezier(.74, .06, .4, .92) forwards`,
     animationDelay: '3s',
   },
   title: {
@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: 1,
     opacity: 0,
     marginTop: 0,
-    animation: `$${title} 1s ease-in-out forwards`,
+    animation: `$${title} 0.7s ease-in-out forwards`,
     animationDelay: '3.5s',
   },
   score: {
@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const demoContent = {
-  score: 7,
+  score: 3,
 }
 
 const Score = () => {
@@ -126,7 +126,9 @@ const Score = () => {
           <span className={classes.block}></span>
           <h1 className={classes.title}>Twój wynik :</h1>
         </div>
-        <ScoreCounter  score={demoContent.score}/>
+        <ScoreCounter  
+          scoreNumber={demoContent.score}
+        />
       </div>
     </div>
   );
