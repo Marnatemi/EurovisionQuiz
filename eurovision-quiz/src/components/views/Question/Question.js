@@ -1,32 +1,40 @@
 import React from 'react';
-import Answer from '../../features/Answer/Answer'
+import CorrectAnswer from '../../features/CorrectAnswer/CorrectAnswer';
+import AnswerCard from '../../common/AnswerCard/AnswerCard.js';
 import { makeStyles } from '@material-ui/styles';
-import {Card, CardContent, CardHeader, Chip, Avatar, Modal} from '@material-ui/core';
+import {Card, CardContent, CardHeader, Chip, Avatar, Modal, Paper} from '@material-ui/core';
 
 
 const useStyles = makeStyles(theme => ({
   card: {
     transition: '0.3s',
-    display: 'inline-block',
+    display: 'flex',
     position: 'relative',
     width: '95%',
+    height: '80vh',
+    maxHeight: 600,
     backgroundColor: theme.palette.primary.light,
     margin: '50px 0',
     overflow: 'initial',
-    maxWidth: 500,
+    maxWidth: 450,
+    flexDirection: 'column',
+
   },
   header: {
     background: theme.palette.primary.main,
     color: 'white', 
-    margin: '-30px 15px 20px',
+    margin: '-30px 15px 0px',
     borderRadius: '3px',
     padding: '15px',
     boxShadow: '0px 3px 5px #000',
   },
-  content: {
-    textAlign: 'center',
-    overflowX: 'auto',
-    padding: '30px 0 0',
+  answers: {
+    position: 'relative',
+    height: '70%',
+    margin: 'auto 0',
+  },
+  answerCard: {
+    //width: '20%',
   },
   chip: {
     margin: '50px 0 40px',
@@ -54,9 +62,9 @@ const demoContent = {
   country: "Francja",
   place: "Londyn (Anglia)",
   answers: [
-    {id: 'A', answer: "Marie Myriam" },
-    {id: 'B', answer: "Celine Dion" },
-    {id: 'C', answer: "Massiel"}
+    {id: 'A', answer: "Marie Myriam & Celine Dion" },
+    // {id: 'B', answer: "Celine Dion" },
+    // {id: 'C', answer: "Massiel"}
   ],
   message: "",
 }
@@ -81,17 +89,16 @@ const Question = () => {
       <Card className={classes.card}>
           <CardHeader
               className={classes.header}
-              title={'Wskaż wykonawcę'}
+              title={'Wskaż wykonawcę utworu'}
             />
-        <CardContent className={classes.content}>
+        <CardContent className={classes.answers}>
           {demoContent.answers.map(answer => (
-             <Chip key={answer.id} 
-             className={classes.chip} 
-             color='default'
-             size='medium'
-             avatar={<Avatar className={classes.avatar}><h1>{answer.id}</h1></Avatar>} 
-             label={answer.answer} 
-             onClick={() => handleClick(answer.answer)} />
+            <AnswerCard
+              key={answer.id} 
+              className={classes.answerCard}
+              onClick={() => handleClick(answer.answer)}
+              answer={answer.answer}
+            />
           ))}
           <Modal
             open={open}
@@ -100,7 +107,7 @@ const Question = () => {
             disableEscapeKeyDown={true}
           >
             <div>
-              <Answer message={demoContent.message} title={demoContent.title} artist={demoContent.artist} year={demoContent.year} country={demoContent.country} place={demoContent.place}   />
+              <CorrectAnswer message={demoContent.message} title={demoContent.title} artist={demoContent.artist} year={demoContent.year} country={demoContent.country} place={demoContent.place}   />
             </div>
           </Modal>
         </CardContent>

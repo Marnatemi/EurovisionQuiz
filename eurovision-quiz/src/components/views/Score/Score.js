@@ -110,7 +110,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const demoContent = {
-  score: 8,
+  score: 3,
 }
 
 
@@ -127,7 +127,7 @@ const Score = () => {
   useEffect(()=> {
     const timer = setTimeout(() => {
       setFinish(true)
-    }, 100);
+    }, 500);
     return () => clearTimeout(timer);
   })
 
