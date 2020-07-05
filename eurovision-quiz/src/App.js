@@ -5,6 +5,7 @@ import Question from '././components/views/Question/Question'
 import Start from '././components/views/Start/Start';
 import Level from '././components/views/Level/Level';
 import Score from '././components/views/Score/Score';
+import Footer from './components/layout/Footer/Footer';
 
 import './App.css';
 
@@ -38,7 +39,8 @@ function App() {
         {/* <Score /> */}
         {/* <Level /> */}
         <Question />
-        {/* <Footer /> */}
+
+        <Footer />
         {/* <img className="Img" src={melodyLine} /> */}
       </div>
     </ThemeProvider>

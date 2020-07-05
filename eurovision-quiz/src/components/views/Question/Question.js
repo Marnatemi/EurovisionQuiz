@@ -40,9 +40,10 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     left: '50%',
     bottom: '10%',
-    marginLeft: -60,
-    marginBottom: -75,
-    transform: 'rotate(90deg) scale(0.5)',
+    marginLeft: -110,
+    marginBottom: -35,
+    //transform: 'rotate(90deg) scale(0.5)',
+    transform: 'scale(0.5)',
     animation: `$${grow} 0.65s ease-in-out forwards`,
     animationDelay: '1.2s',
     '&:first-child': {
@@ -57,22 +58,24 @@ const useStyles = makeStyles(theme => ({
   [`@keyframes ${grow}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '65%',
-      left: '51.5%'
+      //bottom: '65%',
+      //left: '51.5%'
+      bottom: '70%',
     }
   },
   [`@keyframes ${growLeft}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '45%',
-      left: '28.5%',
+      //bottom: '45%',
+      //left: '28.5%',
+      bottom: '50%',
     }
   },
   [`@keyframes ${growRight}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '40%',
-      left: '71.5%',
+      bottom: '30%',
+      //left: '71.5%',
     }
   },
 }));
@@ -85,7 +88,7 @@ const demoContent = {
   place: "Londyn (Anglia)",
   answers: [
     {id: 'A', answer: "Marie Myriam" },
-    {id: 'B', answer: "Celine Dion" },
+    {id: 'B', answer: "Celine Dion Marie Myriam" },
     {id: 'C', answer: "Massiel"}
   ],
   message: "",

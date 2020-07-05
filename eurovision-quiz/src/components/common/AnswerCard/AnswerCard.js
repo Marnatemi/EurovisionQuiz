@@ -6,8 +6,8 @@ const flip = 'flip';
 
 const useStyles = makeStyles(theme => ({
  cardContainer: {
-   width: 120,
-   height: 150,
+   width: 220,
+   height: 70,
  },
  card: {
    position: 'relative',
@@ -35,14 +35,17 @@ const useStyles = makeStyles(theme => ({
    }
  },
  front: {
-  transform: 'rotateY(180deg)',
+  transform: 'rotateX(180deg)',
+  background: theme.palette.primary.light,
+  border: `2px dashed ${theme.palette.primary.dark}` ,
  },
  back: {
-    background: '#deb445'
+    background: theme.palette.primary.main,
+    border: `2px solid ${theme.palette.primary.main}` ,
  },
  [`@keyframes ${flip}`]: {
     '100%': {
-      transform: 'rotateY(180deg)',
+      transform: 'rotateX(180deg)',
     }
   },
 }));
