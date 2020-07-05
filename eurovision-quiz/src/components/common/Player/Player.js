@@ -26,14 +26,17 @@ class Player extends React.Component {
     }
   }
 
+
   render() {
+    const { classes, songStart, songEnd } = this.props;
+    console.log (this.props)
     const opts = {
       height: '200',
       width: '200',
       playerVars: {
         autoplay: 1,
-        start:"634",
-        end: "648",
+        start: songStart,
+        end: songEnd,
         controls: 0,
         disablekb: 1,
         fs: 0,
@@ -41,7 +44,6 @@ class Player extends React.Component {
         rel:1
       },
     };
-    const { classes } = this.props;
 
     return (
       <div>
