@@ -32,21 +32,42 @@ const theme = createMuiTheme({
   },
 });
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        {/* <Start /> */}
-        {/* <Score /> */}
-        {/* <Level /> */}
-        <Question />
-        {/* <QuestionSong /> */}
-        <Footer />
-        {/* <img className="Img" src={melodyLine} /> */}
-      </div>
-    </ThemeProvider>
-    
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    //props = data;
+    this.state = {
+      currentQuestion: 1,
+      currentView: <QuestionSong />,
+    };
+
+    this.handler = this.handler.bind(this);
+    console.log(this.state);
+    }
+
+    handler(view) {
+      this.setState({
+        currentView: view,
+      });
+  }
+
+  render() {
+    return (
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          {this.state.currentView}
+          {/* <Start /> */}
+          {/* <Score /> */}
+          {/* <Level /> */}
+          {/* <Question /> */}
+          {/* <QuestionSong /> */}
+          <Footer />
+          {/* <img className="Img" src={melodyLine} /> */}
+        </div>
+      </ThemeProvider>
+    );
+  }
 }
 
 export default App;
