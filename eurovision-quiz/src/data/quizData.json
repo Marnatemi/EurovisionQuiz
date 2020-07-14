@@ -7,7 +7,9 @@
     "year": 1964,
     "country": "Włochy",
     "place": "Kopenhaga (Dania)"
-    }
+    },
+  "simpleQuestionOptions": ["Gigliola Cinquetti", "Gianni Morandi", "Jimmy Fontana"],
+  "mediumQuestionOptions": ["Hiszpania", "Włochy", "Portugalia"]
   },
   {
   "id": 13,
@@ -17,7 +19,9 @@
     "year": 1968,
     "country": "Hiszpania",
     "place": "Londyn (Anglia)"
-    }
+    },
+  "simpleQuestionOptions": ["Patricia Kraus", "Massiel", "Karina"],
+  "mediumQuestionOptions": ["Hiszpania", "Szwajcaria", "Belgia"]  
   },
   {
   "id": 18,
@@ -27,7 +31,9 @@
     "year": 1974,
     "country": "Szwecja",
     "place": "Brighton (Anglia)"
-    }
+    },
+  "simpleQuestionOptions": ["Bananarama", "ABBA", "KEiiNO"],
+  "mediumQuestionOptions": ["Norwegia", "Wielka Brytania", "Szwecja"]  
   },
   {
   "id": 19,
@@ -37,7 +43,10 @@
     "year": 1975,
     "country": "Holandia",
     "place": "Sztokholm (Szwecja)"
-    }
+    },
+  "simpleQuestionOptions": ["Teach-In", "Bee Gees", "Brotherhood of Man"],
+  "mediumQuestionOptions": ["Holandia", "Turcja", "Irlandia"]  
+  
   },
   {
   "id": 20,
@@ -47,7 +56,10 @@
     "year": 1976,
     "country": "Wielka Brytania",
     "place": "Haga (Holandia)"
-    }
+    },
+  "simpleQuestionOptions": ["Fleetwood Mac", "Brotherhood of Man", "Village People"],
+  "mediumQuestionOptions": ["Malta", "Wielka Brytania", "Szwecja"]  
+  
   },
   {
   "id": 21,
@@ -57,7 +69,10 @@
     "year": 1977,
     "country": "Francja",
     "place": "Londyn (Anglia)"
-    }
+    },
+  "simpleQuestionOptions": ["Marie Myriam", "Celine Dion", "Edith Piaf"],
+  "mediumQuestionOptions": ["Monako", "Austria", "Francja"]  
+  
   },
   {
   "id": 24,
@@ -67,7 +82,10 @@
     "year": 1980,
     "country": "Irlandia",
     "place": "Haga (Holandia)"
-    }
+    },
+  "simpleQuestionOptions": ["Johnny Hallyday", "Johnny Logan", "Bono"],
+  "mediumQuestionOptions": ["Holandia", "Irlandia", "Islandia"]  
+  
   },
   {
   "id": 32,
@@ -77,7 +95,9 @@
     "year": 1988,
     "country": "Szwajcaria",
     "place": "Dublin (Irlandia)"
-    }
+    },
+  "simpleQuestionOptions": ["Noëlle Cordier", "Vanessa Pardis", "Céline Dion"],
+  "mediumQuestionOptions": ["Szwajcaria", "Francja", "Niemcy"]  
   },
   {
   "id": 42,
@@ -87,7 +107,9 @@
     "year": 1998,
     "country": "Izrael",
     "place": "Birmingham (Anglia)"
-    }
+    },
+  "simpleQuestionOptions": ["Dana International", "Liora", "Moran Mazor"],
+  "mediumQuestionOptions": ["Jugosławia", "Niemcy", "Izrael"]  
   },
   {
   "id": 44,
@@ -97,7 +119,9 @@
     "year": 2000,
     "country": "Dania",
     "place": "Sztokholm (Szwecja)"
-    }
+    },
+  "simpleQuestionOptions": ["Brotherhood of Man", "Olsen Brothers", "Dorthe Andersen i Martin Loft"],
+  "mediumQuestionOptions": ["Szwecja", "Dania", "Francja"]  
   },
   {
   "id": 45,
@@ -107,8 +131,10 @@
     "year": 2001,
     "country": "Estonia",
     "place": "Kopenhaga (Dania)"
-    }
-  },
+    },
+    "simpleQuestionOptions": ["E.N.I.", "Jorgos Alkieos i Przyjaciele", "Tanel Padar, Dave Benton i 2XL"],
+    "mediumQuestionOptions": ["Maroko", "Islandia", "Estonia"]    
+  }, 
   {
   "id": 46,
   "winner": {
@@ -117,7 +143,9 @@
     "year": 2002,
     "country": "Łotwa",
     "place": "Tallinn (Estonia)"
-    }
+    },
+  "simpleQuestionOptions": ["", "Marie N", ""],
+  "mediumQuestionOptions": ["Łotwa", "Austria", "Estonia"]    
   },
   {
   "id": 47,
@@ -127,7 +155,9 @@
     "year": 2003,
     "country": "Turcja",
     "place": "Ryga (Łotwa)"
-    }
+    },
+  "simpleQuestionOptions": ["Julio Iglesias", "Stelios Konstandas", "Sertab Erener"],
+  "mediumQuestionOptions": ["Wielka Brytania", "Cypr", "Turcja"]    
   },
   {
   "id": 48,
@@ -137,7 +167,10 @@
     "year": 2004,
     "country": "Ukraina",
     "place": "Stambuł (Turcja)"
-    }
+    },
+  "simpleQuestionOptions": ["Barei", "Rusłana", "Mandinga"],
+  "mediumQuestionOptions": ["Ukraina", "Szwajcaria", "Dania"]    
+  
   },
   {
   "id": 49,
@@ -147,7 +180,9 @@
     "year": 2005,
     "country": "Grecja",
     "place": "Kijów (Ukraina)"
-    }
+    },
+  "simpleQuestionOptions": ["Elena Paparizou", "Nathalie Pâque", "Eleni Fureira"],
+  "mediumQuestionOptions": ["Rosja", "Grecja", "Chorwacja"]    
   },
   {
   "id": 50,
@@ -157,7 +192,9 @@
     "year": 2006,
     "country": "Finlandia",
     "place": "Ateny (Grecja)"
-    }
+    },
+  "simpleQuestionOptions": ["Hatari", "IMRI", "Lordi"],
+  "mediumQuestionOptions": ["Finlandia", "Norwegia", "Ukraina"]    
   },
   {
   "id": 51,
@@ -167,7 +204,9 @@
     "year": 2007,
     "country": "Serbia",
     "place": "Helsinki (Finlandia)"
-    }
+    },
+  "simpleQuestionOptions": ["Elena Paparizou", "Marija Šerifović", "Jelena Tomašević"],
+  "mediumQuestionOptions": ["Hiszpania", "Mołdawia", "Serbia"]      
   },
   {
   "id": 52,
@@ -177,7 +216,10 @@
     "year": 2008,
     "country": "Rosja",
     "place": "Belgrad (Serbia)"
-    }
+    },
+  "simpleQuestionOptions": ["Johnny Logan", "Siergiej Łazariew", "Dima Biłan"],
+  "mediumQuestionOptions": ["Rosja", "Białoruś", "Turcja"]      
+  
   },
   {
   "id": 53,
@@ -187,7 +229,9 @@
     "year": 2009,
     "country": "Norwegia",
     "place": "Moskwa (Rosja)"
-    }
+    },
+  "simpleQuestionOptions": ["Alexander Rybak", "Siergiej Łazariew", "Andrius Pojavis"],
+  "mediumQuestionOptions": ["Finlandia", "Norwegia", "Gruzja"]      
   },
   {
   "id": 54,
@@ -197,7 +241,10 @@
     "year": 2010,
     "country": "Niemcy",
     "place": "Oslo (Norwegia)"
-    }
+    },
+  "simpleQuestionOptions": ["Lonnie Devantier", "Lena Meyer-Landrut", "Mélanie Cohl"],
+  "mediumQuestionOptions": ["Czechy", "Belgia", "Niemcy"]      
+  
   },
   {
   "id": 55,
@@ -207,7 +254,9 @@
     "year": 2011,
     "country": "Azerbejdżan",
     "place": "Düsseldorf (Niemcy)"
-    }
+    },
+  "simpleQuestionOptions": ["Ell i Nikki", "Nico i Vlad", "Evridiki i Dimitris Korjalas"],
+  "mediumQuestionOptions": ["Cypr", "Azerbejdżan", "Niemcy"]      
   },
   {
   "id": 56,
@@ -217,7 +266,9 @@
     "year": 2012,
     "country": "Szwecja",
     "place": "Baku (Azerbejdżan)"
-    }
+    },
+  "simpleQuestionOptions": ["Leonora", "Loreen", "Dana International"],
+  "mediumQuestionOptions": ["Szwecja", "Wielka Brytania", "Holandia"]      
   },
   {
   "id": 57,
@@ -227,7 +278,9 @@
     "year": 2013,
     "country": "Dania",
     "place": "Malmö (Szwecja)"
-    }
+    },
+    "simpleQuestionOptions": ["Lena Meyer-Landrut", "Pastora Soler", "Emmelie de Forest"],
+    "mediumQuestionOptions": ["Portugalia", "Rosja", "Dania"]      
   },
   {
   "id": 58,
@@ -237,7 +290,9 @@
     "year": 2014,
     "country": "Austria",
     "place": "Kopenhaga (Dania)"
-    }
+    },
+  "simpleQuestionOptions": ["Dana International", "Conchita Wurst", "Elnur Hüseynov"],
+  "mediumQuestionOptions": ["Niemcy", "Austria", "Azerbejdżan"]      
   },
   {
   "id": 59,
@@ -247,7 +302,9 @@
     "year": 2015,
     "country": "Szwecja",
     "place": "Wiedeń (Austria)"
-    }
+    },
+  "simpleQuestionOptions": ["Måns Zelmerlöw", "Elnur Hüseynov", "Tony Cetinski"],
+  "mediumQuestionOptions": ["Szwecja", "Rosja", "Malta"]      
   },
   {
   "id": 60,
@@ -257,7 +314,9 @@
     "year": 2016,
     "country": "Ukraina",
     "place": "Sztokholm (Szwecja)"
-    }
+    },
+  "simpleQuestionOptions": ["Feminnem", "Netta", "Jamala"],
+  "mediumQuestionOptions": ["Armenia", "Czarnogóra", "Ukraina"]      
   },
   {
   "id": 61,
@@ -267,7 +326,9 @@
     "year": 2017,
     "country": "Portugalia",
     "place": "Kijów (Ukraina)"
-    }
+    },
+  "simpleQuestionOptions": ["Jonatan Cerrada", "Salvador Sobral", "Simon Mathew"],
+  "mediumQuestionOptions": ["Hiszpania", "Portugalia", "Serbia"]      
   },
   {
   "id": 62,
@@ -277,7 +338,9 @@
     "year": 2018,
     "country": "Izrael",
     "place": "Lizbona (Portugalia)"
-    }
+    },
+  "simpleQuestionOptions": ["Netta", "Xandee", "Agnete"],
+  "mediumQuestionOptions": ["Izrael", "San Marino", "Malta"]       
   },
   {
   "id": 63,
@@ -287,16 +350,8 @@
     "year": 2019,
     "country": "Holandia",
     "place": "Tel Awiw-Jafa (Izrael)"
-    }
-  },
-  {
-  "id": 64,
-  "winner": {
-    "title": "To nie ja",
-    "artist": "Edyta Górniak",
-    "year": 1994,
-    "country": "Poland",
-    "place": "Tel Awiw-Jafa (Izrael)"
-    }
+    },
+  "simpleQuestionOptions": ["Roberto Bellarosa", "Tomas Thordarson", "Duncan Laurence"],
+  "mediumQuestionOptions": ["Irlandia", "Szwecja", "Holandia"]       
   }
 ]

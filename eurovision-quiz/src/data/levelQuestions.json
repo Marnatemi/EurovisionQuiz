@@ -1,0 +1,14 @@
+[
+  {
+    "id": "easy",
+    "question": "Wskaż wykonawcę tego utworu"
+  },
+  {
+    "id": "medium",
+    "question": "Który kraj reprezentował ten wykonawca?"
+  },
+  {
+    "id": "hard",
+    "question": "W którym roku został wykonany ten utwór?"
+  }
+]

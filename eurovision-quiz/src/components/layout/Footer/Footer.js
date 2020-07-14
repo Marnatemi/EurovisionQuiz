@@ -1,7 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, CardActions, CardHeader, Button, Divider  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -12,7 +10,6 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'right',
     marginLeft: 10,
     fontSize: 11,
-    //backgroundImage: `url('${melodyLine}')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     justifySelf: "flex-end",
@@ -26,15 +23,20 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const Footer = () => {
+const Footer = ({show}) => {
   const classes = useStyles();
 
-  return (
-    <div className={classes.root}>
-      <p>Made with <span className={classes.icon}>passion</span> by Mar</p>
-    </div>
-    
-  );
+  if (show === true)
+    return (
+      <div className={classes.root}>
+        <p>Made with <span className={classes.icon}>passion</span> by Mar</p>
+      </div>
+    );
+  else
+    return (
+      <div className={classes.root}>
+      </div>  
+    );
 }
 
 export default Footer;
