@@ -29,7 +29,7 @@ class Player extends React.Component {
 
   render() {
     const { classes, songStart, songEnd } = this.props;
-    console.log (this.props)
+    console.log(this.state);
     const opts = {
       height: '200',
       width: '200',

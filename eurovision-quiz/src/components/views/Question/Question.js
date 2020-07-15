@@ -7,6 +7,7 @@ import {Card, CardContent, CardHeader, Chip, Avatar, Modal, Paper} from '@materi
 const grow = 'grow';
 const growLeft = 'growLeft';
 const growRight = 'growRight';
+const appear = 'appear'
 
 
 const useStyles = makeStyles(theme => ({
@@ -22,7 +23,9 @@ const useStyles = makeStyles(theme => ({
     overflow: 'initial',
     maxWidth: 450,
     flexDirection: 'column',
-
+    animation: `$${appear} .8s ease forwards`,
+    opacity: 0,
+    top: '10%',
   },
   header: {
     background: theme.palette.primary.main,
@@ -53,6 +56,12 @@ const useStyles = makeStyles(theme => ({
     '&:last-child': {
       animation: `$${growRight} 0.6s ease-in-out forwards`,
       animationDelay: '1.4s',
+    },
+  },
+  [`@keyframes ${appear}`]: {
+    '100%': {
+      opacity: 1,
+      top: 0,
     },
   },
   [`@keyframes ${grow}`]: {

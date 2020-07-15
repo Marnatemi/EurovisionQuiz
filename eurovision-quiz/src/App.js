@@ -45,9 +45,9 @@ class App extends React.Component {
     this.state = {
       level: "easy",
       currentQuestion: 0,
-      currentView: "question",
+      currentView: "question song",
       score: 0,
-      showFooter: false,
+      questionSongIsReady: false,
     };
 
     this.handler = this.handler.bind(this);
@@ -58,21 +58,27 @@ class App extends React.Component {
       this.setState({
         currentView: view,
       });
-  }
+    }
+  
 
   render() {
     const currentView = this.state.currentView
+    const hide = () => {
+      if (currentView === "start") {
+        return true
+      }
+    }
 
     return (
       <ThemeProvider theme={theme}>
         <div className="App">
-          <View currentView={currentView} className="view"/>
+          <View currentView={currentView} />
           {/* <Start /> */}
           {/* <Score /> */}
           {/* <Level /> */}
           {/* <Question /> */}
           {/* <QuestionSong /> */}
-          <Footer show={this.state.showFooter} />
+          <Footer hide={hide()} />
           {/* <img className="Img" src={melodyLine} /> */}
         </div>
       </ThemeProvider>

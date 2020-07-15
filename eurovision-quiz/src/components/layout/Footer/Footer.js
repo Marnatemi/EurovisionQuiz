@@ -23,19 +23,18 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const Footer = ({show}) => {
+const Footer = ({hide}) => {
   const classes = useStyles();
-
-  if (show === true)
+  console.log(hide);
+  if (hide === true)
     return (
-      <div className={classes.root}>
-        <p>Made with <span className={classes.icon}>passion</span> by Mar</p>
-      </div>
+      null
     );
   else
     return (
       <div className={classes.root}>
-      </div>  
+        <p>Made with <span className={classes.icon}>passion</span> by Mar</p>
+      </div> 
     );
 }
 

@@ -7,6 +7,7 @@ import YearsPicker from '../../features/YearsPicker/YearsPicker';
 import Instruction from '../../features/Instruction/Instruction';
 import { Modal, Collapse, Grow, Backdrop, Slide} from '@material-ui/core';
 
+const appear = 'appear'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,6 +18,9 @@ const useStyles = makeStyles(theme => ({
     height: '95vh',
     maxHeight: 600,
     letterSpacing: 0.5,
+    animation: `$${appear} .8s ease forwards`,
+    opacity: 0,
+
     "&>h1": {
       fontFamily: 'Anton',
       textTransform: 'uppercase',
@@ -34,6 +38,11 @@ const useStyles = makeStyles(theme => ({
   button: {
     width: 80,
     margin: 31,
+  },
+  [`@keyframes ${appear}`]: {
+    '100%': {
+      opacity: 1,
+    },
   }
 }));
 
