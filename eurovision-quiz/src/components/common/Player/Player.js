@@ -41,7 +41,8 @@ class Player extends React.Component {
         disablekb: 1,
         fs: 0,
         showinfo: 0,
-        rel:1
+        rel: 1,
+        origin: 'http://localhost:3000',
       },
     };
 

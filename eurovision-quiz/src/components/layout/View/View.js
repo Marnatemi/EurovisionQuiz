@@ -7,7 +7,19 @@ import Score from './../../views/Score/Score';
 import QuestionSong from '../../views/QuestionSong/QuestionSong';
  
 
-const View = ({currentView}) => {
+const View = ({currentView, questionSongIsReady}) => {
+  
+  const displayLoader = (songIsReady) => {
+    let questionSongDisplay = 'none'
+    if (songIsReady === false ) questionSongDisplay = 'flex'
+    return questionSongDisplay;
+  }
+  const runAnim = (songIsReady) => {
+    let runAnim = 'run'
+    if (songIsReady === false ) runAnim = 'paused'
+    return runAnim;
+  }
+
 
   if (currentView === 'start')
     return (
@@ -23,7 +35,7 @@ const View = ({currentView}) => {
     );
   else if (currentView === 'question song')
     return (
-      <QuestionSong/>
+      <QuestionSong displayLoader={displayLoader(questionSongIsReady)} runAnim={runAnim(questionSongIsReady)}/>
     );
   else if (currentView === 'score')
     return (

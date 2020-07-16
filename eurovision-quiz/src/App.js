@@ -47,7 +47,7 @@ class App extends React.Component {
       currentQuestion: 0,
       currentView: "question song",
       score: 0,
-      questionSongIsReady: false,
+      questionSongIsReady: true,
     };
 
     this.handler = this.handler.bind(this);
@@ -63,6 +63,7 @@ class App extends React.Component {
 
   render() {
     const currentView = this.state.currentView
+    const questionSongIsReady = this.state.questionSongIsReady
     const hide = () => {
       if (currentView === "start") {
         return true
@@ -72,7 +73,7 @@ class App extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <div className="App">
-          <View currentView={currentView} />
+          <View currentView={currentView} questionSongIsReady={questionSongIsReady} />
           {/* <Start /> */}
           {/* <Score /> */}
           {/* <Level /> */}

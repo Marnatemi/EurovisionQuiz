@@ -7,8 +7,8 @@ import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 
 const dance = 'dance';
 const shadow = 'shadow';
-const appear = 'appear'
-const jump = 'jump'
+const appear = 'appear';
+const jump = 'jump';
 
 
 const useStyles = makeStyles(theme => ({
@@ -16,42 +16,54 @@ const useStyles = makeStyles(theme => ({
     opacity: 0,
     position: 'absolute',
   },
+  component: {
+    animation: `$${appear} .8s ease forwards`,
+    opacity: 0,
+  },
   playerLoader: {
     position: 'absolute',
-    width: '100%',
-    height: '100%',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 2,
-    background: '#000',
-    opacity: 0.8,
-    '& svg:first-child, svg:last-child': {
-      color: theme.palette.primary.main,
-    },
-    '& svg:nth-child(2)': {
-      color: theme.palette.secondary.main,
-      animationDelay: '0.9s',
-    },
-    '& svg:last-child': {
-      animationDelay: '1.8s',
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: '100vw',
+      height: '100vh',
+      background: '#000',
+      opacity: 0.8,
+      zIndex: -1,
     },
     '& *': {
+      color: theme.palette.primary.main,
       fontSize: '2.5em',
-      animation: `$${jump} 3s ease-in-out infinite`,
-      width: 40,
+      animation: `$${jump} 1.1s ease-in-out infinite`,
+      width: 40,    
+    },
+    '& svg:nth-child(2)': {
+      color: theme.palette.primary.main,
+      animationDelay: '0.2s',
+    },
+    '& svg:last-child': {
+      animationDelay: '0.4s',
     },
   },
-  componentAnimation: {
-    animation: `$${appear} .8s ease forwards`,
-    opacity: 0,
-    '& img, div': {
-      animationPlayState: 'paused',
+  componentAnimation: (props) => (
+    {
+      '& img, div': {
+        animationPlayState: props.runAnim,
+      },
+      '& div:first-child': {
+        display: props.displayLoader,
+      }
     }
-  },
+  ),
   littleMan: {
     animation: `$${dance} 2s ease-in-out infinite`,
     height: '50vh',
@@ -73,19 +85,10 @@ const useStyles = makeStyles(theme => ({
   },
   [`@keyframes ${jump}`]: {
     '5%': {
-      fontSize: '2em',
+      fontSize: '1.8em',
     },
-    '10%': {
-      marginTop: 0,
-    },
-    '15%': {
+    '30%': {
       fontSize: '2.5em',
-    },
-    '25%': {
-      marginTop: '-10%',
-    },
-    '50%': {
-      marginTop: 0,
     },
   },
   [`@keyframes ${dance}`]: {
@@ -118,11 +121,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const QuestionSong = () => {
-  const classes = useStyles();
+const QuestionSong = (props) => {
 
+  const classes = useStyles(props);
+  console.log(props)
   return(
-    <div> 
+    <div className={classes.component}> 
       <div className={classes.player}>
         <Player songStart={634} songEnd={648} />
       </div>    
