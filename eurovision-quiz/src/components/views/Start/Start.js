@@ -9,15 +9,11 @@ const button = "button";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '100vh', 
-    width: '100vw ',
+    ...theme.size.fullByDivice,
     overflow: 'hidden',
   },
   hero: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    ...theme.center.absolute,
     height: '70%',
     maxHeight: '400px',
     display: 'flex',
@@ -25,20 +21,17 @@ const useStyles = makeStyles(theme => ({
   },
   wave: {
     position: 'relative',
-    width: '100%',
-    height: '100%',
+    ...theme.size.fullByPercent,
     background: '#414c4f',
     boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
     '&::after': {
+      ...theme.center.absolute,
       content: "''",
-      position: 'absolute',
       width: '300%',
       maxWidth: 1200,
       maxHeight: 1300,
       height: '200%',
       top: '-30%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
       borderRadius: '40%',
       boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
       backgroundImage: 'linear-gradient(326deg, #1F95CE 0%, #ce581f 74%)',
@@ -71,12 +64,9 @@ const useStyles = makeStyles(theme => ({
     'root':{
       '&:after': {
         content: "''",
-        position: 'absolute',
+        ...theme.center.absolute,
         width: '600px',
         height: '600px',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
         border: '2px solid #fff',
         borderRadius: '50%',
         zIndex: 1,

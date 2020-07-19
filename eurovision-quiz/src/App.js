@@ -2,13 +2,8 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 
-import {quizData} from './data/quizData.json';
-import {levelQuestions} from './data/levelQuestions.json';
-import Question from '././components/views/Question/Question'
-import Start from '././components/views/Start/Start';
-import Level from '././components/views/Level/Level';
-import Score from '././components/views/Score/Score';
-import QuestionSong from './components/views/QuestionSong/QuestionSong';
+import quizData from './data/quizData.json';
+import levelQuestions from './data/levelQuestions';
 import View from './components/layout/View/View';
 import Footer from './components/layout/Footer/Footer';
 
@@ -33,33 +28,99 @@ const theme = createMuiTheme({
       'sans-serif',
     ].join(','),
   },
+  center: {
+    absolute: {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+    },
+    flexbox: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }
+  },
+  size: {
+    fullByPercent: {
+      width: '100%',
+      height: '100%',
+    },
+    fullByDivice: {
+      width: '100vw',
+      height: '100vh',
+    },
+  }
 });
-
 
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-    //props = data;
     this.state = {
       level: "easy",
+      period: {
+        from: 1999, 
+        to: 2019
+      },
+      questions: [],
       currentQuestion: 0,
-      currentView: "question song",
+      currentView: "score",
       score: 0,
-      questionSongIsReady: true,
+      questionSongIsReady: false,
     };
 
     this.handler = this.handler.bind(this);
-    console.log(this.state);
+
+    this.render = this.render.bind(this);
+    console.log(this.state)
+  
+  }
+
+    questionsPicker = (from, to) => {
+
+      this.setState(
+        () => {
+          const questions = [];
+          const randomizedQuestions = [];
+    
+          for (let question of quizData){
+            if(question.year <= to && question.year >= from){
+              questions.push(question);
+            }
+            console.log(questions)
+          }
+        
+          while (randomizedQuestions.length < 10) {
+            const randomQuestion = Math.floor(Math.random() * (questions.length))
+            console.log(randomQuestion)
+            const selectedQuestion = questions[randomQuestion]
+        
+            if(randomizedQuestions.indexOf(selectedQuestion) === -1){
+              randomizedQuestions.push(selectedQuestion)
+            }
+        
+            console.log(randomizedQuestions)
+          }
+        
+          return { questions: randomizedQuestions }
+        }
+      )
+    
     }
+
 
     handler(view) {
       this.setState({
         currentView: view,
       });
     }
-  
+
+
+    componentDidMount(){
+      this.questionsPicker(this.state.period.from, this.state.period.to)
+    }
 
   render() {
     const currentView = this.state.currentView
@@ -69,19 +130,23 @@ class App extends React.Component {
         return true
       }
     }
+    // const initQuestions = () => {
+    //   const randomizedQuestions = this.questionsPicker(this.state.period.from, this.state.period.to)
+
+    //   this.setState ({
+    //     questions: randomizedQuestions,
+    //   })
+
+    // }
+
 
     return (
       <ThemeProvider theme={theme}>
-        <div className="App">
-          <View currentView={currentView} questionSongIsReady={questionSongIsReady} />
-          {/* <Start /> */}
-          {/* <Score /> */}
-          {/* <Level /> */}
-          {/* <Question /> */}
-          {/* <QuestionSong /> */}
-          <Footer hide={hide()} />
-          {/* <img className="Img" src={melodyLine} /> */}
+        <div className="App" >
+          <View question={this.state.questions[this.state.currentQuestion]} currentView={currentView} questionSongIsReady={questionSongIsReady} questions={quizData}/>
+          <Footer status={hide()} />
         </div>
+        {console.log(this.state)}
       </ThemeProvider>
     );
   }

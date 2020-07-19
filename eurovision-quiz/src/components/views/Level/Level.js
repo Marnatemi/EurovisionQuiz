@@ -5,7 +5,7 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import LevelPicker from '../../features/LevelPicker/LevelPicker';
 import YearsPicker from '../../features/YearsPicker/YearsPicker';
 import Instruction from '../../features/Instruction/Instruction';
-import { Modal, Collapse, Grow, Backdrop, Slide} from '@material-ui/core';
+import { Modal } from '@material-ui/core';
 
 const appear = 'appear'
 

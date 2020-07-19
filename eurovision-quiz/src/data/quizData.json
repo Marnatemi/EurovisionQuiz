@@ -1,356 +1,292 @@
 [
   {
   "id": 9,
-  "winner": {
-    "title": "Non ho l’età",
-    "artist": "Gigliola Cinquetti",
-    "year": 1964,
-    "country": "Włochy",
-    "place": "Kopenhaga (Dania)"
-    },
+  "songTitle": "Non ho l’età",
+  "artist": "Gigliola Cinquetti",
+  "year": 1964,
+  "winnerCountry": "Włochy",
+  "place": "Kopenhaga (Dania)",
   "simpleQuestionOptions": ["Gigliola Cinquetti", "Gianni Morandi", "Jimmy Fontana"],
   "mediumQuestionOptions": ["Hiszpania", "Włochy", "Portugalia"]
   },
   {
   "id": 13,
-  "winner": {
-    "title": "La, la, la",
-    "artist": "Massiel",
-    "year": 1968,
-    "country": "Hiszpania",
-    "place": "Londyn (Anglia)"
-    },
+  "songTitle": "La, la, la",
+  "artist": "Massiel",
+  "year": 1968,
+  "winnerCountry": "Hiszpania",
+  "place": "Londyn (Anglia)",
   "simpleQuestionOptions": ["Patricia Kraus", "Massiel", "Karina"],
   "mediumQuestionOptions": ["Hiszpania", "Szwajcaria", "Belgia"]  
   },
   {
   "id": 18,
-  "winner": {
-    "title": "Waterloo",
-    "artist": "ABBA",
-    "year": 1974,
-    "country": "Szwecja",
-    "place": "Brighton (Anglia)"
-    },
+  "songTitle": "Waterloo",
+  "artist": "ABBA",
+  "year": 1974,
+  "winnerCountry": "Szwecja",
+  "place": "Brighton (Anglia)",
   "simpleQuestionOptions": ["Bananarama", "ABBA", "KEiiNO"],
   "mediumQuestionOptions": ["Norwegia", "Wielka Brytania", "Szwecja"]  
   },
   {
   "id": 19,
-  "winner": {
-    "title": "Ding-a-dong",
-    "artist": "Teach-In",
-    "year": 1975,
-    "country": "Holandia",
-    "place": "Sztokholm (Szwecja)"
-    },
+  "songTitle": "Ding-a-dong",
+  "artist": "Teach-In",
+  "year": 1975,
+  "winnerCountry": "Holandia",
+  "place": "Sztokholm (Szwecja)",
   "simpleQuestionOptions": ["Teach-In", "Bee Gees", "Brotherhood of Man"],
   "mediumQuestionOptions": ["Holandia", "Turcja", "Irlandia"]  
-  
   },
   {
   "id": 20,
-  "winner": {
-    "title": "Save Your Kisses for Me",
-    "artist": "Brotherhood of Man",
-    "year": 1976,
-    "country": "Wielka Brytania",
-    "place": "Haga (Holandia)"
-    },
+  "songTitle": "Save Your Kisses for Me",
+  "artist": "Brotherhood of Man",
+  "year": 1976,
+  "winnerCountry": "Wielka Brytania",
+  "place": "Haga (Holandia)",
   "simpleQuestionOptions": ["Fleetwood Mac", "Brotherhood of Man", "Village People"],
   "mediumQuestionOptions": ["Malta", "Wielka Brytania", "Szwecja"]  
   
   },
   {
   "id": 21,
-  "winner": {
-    "title": "L’oiseau et l’enfant",
-    "artist": "Marie Myriam",
-    "year": 1977,
-    "country": "Francja",
-    "place": "Londyn (Anglia)"
-    },
+  "songTitle": "L’oiseau et l’enfant",
+  "artist": "Marie Myriam",
+  "year": 1977,
+  "winnerCountry": "Francja",
+  "place": "Londyn (Anglia)",
   "simpleQuestionOptions": ["Marie Myriam", "Celine Dion", "Edith Piaf"],
   "mediumQuestionOptions": ["Monako", "Austria", "Francja"]  
-  
   },
   {
   "id": 24,
-  "winner": {
-    "title": "What’s Another Year",
-    "artist": "Johnny Logan",
-    "year": 1980,
-    "country": "Irlandia",
-    "place": "Haga (Holandia)"
-    },
+  "songTitle": "What’s Another Year",
+  "artist": "Johnny Logan",
+  "year": 1980,
+  "winnerCountry": "Irlandia",
+  "place": "Haga (Holandia)",
   "simpleQuestionOptions": ["Johnny Hallyday", "Johnny Logan", "Bono"],
   "mediumQuestionOptions": ["Holandia", "Irlandia", "Islandia"]  
-  
   },
   {
   "id": 32,
-  "winner": {
-    "title": "Ne partez pas sans moi",
-    "artist": "Céline Dion",
-    "year": 1988,
-    "country": "Szwajcaria",
-    "place": "Dublin (Irlandia)"
-    },
+  "songTitle": "Ne partez pas sans moi",
+  "artist": "Céline Dion",
+  "year": 1988,
+  "winnerCountry": "Szwajcaria",
+  "place": "Dublin (Irlandia)",
   "simpleQuestionOptions": ["Noëlle Cordier", "Vanessa Pardis", "Céline Dion"],
   "mediumQuestionOptions": ["Szwajcaria", "Francja", "Niemcy"]  
   },
   {
   "id": 42,
-  "winner": {
-    "title": "Diva",
-    "artist": "Dana International",
-    "year": 1998,
-    "country": "Izrael",
-    "place": "Birmingham (Anglia)"
-    },
+  "songTitle": "Diva",
+  "artist": "Dana International",
+  "year": 1998,
+  "winnerCountry": "Izrael",
+  "place": "Birmingham (Anglia)",
   "simpleQuestionOptions": ["Dana International", "Liora", "Moran Mazor"],
   "mediumQuestionOptions": ["Jugosławia", "Niemcy", "Izrael"]  
   },
   {
   "id": 44,
-  "winner": {
-    "title": "Fly on the Wings of Love",
-    "artist": "Olsen Brothers",
-    "year": 2000,
-    "country": "Dania",
-    "place": "Sztokholm (Szwecja)"
-    },
+  "songTitle": "Fly on the Wings of Love",
+  "artist": "Olsen Brothers",
+  "year": 2000,
+  "winnerCountry": "Dania",
+  "place": "Sztokholm (Szwecja)",
   "simpleQuestionOptions": ["Brotherhood of Man", "Olsen Brothers", "Dorthe Andersen i Martin Loft"],
   "mediumQuestionOptions": ["Szwecja", "Dania", "Francja"]  
   },
   {
   "id": 45,
-  "winner": {
-    "title": "Everybody",
-    "artist": "Tanel Padar, Dave Benton i 2XL",
-    "year": 2001,
-    "country": "Estonia",
-    "place": "Kopenhaga (Dania)"
-    },
-    "simpleQuestionOptions": ["E.N.I.", "Jorgos Alkieos i Przyjaciele", "Tanel Padar, Dave Benton i 2XL"],
-    "mediumQuestionOptions": ["Maroko", "Islandia", "Estonia"]    
+  "songTitle": "Everybody",
+  "artist": "Tanel Padar, Dave Benton i 2XL",
+  "year": 2001,
+  "winnerCountry": "Estonia",
+  "place": "Kopenhaga (Dania)",
+  "simpleQuestionOptions": ["E.N.I.", "Jorgos Alkieos i Przyjaciele", "Tanel Padar, Dave Benton i 2XL"],
+  "mediumQuestionOptions": ["Maroko", "Islandia", "Estonia"]    
   }, 
   {
   "id": 46,
-  "winner": {
-    "title": "I Wanna",
-    "artist": "Marie N",
-    "year": 2002,
-    "country": "Łotwa",
-    "place": "Tallinn (Estonia)"
-    },
-  "simpleQuestionOptions": ["", "Marie N", ""],
+  "songTitle": "I Wanna",
+  "artist": "Marie N",
+  "year": 2002,
+  "winnerCountry": "Łotwa",
+  "place": "Tallinn (Estonia)",
+  "simpleQuestionOptions": ["Pastora Soler", "Marie N", "Moran Mazor"],
   "mediumQuestionOptions": ["Łotwa", "Austria", "Estonia"]    
   },
   {
   "id": 47,
-  "winner": {
-    "title": "Everyway That I Can",
-    "artist": "Sertab Erener",
-    "year": 2003,
-    "country": "Turcja",
-    "place": "Ryga (Łotwa)"
-    },
+  "songTitle": "Everyway That I Can",
+  "artist": "Sertab Erener",
+  "year": 2003,
+  "winnerCountry": "Turcja",
+  "place": "Ryga (Łotwa)",
   "simpleQuestionOptions": ["Julio Iglesias", "Stelios Konstandas", "Sertab Erener"],
   "mediumQuestionOptions": ["Wielka Brytania", "Cypr", "Turcja"]    
   },
   {
   "id": 48,
-  "winner": {
-    "title": "Wild Dances",
-    "artist": "Rusłana",
-    "year": 2004,
-    "country": "Ukraina",
-    "place": "Stambuł (Turcja)"
-    },
+  "songTitle": "Wild Dances",
+  "artist": "Rusłana",
+  "year": 2004,
+  "winnerCountry": "Ukraina",
+  "place": "Stambuł (Turcja)",
   "simpleQuestionOptions": ["Barei", "Rusłana", "Mandinga"],
   "mediumQuestionOptions": ["Ukraina", "Szwajcaria", "Dania"]    
-  
   },
   {
   "id": 49,
-  "winner": {
-    "title": "My Number One",
-    "artist": "Elena Paparizou",
-    "year": 2005,
-    "country": "Grecja",
-    "place": "Kijów (Ukraina)"
-    },
+  "songTitle": "My Number One",
+  "artist": "Elena Paparizou",
+  "year": 2005,
+  "winnerCountry": "Grecja",
+  "place": "Kijów (Ukraina)",
   "simpleQuestionOptions": ["Elena Paparizou", "Nathalie Pâque", "Eleni Fureira"],
   "mediumQuestionOptions": ["Rosja", "Grecja", "Chorwacja"]    
   },
   {
   "id": 50,
-  "winner": {
-    "title": "Hard Rock Hallelujah",
-    "artist": "Lordi",
-    "year": 2006,
-    "country": "Finlandia",
-    "place": "Ateny (Grecja)"
-    },
+  "songTitle": "Hard Rock Hallelujah",
+  "artist": "Lordi",
+  "year": 2006,
+  "winnerCountry": "Finlandia",
+  "place": "Ateny (Grecja)",
   "simpleQuestionOptions": ["Hatari", "IMRI", "Lordi"],
   "mediumQuestionOptions": ["Finlandia", "Norwegia", "Ukraina"]    
   },
   {
   "id": 51,
-  "winner": {
-    "title": "Molitva",
-    "artist": "Marija Šerifović",
-    "year": 2007,
-    "country": "Serbia",
-    "place": "Helsinki (Finlandia)"
-    },
+  "songTitle": "Molitva",
+  "artist": "Marija Šerifović",
+  "year": 2007,
+  "winnerCountry": "Serbia",
+  "place": "Helsinki (Finlandia)",
   "simpleQuestionOptions": ["Elena Paparizou", "Marija Šerifović", "Jelena Tomašević"],
   "mediumQuestionOptions": ["Hiszpania", "Mołdawia", "Serbia"]      
   },
   {
   "id": 52,
-  "winner": {
-    "title": "Believe",
-    "artist": "Dima Biłan",
-    "year": 2008,
-    "country": "Rosja",
-    "place": "Belgrad (Serbia)"
-    },
+  "songTitle": "Believe",
+  "artist": "Dima Biłan",
+  "year": 2008,
+  "winnerCountry": "Rosja",
+  "place": "Belgrad (Serbia)",
   "simpleQuestionOptions": ["Johnny Logan", "Siergiej Łazariew", "Dima Biłan"],
   "mediumQuestionOptions": ["Rosja", "Białoruś", "Turcja"]      
-  
   },
   {
   "id": 53,
-  "winner": {
-    "title": "Fairytale",
-    "artist": "Alexander Rybak",
-    "year": 2009,
-    "country": "Norwegia",
-    "place": "Moskwa (Rosja)"
-    },
+  "songTitle": "Fairytale",
+  "artist": "Alexander Rybak",
+  "year": 2009,
+  "winnerCountry": "Norwegia",
+  "place": "Moskwa (Rosja)",
   "simpleQuestionOptions": ["Alexander Rybak", "Siergiej Łazariew", "Andrius Pojavis"],
   "mediumQuestionOptions": ["Finlandia", "Norwegia", "Gruzja"]      
   },
   {
   "id": 54,
-  "winner": {
-    "title": "Satellite",
-    "artist": "Lena Meyer-Landrut",
-    "year": 2010,
-    "country": "Niemcy",
-    "place": "Oslo (Norwegia)"
-    },
+  "songTitle": "Satellite",
+  "artist": "Lena Meyer-Landrut",
+  "year": 2010,
+  "winnerCountry": "Niemcy",
+  "place": "Oslo (Norwegia)",
   "simpleQuestionOptions": ["Lonnie Devantier", "Lena Meyer-Landrut", "Mélanie Cohl"],
   "mediumQuestionOptions": ["Czechy", "Belgia", "Niemcy"]      
-  
   },
   {
   "id": 55,
-  "winner": {
-    "title": "Running Scared",
-    "artist": "Ell i Nikki",
-    "year": 2011,
-    "country": "Azerbejdżan",
-    "place": "Düsseldorf (Niemcy)"
-    },
+  "songTitle": "Running Scared",
+  "artist": "Ell i Nikki",
+  "year": 2011,
+  "winnerCountry": "Azerbejdżan",
+  "place": "Düsseldorf (Niemcy)",
   "simpleQuestionOptions": ["Ell i Nikki", "Nico i Vlad", "Evridiki i Dimitris Korjalas"],
   "mediumQuestionOptions": ["Cypr", "Azerbejdżan", "Niemcy"]      
   },
   {
   "id": 56,
-  "winner": {
-    "title": "Euphoria",
-    "artist": "Loreen",
-    "year": 2012,
-    "country": "Szwecja",
-    "place": "Baku (Azerbejdżan)"
-    },
+  "songTitle": "Euphoria",
+  "artist": "Loreen",
+  "year": 2012,
+  "winnerCountry": "Szwecja",
+  "place": "Baku (Azerbejdżan)",
   "simpleQuestionOptions": ["Leonora", "Loreen", "Dana International"],
   "mediumQuestionOptions": ["Szwecja", "Wielka Brytania", "Holandia"]      
   },
   {
   "id": 57,
-  "winner": {
-    "title": "Only Teardrops",
-    "artist": "Emmelie de Forest",
-    "year": 2013,
-    "country": "Dania",
-    "place": "Malmö (Szwecja)"
-    },
-    "simpleQuestionOptions": ["Lena Meyer-Landrut", "Pastora Soler", "Emmelie de Forest"],
-    "mediumQuestionOptions": ["Portugalia", "Rosja", "Dania"]      
+  "songTitle": "Only Teardrops",
+  "artist": "Emmelie de Forest",
+  "year": 2013,
+  "winnerCountry": "Dania",
+  "place": "Malmö (Szwecja)",
+  "simpleQuestionOptions": ["Lena Meyer-Landrut", "Pastora Soler", "Emmelie de Forest"],
+  "mediumQuestionOptions": ["Portugalia", "Rosja", "Dania"]      
   },
   {
   "id": 58,
-  "winner": {
-    "title": "Rise Like a Phoenix",
-    "artist": "Conchita Wurst",
-    "year": 2014,
-    "country": "Austria",
-    "place": "Kopenhaga (Dania)"
-    },
+  "songTitle": "Rise Like a Phoenix",
+  "artist": "Conchita Wurst",
+  "year": 2014,
+  "winnerCountry": "Austria",
+  "place": "Kopenhaga (Dania)",
   "simpleQuestionOptions": ["Dana International", "Conchita Wurst", "Elnur Hüseynov"],
   "mediumQuestionOptions": ["Niemcy", "Austria", "Azerbejdżan"]      
   },
   {
   "id": 59,
-  "winner": {
-    "title": "Heroes",
-    "artist": "Måns Zelmerlöw",
-    "year": 2015,
-    "country": "Szwecja",
-    "place": "Wiedeń (Austria)"
-    },
+  "songTitle": "Heroes",
+  "artist": "Måns Zelmerlöw",
+  "year": 2015,
+  "winnerCountry": "Szwecja",
+  "place": "Wiedeń (Austria)",
   "simpleQuestionOptions": ["Måns Zelmerlöw", "Elnur Hüseynov", "Tony Cetinski"],
   "mediumQuestionOptions": ["Szwecja", "Rosja", "Malta"]      
   },
   {
   "id": 60,
-  "winner": {
-    "title": "1944",
-    "artist": "Jamala",
-    "year": 2016,
-    "country": "Ukraina",
-    "place": "Sztokholm (Szwecja)"
-    },
+  "songTitle": "1944",
+  "artist": "Jamala",
+  "year": 2016,
+  "winnerCountry": "Ukraina",
+  "place": "Sztokholm (Szwecja)",
   "simpleQuestionOptions": ["Feminnem", "Netta", "Jamala"],
   "mediumQuestionOptions": ["Armenia", "Czarnogóra", "Ukraina"]      
   },
   {
   "id": 61,
-  "winner": {
-    "title": "Amar pelos dois",
-    "artist": "Salvador Sobral",
-    "year": 2017,
-    "country": "Portugalia",
-    "place": "Kijów (Ukraina)"
-    },
+  "songTitle": "Amar pelos dois",
+  "artist": "Salvador Sobral",
+  "year": 2017,
+  "winnerCountry": "Portugalia",
+  "place": "Kijów (Ukraina)",
   "simpleQuestionOptions": ["Jonatan Cerrada", "Salvador Sobral", "Simon Mathew"],
   "mediumQuestionOptions": ["Hiszpania", "Portugalia", "Serbia"]      
   },
   {
   "id": 62,
-  "winner": {
-    "title": "Toy",
-    "artist": "Netta",
-    "year": 2018,
-    "country": "Izrael",
-    "place": "Lizbona (Portugalia)"
-    },
+  "songTitle": "Toy",
+  "artist": "Netta",
+  "year": 2018,
+  "winnerCountry": "Izrael",
+  "place": "Lizbona (Portugalia)",
   "simpleQuestionOptions": ["Netta", "Xandee", "Agnete"],
   "mediumQuestionOptions": ["Izrael", "San Marino", "Malta"]       
   },
   {
   "id": 63,
-  "winner": {
-    "title": "Arcade",
-    "artist": "Duncan Laurence",
-    "year": 2019,
-    "country": "Holandia",
-    "place": "Tel Awiw-Jafa (Izrael)"
-    },
+  "songTitle": "Arcade",
+  "artist": "Duncan Laurence",
+  "year": 2019,
+  "winnerCountry": "Holandia",
+  "place": "Tel Awiw-Jafa (Izrael)",
   "simpleQuestionOptions": ["Roberto Bellarosa", "Tomas Thordarson", "Duncan Laurence"],
   "mediumQuestionOptions": ["Irlandia", "Szwecja", "Holandia"]       
   }

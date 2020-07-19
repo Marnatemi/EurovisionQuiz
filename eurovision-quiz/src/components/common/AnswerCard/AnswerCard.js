@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card, CardContent, Typography} from '@material-ui/core';
+import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import { makeStyles } from '@material-ui/styles';
 
 const flip = 'flip';
@@ -8,27 +9,27 @@ const useStyles = makeStyles(theme => ({
  cardContainer: {
    width: 220,
    height: 70,
- },
+   '&:hover': {
+     '& figure:first-of-type': {
+      background: '#dddedd',
+      }
+    },
+  },
  card: {
    position: 'relative',
-   width: '100%',
-   height: '100%',
+   ...theme.size.fullByPercent,
    animation: `$${flip} 0.45s ease-in-out forwards`,
    animationDelay: '1.2s',
    transformStyle: 'preserve-3d',
    overflow: 'visible',
    '& figure' : {
-     width: '100%',
-     height: '100%',
+     ...theme.center.flexbox,   
+     ...theme.size.fullByPercent,
      position: 'absolute',
      margin: 0,
-     display: 'flex',
-     justifyContent: 'center',
-     alignItems: 'center',
      flexDirection: 'column',
      borderRadius: 4,
      boxShadow: 'inset -1px -1px 7px 0px #0000001f',
-
    },
    answer: {
      padding: 0,
@@ -42,6 +43,10 @@ const useStyles = makeStyles(theme => ({
  back: {
     background: theme.palette.primary.main,
     border: `2px solid ${theme.palette.primary.main}` ,
+ },
+ note: {
+  border: 'solid 1px #000',
+  borderRadius: '50%',
  },
  [`@keyframes ${flip}`]: {
     '100%': {
@@ -64,7 +69,9 @@ const AnswerCard = ({answer}) => {
           </Typography>
         </CardContent>
       </figure>
-      <figure className={classes.back}></figure>
+      <figure className={classes.back}>
+        <AudiotrackOutlinedIcon className={classes.note} />
+      </figure>
       </Card>
     </div>
   );

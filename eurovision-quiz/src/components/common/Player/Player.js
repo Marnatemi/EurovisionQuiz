@@ -34,6 +34,7 @@ class Player extends React.Component {
       height: '200',
       width: '200',
       playerVars: {
+        //host: 'https://www.youtube.com',
         autoplay: 1,
         start: songStart,
         end: songEnd,
@@ -42,7 +43,8 @@ class Player extends React.Component {
         fs: 0,
         showinfo: 0,
         rel: 1,
-        origin: 'http://localhost:3000',
+        //origin: 'http://localhost:3000',
+        //widget_referrer:'http://localhost:3000',
       },
     };
 

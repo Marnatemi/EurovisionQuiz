@@ -26,8 +26,7 @@ const useStyles = makeStyles(theme => ({
       height: 'calc(100% + 6px)',
       fill: 'transparent',
       '& rect': {
-        width: '100%',
-        height: '100%',
+        ...theme.size.fullByPercent,
         stroke: theme.palette.primary.main,
         strokeWidth: 7,
         strokeDasharray: 1000,
@@ -37,16 +36,10 @@ const useStyles = makeStyles(theme => ({
       }    }, 
   },
   scoreWrapper: {
+    ...theme.center.absolute,
+    ...theme.center.flexbox,
     opacity: 0,
-    display: 'flex',
     fontSize: '2em',
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
     animation: `$${show} 1s forwards`,
     animationDelay: '4.8s',
     '& span': {

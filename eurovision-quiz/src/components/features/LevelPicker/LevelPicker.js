@@ -28,9 +28,7 @@ const useStyles = makeStyles(theme => ({
     margin: '5px 0',
   },
   rating: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    ...theme.center.flexbox,
     fontSize: 50,
     marginBottom: 10,
   },

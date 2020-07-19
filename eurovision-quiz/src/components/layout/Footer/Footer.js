@@ -10,8 +10,6 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'right',
     marginLeft: 10,
     fontSize: 11,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
     justifySelf: "flex-end",
   },
   icon: {

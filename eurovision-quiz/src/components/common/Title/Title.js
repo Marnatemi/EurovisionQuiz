@@ -12,10 +12,8 @@ const subtitle = "subtitle";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    position: 'absolute',
+    ...theme.center.absolute,
     top: '20%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
     lineHeight: 1,
     letterSpacing: '-.07em',
     fontSize: '2em',
@@ -36,12 +34,9 @@ const useStyles = makeStyles(theme => ({
     },
   },
   background: {
+    ...theme.center.absolute,
     width: '150vw',
     height: '150vh',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    position: 'absolute',
     background: '#000',
     zIndex: '-1',
     animation: `$${background} 2.5s forwards`,

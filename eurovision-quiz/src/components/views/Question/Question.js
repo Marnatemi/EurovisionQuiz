@@ -2,11 +2,11 @@ import React from 'react';
 import CorrectAnswer from '../../features/CorrectAnswer/CorrectAnswer';
 import AnswerCard from '../../common/AnswerCard/AnswerCard.js';
 import { makeStyles } from '@material-ui/styles';
-import {Card, CardContent, CardHeader, Chip, Avatar, Modal, Paper} from '@material-ui/core';
+import {Card, CardContent, CardHeader,  Modal} from '@material-ui/core';
 
-const grow = 'grow';
-const growLeft = 'growLeft';
-const growRight = 'growRight';
+const growFirst = 'growFirst';
+const growThird = 'growThird';
+const growSecond = 'growSecond';
 const appear = 'appear'
 
 
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
   header: {
     background: theme.palette.primary.main,
-    color: 'white', 
+    color: '#1f1b0e', 
     margin: '-30px 15px 0px',
     borderRadius: '3px',
     padding: '15px',
@@ -45,16 +45,15 @@ const useStyles = makeStyles(theme => ({
     bottom: '10%',
     marginLeft: -110,
     marginBottom: -35,
-    //transform: 'rotate(90deg) scale(0.5)',
     transform: 'scale(0.5)',
-    animation: `$${grow} 0.65s ease-in-out forwards`,
+    animation: `$${growFirst} 0.65s ease-in-out forwards`,
     animationDelay: '1.2s',
     '&:first-child': {
-      animation: `$${growLeft} 0.6s ease-in-out forwards`,
+      animation: `$${growThird} 0.6s ease-in-out forwards`,
       animationDelay: '1s',
     },
     '&:last-child': {
-      animation: `$${growRight} 0.6s ease-in-out forwards`,
+      animation: `$${growSecond} 0.6s ease-in-out forwards`,
       animationDelay: '1.4s',
     },
   },
@@ -64,27 +63,22 @@ const useStyles = makeStyles(theme => ({
       top: 0,
     },
   },
-  [`@keyframes ${grow}`]: {
+  [`@keyframes ${growFirst}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      //bottom: '65%',
-      //left: '51.5%'
       bottom: '70%',
     }
   },
-  [`@keyframes ${growLeft}`]: {
+  [`@keyframes ${growThird}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      //bottom: '45%',
-      //left: '28.5%',
       bottom: '50%',
     }
   },
-  [`@keyframes ${growRight}`]: {
+  [`@keyframes ${growSecond}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
       bottom: '30%',
-      //left: '71.5%',
     }
   },
 }));

@@ -45,7 +45,6 @@ const useStyles = makeStyles(theme => ({
     height: 50,
     marginBottom: 21.5,
   },
-
   block: {
     height: '0%',
     top: 0,
@@ -118,12 +117,6 @@ const Score = () => {
   const classes = useStyles();
   const [finish, setFinish] = React.useState(false);
 
-  // useEffect(()=> {
-  //   const timer = setTimeout(() => {
-  //     setFinish(true)
-  //   }, demoContent.score * 1000);
-  //   return () => clearTimeout(timer);
-  // })
   useEffect(()=> {
     const timer = setTimeout(() => {
       setFinish(true)
