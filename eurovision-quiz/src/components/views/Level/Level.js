@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Level = () => {
+const Level = ({handler}) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -75,7 +75,7 @@ const Level = () => {
     <h1>Wybierz poziom <HelpOutlineIcon className={classes.icon} onClick={() => handleClick()}/></h1>
     <LevelPicker />
     <YearsPicker />
-    <Button className={classes.button} variant="outlined" size="large" color="primary">START</Button>
+    <Button onClick={() => handler("question song")} className={classes.button} variant="outlined" size="large" color="primary">START</Button>
     </div>
   );
 }

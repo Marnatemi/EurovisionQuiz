@@ -65,8 +65,8 @@ const useStyles = makeStyles(theme => ({
       '&:after': {
         content: "''",
         ...theme.center.absolute,
-        width: '600px',
-        height: '600px',
+        width: '500px',
+        height: '500px',
         border: '2px solid #fff',
         borderRadius: '50%',
         zIndex: 1,
@@ -76,14 +76,14 @@ const useStyles = makeStyles(theme => ({
     'wave': {
       '&:after': {
         top: '50%',
-        width: '600px',
-        height: '600px',
+        width: '500px',
+        height: '500px',
       },
     },
   },
 }));
 
-const Start = () => {
+const Start = ({viewHandler}) => {
   const classes = useStyles();
 
   return (
@@ -94,7 +94,8 @@ const Start = () => {
         <Button className={classes.button}
           variant="outlined"
           color="primary"
-          size="large" >
+          size="large"
+          onClick={() => viewHandler("level")} >
           Graj
         </Button>
       </div>

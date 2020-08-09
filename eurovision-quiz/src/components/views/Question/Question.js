@@ -98,14 +98,33 @@ const demoContent = {
 }
 
 
-const Question = () => {
+const Question = ({level, question, questionChangeHandler, scoreHandler}) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const answers = `questions.${level}QuestionOptions`
+  // const setLevelAnswers = () => {
+  //   if(level === "easy"){
+  //     return {
+  //       question.easyQuestionOptions.map(answer => (
+  //       <div 
+  //       className={classes.answer}
+  //       key={answer}
+  //       onClick={() => handleClick(answer)}
+  //       >
+  //         <AnswerCard answer={answer}/>
+  //       </div>
+  //     ))}}}
+  // console.log(question, answers)
+
 
   const handleClick = (id) => {
-    if(id === demoContent.artist){demoContent.message = "Dobrze!"; console.info('You clicked the', id, demoContent.message);
+    if(id === question.artist){
+      demoContent.message = "Dobrze!";
+      scoreHandler();
     }
-    else{demoContent.message = "Błędna odpowiedź"; console.info('You clicked the', id, demoContent.message);}
+    else {
+    demoContent.message = "Błędna odpowiedź";
+    }
     setOpen(true);
   };
   
@@ -120,13 +139,13 @@ const Question = () => {
               title={'Wskaż wykonawcę utworu'}
             />
         <CardContent className={classes.answers}>
-          {demoContent.answers.map(answer => (
+          {question.easyQuestionOptions.map(answer => (
             <div 
             className={classes.answer}
-            key={answer.id}
-            onClick={() => handleClick(answer.answer)}
+            key={answer}
+            onClick={() => handleClick(answer)}
             >
-              <AnswerCard answer={answer.answer}/>
+              <AnswerCard answer={answer}/>
             </div>
           ))}
           <Modal
@@ -136,7 +155,17 @@ const Question = () => {
             disableEscapeKeyDown={true}
           >
             <div>
-              <CorrectAnswer message={demoContent.message} title={demoContent.title} artist={demoContent.artist} year={demoContent.year} country={demoContent.country} place={demoContent.place}   />
+              <CorrectAnswer 
+                message={demoContent.message}
+                title={question.songTitle} 
+                artist={question.artist} 
+                year={question.year} 
+                country={question.winnerCountry} 
+                place={question.place} 
+                questionChangeHandler={questionChangeHandler}
+                playerStart={question.playerStart}
+                playerEnd={question.playerEnd}
+              />
             </div>
           </Modal>
         </CardContent>

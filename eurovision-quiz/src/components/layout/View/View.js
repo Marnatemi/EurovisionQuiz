@@ -7,7 +7,7 @@ import Score from './../../views/Score/Score';
 import QuestionSong from '../../views/QuestionSong/QuestionSong';
  
 
-const View = ({currentView, questionSongIsReady}) => {
+const View = ({level, currentView, questionSongIsReady, currentQuestion, viewHandler, questionChangeHandler, scoreHandler, score}) => {
   
   const displayLoader = (songIsReady) => {
     let questionSongDisplay = 'none'
@@ -20,26 +20,25 @@ const View = ({currentView, questionSongIsReady}) => {
     return runAnim;
   }
 
-
   if (currentView === 'start')
     return (
-      <Start />
+      <Start viewHandler={viewHandler}/>
     );
   else if (currentView === 'level')
     return (
-      <Level/>
+      <Level handler={viewHandler}/>
     );
   else if (currentView === 'question')
     return (
-      <Question/>
+      <Question level={level} question={currentQuestion} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}  />
     );
   else if (currentView === 'question song')
     return (
-      <QuestionSong displayLoader={displayLoader(questionSongIsReady)} runAnim={runAnim(questionSongIsReady)}/>
+      <QuestionSong displayLoader={displayLoader(questionSongIsReady)} runAnim={runAnim(questionSongIsReady)} handler={viewHandler} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
     );
   else if (currentView === 'score')
     return (
-      <Score />
+      <Score score={score} />
     );
 }
 

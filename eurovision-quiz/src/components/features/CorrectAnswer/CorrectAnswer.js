@@ -3,6 +3,7 @@ import Player from '../../common/Player/Player';
 import {CardContent, Typography, Divider  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import ModalCard from '../../common/ModalCard/ModalCard';
+import QuestionSong from '../../views/QuestionSong/QuestionSong';
 
 const useStyles = makeStyles(theme => ({
 
@@ -12,11 +13,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Answer = ({title, year, artist, country, place, message}) => {
+const Answer = ({title, year, artist, country, place, message, questionChangeHandler, playerStart, playerEnd}) => {
   const classes = useStyles();
 
   return (
-    <ModalCard message={message} button="dalej">
+    <ModalCard message={message} button="dalej" handler={questionChangeHandler}>
       <CardContent>
         <Typography align="center">
         Utwór ten pod tytułem "
@@ -29,7 +30,7 @@ const Answer = ({title, year, artist, country, place, message}) => {
       </CardContent>
       <Divider variant="middle" />
       <CardContent className={classes.player}>
-        <Player />
+        <Player songStart={playerStart} songEnd={playerEnd}/>
       </CardContent>
     </ModalCard>
   );

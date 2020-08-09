@@ -113,13 +113,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const QuestionSong = (props) => {
-
+  console.log(props);
   const classes = useStyles(props);
-  console.log(props)
   return(
     <div className={classes.component}> 
       <div className={classes.player}>
-        <Player songStart={634} songEnd={648} />
+        <Player songStart={props.playerStart} songEnd={props.playerEnd} handler={()=> props.handler("question")}/>
       </div>    
       <div className={classes.componentAnimation}> 
         <div className={classes.playerLoader}>

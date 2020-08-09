@@ -108,12 +108,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const demoContent = {
-  score: 3,
-}
 
-
-const Score = () => {
+const Score = ({score}) => {
   const classes = useStyles();
   const [finish, setFinish] = React.useState(false);
 
@@ -137,7 +133,7 @@ const Score = () => {
           <h1 className={classes.title}>Twój wynik :</h1>
         </div>
         <ScoreCounter  
-          scoreNumber={demoContent.score}
+          scoreNumber={score}
         />
         <Confetti 
           width={window.innerWidth}

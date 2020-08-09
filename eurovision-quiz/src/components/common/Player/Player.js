@@ -24,6 +24,7 @@ class Player extends React.Component {
     this.state = {
       isLoading: true
     }
+    console.log(props);
   }
 
 
@@ -31,14 +32,14 @@ class Player extends React.Component {
     const { classes, songStart, songEnd } = this.props;
     console.log(this.state);
     const opts = {
-      height: '200',
-      width: '200',
+      height: '260',
+      //width: '300',
       playerVars: {
         //host: 'https://www.youtube.com',
         autoplay: 1,
         start: songStart,
         end: songEnd,
-        controls: 0,
+        controls: 1, //powinno być 0!!!!!!
         disablekb: 1,
         fs: 0,
         showinfo: 0,
@@ -50,7 +51,7 @@ class Player extends React.Component {
 
     return (
       <div>
-        <div className={this.state.isLoading ? `${classes.active}` : `${classes.hide}` }>
+        <div className={this.state.isLoading ? `${classes.active}` : `${classes.hide}`}>
           <Skeleton variant="text" width={210} />
           <Skeleton variant="circle" width={40} height={40} />
           <Skeleton variant="rect" width={210} height={118} />
@@ -69,6 +70,9 @@ class Player extends React.Component {
   }
   onEnded() {
     console.log('ENDED!!!')
+    if ( this.props.handler !== undefined){
+      this.props.handler("question")
+    }
   }
 }
 
