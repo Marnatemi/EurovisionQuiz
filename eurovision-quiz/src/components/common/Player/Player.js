@@ -5,9 +5,11 @@ import { withStyles } from '@material-ui/core/styles';
 
 const useStyles = ({
   active: {
+    width: '60%',
+    height: 260,
+    marginTop: 40,
     left: '50%',
     transform: 'translateX(-50%)',
-    width: 210,
     position: 'absolute',
   },
   hide: {
@@ -29,17 +31,17 @@ class Player extends React.Component {
 
 
   render() {
-    const { classes, songStart, songEnd } = this.props;
+    const { classes, songStart, songEnd, songId } = this.props;
     console.log(this.state);
     const opts = {
       height: '260',
-      //width: '300',
+      width: '100%',
       playerVars: {
         //host: 'https://www.youtube.com',
         autoplay: 1,
         start: songStart,
         end: songEnd,
-        controls: 1, //powinno być 0!!!!!!
+        controls: 0, 
         disablekb: 1,
         fs: 0,
         showinfo: 0,
@@ -49,14 +51,24 @@ class Player extends React.Component {
       },
     };
 
+    const setVideoId = () => {
+      let videoId = "MB8cNvZ5ymQ"
+      if (songId === 62 || songId === 63){videoId = "GCIa80rd7sM"}
+      return videoId
+    }
+
     return (
       <div>
         <div className={this.state.isLoading ? `${classes.active}` : `${classes.hide}`}>
-          <Skeleton variant="text" width={210} />
+          <Skeleton variant="text" width={'100%'} />
           <Skeleton variant="circle" width={40} height={40} />
-          <Skeleton variant="rect" width={210} height={118} />
+          <Skeleton variant="rect" width={"100%"} height={118} />
         </div>
-      <YouTube videoId="MB8cNvZ5ymQ" opts={opts} onReady={this.onReady} onEnd={this.onEnded} />
+        {console.log(songId, setVideoId())}
+      <YouTube videoId={setVideoId()} opts={opts} onReady={this.onReady} onEnd={this.onEnded} />
+      {/* GCIa80rd7sM ten last */}
+      {/* MB8cNvZ5ymQ */}
+
 
       </div>
     );

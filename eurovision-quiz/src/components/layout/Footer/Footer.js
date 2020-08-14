@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 10,
     fontSize: 11,
     justifySelf: "flex-end",
+    zIndex: -1,
   },
   icon: {
     textTransform: 'uppercase',

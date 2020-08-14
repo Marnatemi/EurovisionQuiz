@@ -118,7 +118,7 @@ const QuestionSong = (props) => {
   return(
     <div className={classes.component}> 
       <div className={classes.player}>
-        <Player songStart={props.playerStart} songEnd={props.playerEnd} handler={()=> props.handler("question")}/>
+        <Player songId={props.question.id} songStart={props.question.playerStart} songEnd={props.question.playerEnd} handler={()=> props.handler("question")}/>
       </div>    
       <div className={classes.componentAnimation}> 
         <div className={classes.playerLoader}>

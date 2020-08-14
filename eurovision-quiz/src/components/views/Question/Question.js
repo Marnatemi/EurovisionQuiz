@@ -163,6 +163,7 @@ const Question = ({level, question, questionChangeHandler, scoreHandler}) => {
                 country={question.winnerCountry} 
                 place={question.place} 
                 questionChangeHandler={questionChangeHandler}
+                songId={question.id}
                 playerStart={question.playerStart}
                 playerEnd={question.playerEnd}
               />

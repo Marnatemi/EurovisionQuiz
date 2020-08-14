@@ -34,7 +34,7 @@ const View = ({level, currentView, questionSongIsReady, currentQuestion, viewHan
     );
   else if (currentView === 'question song')
     return (
-      <QuestionSong displayLoader={displayLoader(questionSongIsReady)} runAnim={runAnim(questionSongIsReady)} handler={viewHandler} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
+      <QuestionSong displayLoader={displayLoader(questionSongIsReady)} runAnim={runAnim(questionSongIsReady)} handler={viewHandler} question={currentQuestion} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
     );
   else if (currentView === 'score')
     return (

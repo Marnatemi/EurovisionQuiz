@@ -7,6 +7,7 @@ import levelQuestions from './data/levelQuestions';
 import View from './components/layout/View/View';
 import Footer from './components/layout/Footer/Footer';
 import Player from './components/common/Player/Player';
+import CorrectAnswer from './components/features/CorrectAnswer/CorrectAnswer';
 
 import './App.css';
 
@@ -85,7 +86,7 @@ class App extends React.Component {
 
       this.setState(
         () => {
-          const questions = [];
+         const questions = [];
           const randomizedQuestions = [];
     
           for (let question of quizData){

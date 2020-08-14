@@ -8,8 +8,8 @@
   "year": 1956,
   "winnerCountry": "Szwajcaria",
   "place": "Lugano (Szwajcaria)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Liane Augustin", "Lys Assia", "Semiha Yankı"],
+  "mediumQuestionOptions": ["Francja", "San Marino", "Szwajcaria"]  
   },       
   {
   "id": 2,
@@ -20,8 +20,8 @@
   "year": 1957,
   "winnerCountry": "Holandia",
   "place": "Frankfurt (Niemcy)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Margot Hielscher", "Danièle Dupré", "Corry Brokken"],
+  "mediumQuestionOptions": ["Holandia", "Belgia", "Turcja"]  
   },       
   {
   "id": 3,
@@ -32,8 +32,8 @@
   "year": 1958,
   "winnerCountry": "Francja",
   "place": "Hilversum (Holandia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["André Claveau", "Dario Campeotto", "Eduardo Nascimento"],
+  "mediumQuestionOptions": ["Portugalia", "Francja", "Szwajcaria"]  
   },       
   {
   "id": 4,
@@ -44,8 +44,8 @@
   "year": 1959,
   "winnerCountry": "Holandia",
   "place": "Cannes (Francja)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Simone de Oliveira", "Teddy Scholten", "Dany Dauberson"],
+  "mediumQuestionOptions": ["Rumunia", "Dania", "Holandia"]  
   },       
   {
   "id": 5,
@@ -56,8 +56,8 @@
   "year": 1960,
   "winnerCountry": "Francja",
   "place": "Londyn (Anglia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Jacques Philippe", "Kirsti Sparboe", "Jacqueline Boyerl"],
+  "mediumQuestionOptions": ["Francja", "Luksemburg", "Norwegia"]  
   },       
   {
   "id": 6,
@@ -68,8 +68,8 @@
   "year": 1961,
   "winnerCountry": "Luksemburg",
   "place": "Cannes (Francja)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Jean-Claude Pascal", "Jacques Raymond", "Jimmy Makulis"],
+  "mediumQuestionOptions": ["Austria", "Luksemburg", "Grecja"]  
   },       
   {
   "id": 7,
@@ -80,8 +80,8 @@
   "year": 1962,
   "winnerCountry": "Francja",
   "place": "Luksemburg (Luksemburg)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Nana Mouskouri", "Isabelle Aubret", "Lize Marke"],
+  "mediumQuestionOptions": ["Belgia", "Holandia", "Francja"]  
   },       
   {
   "id": 8,
@@ -92,8 +92,8 @@
   "year": 1963,
   "winnerCountry": "Dania",
   "place": "Londyn (Anglia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Stavros i Constantina", "Nilüfer i Nazar", "Grethe i Jørgen Ingmannow"],
+  "mediumQuestionOptions": ["Dania", "Finlandia", "Niemcy"]  
   },       
   {
   "id": 9,
@@ -116,8 +116,8 @@
   "year": 1965,
   "winnerCountry": "Luksemburg",
   "place": "Neapol (Włochy)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Noëlle Cordier", "France Gall", "Birgit Brüel"],
+  "mediumQuestionOptions": ["Monako", "Holandia", "Luksemburg"]  
   },       
   {
   "id": 11,
@@ -128,8 +128,8 @@
   "year": 1966,
   "winnerCountry": "Austria",
   "place": "Luksemburg (Luksemburg)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Udo Jürgens", "Jean-Paul Mauric", "Eduardo Nascimento"],
+  "mediumQuestionOptions": ["Hiszpania", "Austria", "Luksemburg"]  
   },       
   {
   "id": 12,
@@ -140,8 +140,8 @@
   "year": 1967,
   "winnerCountry": "Wielka Brytania",
   "place": "Wiedeń (Austria)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Inge Brück", "Tonicha", "Sandie Shaw"],
+  "mediumQuestionOptions": ["Wielka Brytania", "Norwegia", "Szwajcaria"]  
   },       
   {
   "id": 13,
@@ -164,8 +164,8 @@
   "year": 1970,
   "winnerCountry": "Irlandia",
   "place": "Amsterdam (Holandia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Dana", "Tonia", "Sonia"],
+  "mediumQuestionOptions": ["Wielka Brytania", "Irlandia", "Belgia"]  
   },       
   {
   "id": 15,
@@ -176,8 +176,8 @@
   "year": 1971,
   "winnerCountry": "Monako",
   "place": "Dublin (Irlandia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Rachel", "Séverine", "Ulla Pia"],
+  "mediumQuestionOptions": ["Francja", "Dania", "Monako"]  
   },       
   {
   "id": 16,
@@ -188,8 +188,8 @@
   "year": 1972,
   "winnerCountry": "Luksemburg",
   "place": "Edynburg (Szkocja)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Dominique Dussault", "Veronique Müller", "Vicky Leandros"],
+  "mediumQuestionOptions": ["Luksemburg", "Monako", "Jugosławia"]  
   },       
   {
   "id": 17,
@@ -200,8 +200,8 @@
   "year": 1973,
   "winnerCountry": "Luksemburg",
   "place": "Luksemburg (Luksemburg)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Mariella Farré", "Mia Martini", "Anne-Marie David"],
+  "mediumQuestionOptions": ["Szwajcaria", "Luksemburg", "Portugalia"]  
   },       
   {
   "id": 18,
@@ -212,7 +212,7 @@
   "year": 1974,
   "winnerCountry": "Szwecja",
   "place": "Brighton (Anglia)",
-  "easyQuestionOptions": ["Bananarama", "ABBA", "KEiiNO"],
+  "easyQuestionOptions": ["Waterloo & Robinson", "ABBA", "KEiiNO"],
   "mediumQuestionOptions": ["Norwegia", "Wielka Brytania", "Szwecja"]  
   },
   {
@@ -261,8 +261,8 @@
   "year": 1978,
   "winnerCountry": "Izrael",
   "place": "Paryż (Francja)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Modern Folk Trio i Ayşegül", "Jizhar Kohen i Alphabeta", "Os Amigos"],
+  "mediumQuestionOptions": ["Austria", "Portugalia", "Izrael"]  
   },     
   {
   "id": 23,
@@ -273,8 +273,8 @@
   "year": 1979,
   "winnerCountry": "Izrael",
   "place": "Jerozolima (Izrael)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Münchener Freiheit", "Park Café", "Gali Atari i Milk and Honey"],
+  "mediumQuestionOptions": ["Izrael", "Francja", "Włochy"]  
   },     
   {
   "id": 24,
@@ -297,8 +297,8 @@
   "year": 1981,
   "winnerCountry": "Wielka Brytania",
   "place": "Dublin (Irlandia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Bucks Fizz", "Mess", "De Spelbrekers"],
+  "mediumQuestionOptions": ["Szwecja", "Wielka Brytania", "Luksemburg"]  
   },     
   {
   "id": 26,
@@ -309,8 +309,8 @@
   "year": 1982,
   "winnerCountry": "Niemcy",
   "place": "Harrogate (Anglia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Sophie", "Vajta", "Nicole"],
+  "mediumQuestionOptions": ["Niemcy", "Jugosławia", "Monako"]  
   },     
   {
   "id": 27,
@@ -321,8 +321,8 @@
   "year": 1983,
   "winnerCountry": "Luksemburg",
   "place": "Monachium (Niemcy)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Nathalie Pâque", "Corinne Hermès", "Anita Spanner"],
+  "mediumQuestionOptions": ["Francja", "Austria", "Luksemburg"]  
   },     
   {
   "id": 28,
@@ -333,8 +333,8 @@
   "year": 1985,
   "winnerCountry": "Szwecja",
   "place": "Luksemburg (Luksemburg)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Herreys", "Maxi & Chris Garden", "Brixx"],
+  "mediumQuestionOptions": ["Izrael", "Szwecja", "Niemcy"]  
   },     
   {
   "id": 29,
@@ -345,8 +345,8 @@
   "year": 1985,
   "winnerCountry": "Norwegia",
   "place": "Göteborg (Szwecja)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["ABBA", "Duo Datz", "Bobbysocks"],
+  "mediumQuestionOptions": ["Norwegia", "Szwecja", "Szwajcaria"]  
   },     
   {
   "id": 30,
@@ -357,8 +357,8 @@
   "year": 1986,
   "winnerCountry": "Belgia",
   "place": "Bergen (Norwegia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Lara Fabian", "Sandra Kim", "Maria Rita"],
+  "mediumQuestionOptions": ["Luksemburg", "Turcja", "Belgia"]  
   },     
   {
   "id": 31,
@@ -369,8 +369,8 @@
   "year": 1987,
   "winnerCountry": "Irlandia",
   "place": "Bruksela (Belgia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Johnny Logan", "Jizhar Kohen", "Gerard Joling"],
+  "mediumQuestionOptions": ["Izrael", "Irlandia", "Holandia"]  
   },    
   {
   "id": 32,
@@ -393,8 +393,8 @@
   "year": 1989,
   "winnerCountry": "Jugosławia",
   "place": "Lozanna (Szwajcaria)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Pihasoittajat", "Franka", "Riva"],
+  "mediumQuestionOptions": ["Norwegia", "Grecja", "Jugosławia"]  
   },    
   {
   "id": 34,
@@ -405,8 +405,8 @@
   "year": 1990,
   "winnerCountry": "Włochy",
   "place": "Zagrzeb (Chorwacja)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Toto Cutugno", "Tó Cruz", "Konstandinos Christoforu"],
+  "mediumQuestionOptions": ["Cypr", "Włochy", "Portugalia"]  
   },  
   {
   "id": 35,
@@ -417,8 +417,8 @@
   "year": 1991,
   "winnerCountry": "Szwecja",
   "place": "Rzym (Włochy)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Wind", "Carola", "Stella"],
+  "mediumQuestionOptions": ["Szwecja", "Belgia", "Niemcy"]  
   },  
   {
   "id": 36,
@@ -429,8 +429,8 @@
   "year": 1992,
   "winnerCountry": "Irlandia",
   "place": "Malmö (Szwecja)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Linda Martin", "Ingrid Peters", "Aylin Vatankoş"],
+  "mediumQuestionOptions": ["Wielka Brytania", "Niemcy", "Irlandia"]  
   },  
   {
   "id": 37,
@@ -441,8 +441,8 @@
   "year": 1993,
   "winnerCountry": "Irlandia",
   "place": "Millstreet (Irlandia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Ana Wisi", "Paola del Medico", "Niamh Kavanagh"],
+  "mediumQuestionOptions": ["Szwajcaria", "Irlandia", "Cypr"]  
   },
   {
   "id": 38,
@@ -453,8 +453,8 @@
   "year": 1994,
   "winnerCountry": "Irlandia",
   "place": "Dublin (Irlandia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Anti Social Media", "Paul Harrington i Charlie McGettigan", "Markku Aro & Koivistolaiset"],
+  "mediumQuestionOptions": ["Irlandia", "Dania", "Holandia"]  
   },
   {
   "id": 39,
@@ -465,8 +465,8 @@
   "year": 1995,
   "winnerCountry": "Norwegia",
   "place": "Dublin (Irlandia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Nocturne", "Dragon Fly", "The Ark"],
+  "mediumQuestionOptions": ["Chorwacja", "Włochy", "Norwegia"]  
   },
   {
   "id": 40,
@@ -477,8 +477,8 @@
   "year": 1996,
   "winnerCountry":  "Irlandia",
   "place": "Oslo (Norwegia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Monica Aspelund", "Tanja", "Eimear Quinn"],
+  "mediumQuestionOptions": ["Irlandia", "Finlandia", "Hiszpania"]  
   },
   {
   "id": 41,
@@ -489,8 +489,8 @@
   "year": 1997,
   "winnerCountry":  "Wielka Brytania",
   "place": "Dublin (Irlandia)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["The Islanders", "Katrina & The Waves", "Belle i The Devotions"],
+  "mediumQuestionOptions": ["Malta", "Wielka Brytania", "Estonia"]  
   },
   {
   "id": 42,
@@ -502,7 +502,7 @@
   "winnerCountry": "Izrael",
   "place": "Birmingham (Anglia)",
   "easyQuestionOptions": ["Dana International", "Liora", "Moran Mazor"],
-  "mediumQuestionOptions": ["Jugosławia", "Niemcy", "Izrael"]  
+  "mediumQuestionOptions": ["Jugosławia", "Turcja", "Izrael"]  
   },
   {
   "id": 43,
@@ -513,8 +513,8 @@
   "year": 1999,
   "winnerCountry": "Szwecja",
   "place": "Jerozolima (Izrael)",
-  "easyQuestionOptions": ["", "", ""],
-  "mediumQuestionOptions": ["", "", ""]  
+  "easyQuestionOptions": ["Kikki Danielsson", "Evridiki", "Charlotte Nilsson"],
+  "mediumQuestionOptions": ["Szwecja", "Islandia", "Wielka Brytania"]  
   },
   {
   "id": 44,
@@ -663,7 +663,7 @@
   {
   "id": 56,
   "songTitle": "Euphoria",
-  "playerStart": 80,
+  "playerStart": 79,
   "playerEnd": 96,
   "artist": "Loreen",
   "year": 2012,
@@ -735,20 +735,20 @@
   {
   "id": 62,
   "songTitle": "Toy",
-  "playerStart": 634,
-  "playerEnd": 635,
+  "playerStart": 183,
+  "playerEnd": 198,
   "artist": "Netta",
   "year": 2018,
   "winnerCountry": "Izrael",
   "place": "Lizbona (Portugalia)",
   "easyQuestionOptions": ["Netta", "Xandee", "Agnete"],
-  "mediumQuestionOptions": ["Izrael", "San Marino", "Malta"]       
+  "mediumQuestionOptions": ["Izrael", "San Marino", "Albania"]       
   },
   {
   "id": 63,
   "songTitle": "Arcade",
-  "playerStart": 634,
-  "playerEnd": 635,
+  "playerStart": 200,
+  "playerEnd": 218,
   "artist": "Duncan Laurence",
   "year": 2019,
   "winnerCountry": "Holandia",

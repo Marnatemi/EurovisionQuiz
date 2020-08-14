@@ -8,12 +8,11 @@ import QuestionSong from '../../views/QuestionSong/QuestionSong';
 const useStyles = makeStyles(theme => ({
 
   player: {
-    height: '200px',
     padding: '5px',
   },
 }));
 
-const Answer = ({title, year, artist, country, place, message, questionChangeHandler, playerStart, playerEnd}) => {
+const Answer = ({title, year, artist, country, place, message, questionChangeHandler, playerStart, playerEnd, songId}) => {
   const classes = useStyles();
 
   return (
@@ -21,7 +20,7 @@ const Answer = ({title, year, artist, country, place, message, questionChangeHan
       <CardContent>
         <Typography align="center">
         Utwór ten pod tytułem "
-        <Typography variant="button" color="primary"> {title} </Typography>" mogliśmy usłyszeć na eurowizyjnej scenie w 
+        <Typography variant="button" color="primary"> {title} </Typography>" mogliśmy usłyszeć na eurowizyjnej scenie w mieście
         <Typography variant="button" color="primary"> {place}</Typography> w 
         <Typography variant="button" color="primary"> {year}</Typography> roku w wykonaniu 
         <Typography variant="button" color="primary"> {artist}</Typography>, reprezentując 
@@ -30,7 +29,7 @@ const Answer = ({title, year, artist, country, place, message, questionChangeHan
       </CardContent>
       <Divider variant="middle" />
       <CardContent className={classes.player}>
-        <Player songStart={playerStart} songEnd={playerEnd}/>
+        <Player songId={songId} songStart={playerStart} songEnd={playerEnd}/>
       </CardContent>
     </ModalCard>
   );
