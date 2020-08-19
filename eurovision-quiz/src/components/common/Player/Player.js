@@ -52,8 +52,8 @@ class Player extends React.Component {
     };
 
     const setVideoId = () => {
-      let videoId = "MB8cNvZ5ymQ"
-      if (songId === 62 || songId === 63){videoId = "GCIa80rd7sM"}
+      let videoId = "MB8cNvZ5ymQ" // from 1956 to 2017
+      if (songId === 62 || songId === 63){videoId = "GCIa80rd7sM"} // 2018, 2019
       return videoId
     }
 
@@ -64,12 +64,7 @@ class Player extends React.Component {
           <Skeleton variant="circle" width={40} height={40} />
           <Skeleton variant="rect" width={"100%"} height={118} />
         </div>
-        {console.log(songId, setVideoId())}
       <YouTube videoId={setVideoId()} opts={opts} onReady={this.onReady} onEnd={this.onEnded} />
-      {/* GCIa80rd7sM ten last */}
-      {/* MB8cNvZ5ymQ */}
-
-
       </div>
     );
   }

@@ -61,10 +61,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: "easy",
+      level: "expert",
       period: {
-        from: 1999, 
-        to: 2019
+        from: 1989, 
+        to: 2009
       },
       questions: [],
       currentQuestion: 0,
@@ -86,7 +86,7 @@ class App extends React.Component {
 
       this.setState(
         () => {
-         const questions = [];
+          const questions = [];
           const randomizedQuestions = [];
     
           for (let question of quizData){
@@ -161,6 +161,7 @@ class App extends React.Component {
             questionChangeHandler={this.questionChangeHandler} 
             scoreHandler={this.scoreHandler}
             score={this.state.score}
+            period={this.state.period}
           />
           {/* <Player /> */}
           <Footer status={hide()} />

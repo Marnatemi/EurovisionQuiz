@@ -98,27 +98,51 @@ const demoContent = {
 }
 
 
-const Question = ({level, question, questionChangeHandler, scoreHandler}) => {
+const Question = ({level, question, period, questionChangeHandler, scoreHandler}) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const answers = `questions.${level}QuestionOptions`
-  // const setLevelAnswers = () => {
-  //   if(level === "easy"){
-  //     return {
-  //       question.easyQuestionOptions.map(answer => (
-  //       <div 
-  //       className={classes.answer}
-  //       key={answer}
-  //       onClick={() => handleClick(answer)}
-  //       >
-  //         <AnswerCard answer={answer}/>
-  //       </div>
-  //     ))}}}
-  // console.log(question, answers)
+  let questionOptions = []
+  const setLevelAnswers = () => {
+    if (level === 'easy'){
+      questionOptions = question.easyQuestionOptions
+    } else if (level === 'medium'){
+      questionOptions = question.mediumQuestionOptions
+    } else if (level === 'expert'){
+      questionOptions = [question.year]
+      while (questionOptions.length < 3) {
+        const randomYear = Math.floor(Math.random() * (period.to - period.from + 1)) + period.from;
+
+        if(questionOptions.indexOf(randomYear) === -1){
+          questionOptions.push(randomYear);
+        } 
+  
+      }
+      console.log('questionOptions START',questionOptions)
+      const randomizedQuestionOptions = []
+      for( let i = 0; i < 3; i++ ){
+        const randomElement = Math.floor(Math.random() * (questionOptions.length))
+        randomizedQuestionOptions.push(questionOptions[randomElement])
+        questionOptions.splice(randomElement, 1)
+        console.log("randomElement",randomElement, "randomizedQuestionOptions AFTER PUSH", randomizedQuestionOptions)
+        console.log("questionOptions AFTER SPLICE", questionOptions)
+      }
+      // randomizedQuestionOptions.push(questionOptions[0])
+      // questionOptions.splice(0, 1)
+      // console.log("randomizedQuestionOptions AFTER PUSH", randomizedQuestionOptions)
+      // console.log("questionOptions AFTER SPLICE", questionOptions)
+
+
+      questionOptions = randomizedQuestionOptions
+      console.log("questionOptions FINAL", questionOptions)
+    }
+
+    return questionOptions 
+  }
+  console.log(level, question, questionOptions)
 
 
   const handleClick = (id) => {
-    if(id === question.artist){
+    if(id === question.artist || id === question.winnerCountry || id === question.year){
       demoContent.message = "Dobrze!";
       scoreHandler();
     }
@@ -132,6 +156,8 @@ const Question = ({level, question, questionChangeHandler, scoreHandler}) => {
     setOpen(false);
   };
 
+  setLevelAnswers()
+
   return (
       <Card className={classes.card}>
           <CardHeader
@@ -139,7 +165,7 @@ const Question = ({level, question, questionChangeHandler, scoreHandler}) => {
               title={'Wskaż wykonawcę utworu'}
             />
         <CardContent className={classes.answers}>
-          {question.easyQuestionOptions.map(answer => (
+          {questionOptions.map(answer => (
             <div 
             className={classes.answer}
             key={answer}
