@@ -3,6 +3,7 @@ import CorrectAnswer from '../../features/CorrectAnswer/CorrectAnswer';
 import AnswerCard from '../../common/AnswerCard/AnswerCard.js';
 import { makeStyles } from '@material-ui/styles';
 import {Card, CardContent, CardHeader,  Modal} from '@material-ui/core';
+import levelQuestions from '../../../data/levelQuestions.json';
 
 const growFirst = 'growFirst';
 const growThird = 'growThird';
@@ -57,6 +58,13 @@ const useStyles = makeStyles(theme => ({
       animationDelay: '1.4s',
     },
   },
+  'questionNumber': {
+    alignSelf: 'flex-end',
+    marginRight: 20,
+    fontFamily: 'Anton',
+    color: theme.palette.primary.main,
+    letterSpacing: 1.5,
+  },
   [`@keyframes ${appear}`]: {
     '100%': {
       opacity: 1,
@@ -83,71 +91,60 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const demoContent = {
-  title: "L’oiseau et l’enfant",
-  artist: "Marie Myriam",
-  year: 1977,
-  country: "Francja",
-  place: "Londyn (Anglia)",
-  answers: [
-    {id: 'A', answer: "Marie Myriam" },
-    {id: 'B', answer: "Celine Dion Marie Myriam" },
-    {id: 'C', answer: "Massiel"}
-  ],
-  message: "",
-}
+let answerMessage = ""
 
 
-const Question = ({level, question, period, questionChangeHandler, scoreHandler}) => {
+
+const Question = ({level, question, period, questionNumber, questionChangeHandler, scoreHandler}) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  let questionOptions = []
+  let answerOptions = []
+  const setLevelQuestion = () => {
+    let levelQuestion = ''
+    if (level === 'easy'){
+      levelQuestion = levelQuestions[0]
+    } else if (level === 'medium'){
+      levelQuestion = levelQuestions[1]
+    } else if (level === 'expert'){
+      levelQuestion = levelQuestions[2]
+    }
+    return levelQuestion;
+  }
   const setLevelAnswers = () => {
     if (level === 'easy'){
-      questionOptions = question.easyQuestionOptions
+      answerOptions = question.easyQuestionOptions
     } else if (level === 'medium'){
-      questionOptions = question.mediumQuestionOptions
+      answerOptions = question.mediumQuestionOptions
     } else if (level === 'expert'){
-      questionOptions = [question.year]
-      while (questionOptions.length < 3) {
+      answerOptions = [question.year]
+      while (answerOptions.length < 3) {
         const randomYear = Math.floor(Math.random() * (period.to - period.from + 1)) + period.from;
-
-        if(questionOptions.indexOf(randomYear) === -1){
-          questionOptions.push(randomYear);
+        if(answerOptions.indexOf(randomYear) === -1){
+          answerOptions.push(randomYear);
         } 
-  
       }
-      console.log('questionOptions START',questionOptions)
-      const randomizedQuestionOptions = []
+      const expertQuestionOptions = []
       for( let i = 0; i < 3; i++ ){
-        const randomElement = Math.floor(Math.random() * (questionOptions.length))
-        randomizedQuestionOptions.push(questionOptions[randomElement])
-        questionOptions.splice(randomElement, 1)
-        console.log("randomElement",randomElement, "randomizedQuestionOptions AFTER PUSH", randomizedQuestionOptions)
-        console.log("questionOptions AFTER SPLICE", questionOptions)
+        const randomElement = Math.floor(Math.random() * (answerOptions.length))
+        expertQuestionOptions.push(answerOptions[randomElement])
+        answerOptions.splice(randomElement, 1)
       }
-      // randomizedQuestionOptions.push(questionOptions[0])
-      // questionOptions.splice(0, 1)
-      // console.log("randomizedQuestionOptions AFTER PUSH", randomizedQuestionOptions)
-      // console.log("questionOptions AFTER SPLICE", questionOptions)
 
-
-      questionOptions = randomizedQuestionOptions
-      console.log("questionOptions FINAL", questionOptions)
+      answerOptions = expertQuestionOptions
     }
 
-    return questionOptions 
+    return answerOptions 
   }
-  console.log(level, question, questionOptions)
+  console.log(level, question, answerOptions)
 
 
   const handleClick = (id) => {
     if(id === question.artist || id === question.winnerCountry || id === question.year){
-      demoContent.message = "Dobrze!";
+      answerMessage = "Dobrze!";
       scoreHandler();
     }
     else {
-    demoContent.message = "Błędna odpowiedź";
+      answerMessage = "Błędna odpowiedź";
     }
     setOpen(true);
   };
@@ -160,12 +157,15 @@ const Question = ({level, question, period, questionChangeHandler, scoreHandler}
 
   return (
       <Card className={classes.card}>
-          <CardHeader
+        <CardHeader
               className={classes.header}
-              title={'Wskaż wykonawcę utworu'}
-            />
+              title={setLevelQuestion()}
+        />
+        <h4 className={classes.questionNumber}>
+          <span>{questionNumber}</span>/10
+        </h4>
         <CardContent className={classes.answers}>
-          {questionOptions.map(answer => (
+          {answerOptions.map(answer => (
             <div 
             className={classes.answer}
             key={answer}
@@ -182,7 +182,7 @@ const Question = ({level, question, period, questionChangeHandler, scoreHandler}
           >
             <div>
               <CorrectAnswer 
-                message={demoContent.message}
+                message={answerMessage}
                 title={question.songTitle} 
                 artist={question.artist} 
                 year={question.year} 

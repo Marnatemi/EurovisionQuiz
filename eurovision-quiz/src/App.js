@@ -19,8 +19,8 @@ const theme = createMuiTheme({
       light: '#f0f2ef',
     }, 
     secondary: {
-      main: '#ce581f',
-      dark: '#97a6ab',
+      main: '#97a6ab',
+      //lol: '#ce581f',
     },
   },
   typography: {
@@ -61,21 +61,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: "expert",
+      level: "medium",
       period: {
-        from: 1989, 
-        to: 2009
+        from: 1956, 
+        to: 1980
       },
       questions: [],
       currentQuestion: 0,
       currentView: "start",
       score: 0,
-      questionSongIsReady: false,
+      questionSongIsReady: true,
     };
 
     this.viewHandler = this.viewHandler.bind(this);
     this.questionChangeHandler = this.questionChangeHandler.bind(this);
     this.scoreHandler= this.scoreHandler.bind(this);
+    this.animHandler = this.animHandler.bind(this);
 
     this.render = this.render.bind(this);
     //console.log(this.state)
@@ -113,6 +114,12 @@ class App extends React.Component {
     viewHandler = (view) => {
       this.setState({
         currentView: view,
+      });
+    }
+
+    animHandler = (status) => {
+      this.setState({
+        questionSongIsReady: status,
       });
     }
 
@@ -155,6 +162,7 @@ class App extends React.Component {
           <View 
             level={this.state.level}
             currentQuestion={this.state.questions[this.state.currentQuestion]} 
+            questionNumber={this.state.currentQuestion + 1}
             currentView={currentView} 
             questionSongIsReady={questionSongIsReady} 
             viewHandler={this.viewHandler} 
@@ -162,13 +170,12 @@ class App extends React.Component {
             scoreHandler={this.scoreHandler}
             score={this.state.score}
             period={this.state.period}
+            animHandler={this.animHandler} 
           />
           {/* <Player /> */}
           <Footer status={hide()} />
         </div>
         {console.log(this.state.questions[this.state.currentQuestion])}
-        {console.log("WYNIK", this.state.score)}
-
       </ThemeProvider>
     );
   }

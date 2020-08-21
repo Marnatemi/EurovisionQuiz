@@ -3,6 +3,10 @@ import { makeStyles } from '@material-ui/styles';
 import Player from '../../common/Player/Player';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import AudiotrackIcon from '@material-ui/icons/Audiotrack';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ForwardIcon from '@material-ui/icons/Forward';
+import {Button} from '@material-ui/core';
+
 
 
 const dance = 'dance';
@@ -19,6 +23,10 @@ const useStyles = makeStyles(theme => ({
   component: {
     animation: `$${appear} .8s ease forwards`,
     opacity: 0,
+    width: '75%',
+    maxWidth: 400,
+    height: '80vh',
+    textAlign: 'right',
   },
   playerLoader: {
     ...theme.center.absolute,
@@ -47,6 +55,11 @@ const useStyles = makeStyles(theme => ({
   },
   componentAnimation: (props) => (
     {
+      width: 212,
+      margin: 'auto',
+      textAlign: 'center',
+      height: 400,
+      marginTop: 'calc((80vh - 400px)/2 - 24px);',
       '& img, div': {
         animationPlayState: props.runAnim,
       },
@@ -116,21 +129,22 @@ const QuestionSong = (props) => {
   console.log(props);
   const classes = useStyles(props);
   return(
-    <div className={classes.component}> 
+    <div className={classes.component}>  
+      <Button className={classes.button} variant="outlined" color="secondary" size="small" onClick={()=> props.handler("question")}><ForwardIcon/></Button>
       <div className={classes.player}>
-        <Player songId={props.question.id} songStart={props.question.playerStart} songEnd={props.question.playerEnd} handler={()=> props.handler("question")}/>
+        <Player songId={props.question.id} animHandler={props.animHandler} songStart={props.question.playerStart} songEnd={props.question.playerEnd} handler={()=> props.handler("question")}/>
       </div>    
       <div className={classes.componentAnimation}> 
+      {console.log('questionSongIsReady TRUE=HIDE-LOADER', props.displayLoader, 'RUNANIM', props.runAnim)}
         <div className={classes.playerLoader}>
           <AudiotrackOutlinedIcon />
           <AudiotrackIcon />
           <AudiotrackOutlinedIcon />
         </div>
-        {/* przy state.questionSongIsReady: true playerLoader- display: none componentAnimation: bez pause */}
+        {/* przy state.questionSongIsReady= true playerLoader- display: none componentAnimation: bez pause */}
         <img className={classes.littleMan} alt='earphones' src="https://i.postimg.cc/B6MMMKck/earphones-152471-640.png"></img>
         <div className={classes.shadow}></div>
       </div>
-      
     </div>
     
 

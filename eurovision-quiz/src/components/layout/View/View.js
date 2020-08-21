@@ -7,7 +7,7 @@ import Score from './../../views/Score/Score';
 import QuestionSong from '../../views/QuestionSong/QuestionSong';
  
 
-const View = ({level, currentView, period, questionSongIsReady, currentQuestion, viewHandler, questionChangeHandler, scoreHandler, score}) => {
+const View = ({level, currentView, period, questionSongIsReady, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
   
   const displayLoader = (songIsReady) => {
     let questionSongDisplay = 'none'
@@ -18,6 +18,7 @@ const View = ({level, currentView, period, questionSongIsReady, currentQuestion,
     let runAnim = 'run'
     if (songIsReady === false ) runAnim = 'paused'
     return runAnim;
+    console.log(runAnim)
   }
 
   if (currentView === 'start')
@@ -30,11 +31,11 @@ const View = ({level, currentView, period, questionSongIsReady, currentQuestion,
     );
   else if (currentView === 'question')
     return (
-      <Question level={level} period={period} question={currentQuestion} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}  />
+      <Question level={level} period={period} question={currentQuestion} questionNumber={questionNumber} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}  />
     );
   else if (currentView === 'question song')
     return (
-      <QuestionSong displayLoader={displayLoader(questionSongIsReady)} runAnim={runAnim(questionSongIsReady)} handler={viewHandler} question={currentQuestion} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
+      <QuestionSong displayLoader={displayLoader(questionSongIsReady)} animHandler={animHandler} runAnim={runAnim(questionSongIsReady)} handler={viewHandler} question={currentQuestion} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
     );
   else if (currentView === 'score')
     return (
