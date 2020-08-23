@@ -7,7 +7,7 @@ import Score from './../../views/Score/Score';
 import QuestionSong from '../../views/QuestionSong/QuestionSong';
  
 
-const View = ({level, currentView, period, questionSongIsReady, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
+const View = ({level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsReady, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
   
   const displayLoader = (songIsReady) => {
     let questionSongDisplay = 'none'
@@ -27,7 +27,7 @@ const View = ({level, currentView, period, questionSongIsReady, currentQuestion,
     );
   else if (currentView === 'level')
     return (
-      <Level handler={viewHandler}/>
+      <Level viewHandler={viewHandler} levelHandler={levelHandler} periodHandler={periodHandler} period={period} quizHandler={quizHandler}/>
     );
   else if (currentView === 'question')
     return (

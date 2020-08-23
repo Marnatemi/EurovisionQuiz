@@ -100,22 +100,10 @@ const Question = ({level, question, period, questionNumber, questionChangeHandle
   const [open, setOpen] = React.useState(false);
   let answerOptions = []
   const setLevelQuestion = () => {
-    let levelQuestion = ''
-    if (level === 'easy'){
-      levelQuestion = levelQuestions[0]
-    } else if (level === 'medium'){
-      levelQuestion = levelQuestions[1]
-    } else if (level === 'expert'){
-      levelQuestion = levelQuestions[2]
-    }
-    return levelQuestion;
+    return levelQuestions[level];
   }
   const setLevelAnswers = () => {
-    if (level === 'easy'){
-      answerOptions = question.easyQuestionOptions
-    } else if (level === 'medium'){
-      answerOptions = question.mediumQuestionOptions
-    } else if (level === 'expert'){
+    if (level === 'expert'){
       answerOptions = [question.year]
       while (answerOptions.length < 3) {
         const randomYear = Math.floor(Math.random() * (period.to - period.from + 1)) + period.from;
@@ -131,11 +119,15 @@ const Question = ({level, question, period, questionNumber, questionChangeHandle
       }
 
       answerOptions = expertQuestionOptions
+
+    } else {
+      answerOptions = question[level + 'QuestionOptions']
     }
 
     return answerOptions 
   }
-  console.log(level, question, answerOptions)
+  //console.log(level, question, answerOptions)
+  console.log(question.year, question.artist, question.winnerCountry)
 
 
   const handleClick = (id) => {

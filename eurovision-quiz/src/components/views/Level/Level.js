@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Level = ({handler}) => {
+const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler}) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -58,6 +58,15 @@ const Level = ({handler}) => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const checkPeriod = () => {
+    if (period.to - period.from < 20) {
+      alert("Wybierz zakres przynajmniej 20lat, dla lepszej zabawy! :)")
+    } else {
+      quizHandler()
+      viewHandler("question song")
+    }
+  }
 
   return (
     <div className={classes.root}>
@@ -73,9 +82,9 @@ const Level = ({handler}) => {
       </div>
     </Modal>
     <h1>Wybierz poziom <HelpOutlineIcon className={classes.icon} onClick={() => handleClick()}/></h1>
-    <LevelPicker />
-    <YearsPicker />
-    <Button onClick={() => handler("question song")} className={classes.button} variant="outlined" size="large" color="primary">START</Button>
+    <LevelPicker handler={levelHandler}/>
+    <YearsPicker handler={periodHandler}/>
+    <Button onClick={() => checkPeriod()} className={classes.button} variant="outlined" size="large" color="primary">START</Button>
     </div>
   );
 }

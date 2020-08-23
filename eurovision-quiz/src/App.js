@@ -61,10 +61,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: "medium",
+      level: "easy",
       period: {
-        from: 1956, 
-        to: 1980
+        from: '', 
+        to: ''
       },
       questions: [],
       currentQuestion: 0,
@@ -77,9 +77,13 @@ class App extends React.Component {
     this.questionChangeHandler = this.questionChangeHandler.bind(this);
     this.scoreHandler= this.scoreHandler.bind(this);
     this.animHandler = this.animHandler.bind(this);
+    this.levelHandler = this.levelHandler.bind(this);
+    this.periodHandler = this.periodHandler.bind(this);
+    this.quizHandler = this.quizHandler.bind(this);
+
 
     this.render = this.render.bind(this);
-    //console.log(this.state)
+    console.log(this.state.level, this.state.period)
   
   }
 
@@ -123,13 +127,27 @@ class App extends React.Component {
       });
     }
 
+    levelHandler = (level) => {
+      this.setState({
+        level: level,
+      });
+    }
+
+    periodHandler = (customPeriod) => {
+      this.setState({
+        period: {
+          from: customPeriod[0],
+          to: customPeriod[1]
+        } 
+      });
+    }
+
     questionChangeHandler = () => {
       if(this.state.currentQuestion < 9) {
         this.setState({
           currentView: "question song",
           currentQuestion: this.state.currentQuestion + 1,
         });  
-        console.log('AFTER CHANGE', this.state.currentQuestion)
       } else {
         this.setState({
           currentView: "score",
@@ -143,7 +161,7 @@ class App extends React.Component {
       });  
     }
 
-    componentDidMount(){
+    quizHandler(){
       this.getRandomizedQuestions(this.state.period.from, this.state.period.to)
     }
 
@@ -171,6 +189,9 @@ class App extends React.Component {
             score={this.state.score}
             period={this.state.period}
             animHandler={this.animHandler} 
+            levelHandler={this.levelHandler}
+            periodHandler={this.periodHandler}
+            quizHandler={this.quizHandler}
           />
           {/* <Player /> */}
           <Footer status={hide()} />

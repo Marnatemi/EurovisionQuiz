@@ -5,6 +5,8 @@ import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import Rating from '@material-ui/lab/Rating';
 import { makeStyles } from '@material-ui/styles';
 import {Paper} from  '@material-ui/core'
+import levelQuestions from '../../../data/levelQuestions.json';
+
 
 
 
@@ -46,17 +48,25 @@ const labelsTop = {
   3: 'Expert',
 };
 
+const labelsTopEng = {
+  1: 'easy',
+  2: 'medium',
+  3: 'expert',
+};
 
-const LevelPicker = () => {
+
+const LevelPicker = ({handler}) => {
   const [value, setValue] = React.useState(1);
   const [hover, setHover] = React.useState(-1);
   const classes = useStyles();
+  const setLevelFromLabel = (value) => {
+    return labelsTopEng[value]
+  }
 
   return (
     <Paper className={classes.root}>
 
       <Box  component="fieldset" mb={3} borderColor="transparent">
-        {/* <Typography component="legend">Custom empty icon</Typography> */}
         <Rating
           className={classes.rating}
           name="level-picker"
@@ -69,6 +79,7 @@ const LevelPicker = () => {
           icon={<AudiotrackIcon fontSize="inherit" />}
           onChange={(event, newValue) => {
             setValue(newValue);
+            handler(setLevelFromLabel(newValue));
           }}
           onChangeActive={(event, newHover) => {
             setHover(newHover);

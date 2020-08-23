@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 
 const Footer = ({hide}) => {
   const classes = useStyles();
-  console.log(hide);
+  //console.log(hide);
   if (hide === true)
     return (
       null

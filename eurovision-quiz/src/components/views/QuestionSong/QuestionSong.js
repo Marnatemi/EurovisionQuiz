@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/styles';
 import Player from '../../common/Player/Player';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import AudiotrackIcon from '@material-ui/icons/Audiotrack';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ForwardIcon from '@material-ui/icons/Forward';
 import {Button} from '@material-ui/core';
 
@@ -126,7 +125,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const QuestionSong = (props) => {
-  console.log(props);
+  //console.log(props);
   const classes = useStyles(props);
   return(
     <div className={classes.component}>  
@@ -135,7 +134,6 @@ const QuestionSong = (props) => {
         <Player songId={props.question.id} animHandler={props.animHandler} songStart={props.question.playerStart} songEnd={props.question.playerEnd} handler={()=> props.handler("question")}/>
       </div>    
       <div className={classes.componentAnimation}> 
-      {console.log('questionSongIsReady TRUE=HIDE-LOADER', props.displayLoader, 'RUNANIM', props.runAnim)}
         <div className={classes.playerLoader}>
           <AudiotrackOutlinedIcon />
           <AudiotrackIcon />

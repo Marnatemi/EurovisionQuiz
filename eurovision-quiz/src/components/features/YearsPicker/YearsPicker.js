@@ -36,12 +36,14 @@ function valuetext(value) {
   return `${value}`;
 }
 
- const YearsPicker = () => {
+ const YearsPicker = ({handler}) => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(1999);
+  const [value, setValue] = React.useState([1999, 2019]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    handler(newValue)
+    console.log(newValue)
   };
 
   return (
@@ -52,7 +54,7 @@ function valuetext(value) {
       <Slider
 
         color="primary"
-        track="inverted"
+        //track="inverted"
         value={value}
         min={1956}
         max={2019}
