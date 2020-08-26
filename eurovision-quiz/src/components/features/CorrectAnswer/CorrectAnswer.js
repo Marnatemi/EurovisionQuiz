@@ -3,7 +3,7 @@ import Player from '../../common/Player/Player';
 import {CardContent, Typography, Divider  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import ModalCard from '../../common/ModalCard/ModalCard';
-import QuestionSong from '../../views/QuestionSong/QuestionSong';
+//import QuestionSong from '../../views/QuestionSong/QuestionSong';
 
 const useStyles = makeStyles(theme => ({
 

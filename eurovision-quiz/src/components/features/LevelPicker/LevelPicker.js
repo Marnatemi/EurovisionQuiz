@@ -5,7 +5,7 @@ import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import Rating from '@material-ui/lab/Rating';
 import { makeStyles } from '@material-ui/styles';
 import {Paper} from  '@material-ui/core'
-import levelQuestions from '../../../data/levelQuestions.json';
+//import levelQuestions from '../../../data/levelQuestions.json';
 
 
 
@@ -13,12 +13,15 @@ import levelQuestions from '../../../data/levelQuestions.json';
 const useStyles = makeStyles(theme => ({
   root: {
     width: 252,
-    height: 182,
     margin: 0,
     border: `2px dashed ${theme.palette.primary.light}` ,
     padding: '10px 20px',
     background: 'inherit',
     color: '#fff',
+  },
+  box: {
+    marginBottom: 15,
+    padding: 0,
   },
   labelsTop: {
     fontSize: 25,
@@ -66,7 +69,7 @@ const LevelPicker = ({handler}) => {
   return (
     <Paper className={classes.root}>
 
-      <Box  component="fieldset" mb={3} borderColor="transparent">
+      <Box  component="fieldset" className={classes.box} mb={3} borderColor="transparent">
         <Rating
           className={classes.rating}
           name="level-picker"

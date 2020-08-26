@@ -31,7 +31,7 @@ class Player extends React.Component {
 
 
   render() {
-    const { classes, songStart, songEnd, songId, animHandler } = this.props;
+    const { classes, songStart, songEnd, songId } = this.props;
     //console.log(this.state);
     const opts = {
       height: '260',
@@ -74,14 +74,14 @@ class Player extends React.Component {
     this.setState({
       isLoading: false
     })
-    if(this.props.animHandler ===! undefined){
-      this.props.animHandler(true)
+    if(this.props.animHandler !== undefined){
+      this.props.animHandler(false)
+      console.log('CHANGE LOADING STATE' )
     }
   }
   onEnded() {
-    //console.log('ENDED!!!')
-    if ( this.props.handler !== undefined){
-      this.props.handler("question")
+    if ( this.props.viewHandler !== undefined){
+      this.props.viewHandler("question")
     }
   }
 }

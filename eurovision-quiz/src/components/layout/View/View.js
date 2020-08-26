@@ -7,19 +7,21 @@ import Score from './../../views/Score/Score';
 import QuestionSong from '../../views/QuestionSong/QuestionSong';
  
 
-const View = ({level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsReady, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
+const View = ({level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
   
-  const displayLoader = (songIsReady) => {
-    let questionSongDisplay = 'none'
-    if (songIsReady === false ) questionSongDisplay = 'flex'
+  const displayLoader = (songIsLoading) => {
+    let questionSongDisplay = 'flex'
+    if (songIsLoading === false ) questionSongDisplay = 'none'
     return questionSongDisplay;
   }
-  const runAnim = (songIsReady) => {
-    let runAnim = 'run'
-    if (songIsReady === false ) runAnim = 'paused'
+  const runAnim = (songIsLoading) => {
+    let runAnim = 'paused'
+    if (songIsLoading === false ) runAnim = 'run'
     return runAnim;
-    console.log(runAnim)
   }
+
+  console.log('STATE', questionSongIsLoading, 'DISPLAY NOTES', displayLoader(questionSongIsLoading))
+  console.log('STATE', questionSongIsLoading, 'RUN LITTLE MAN', runAnim(questionSongIsLoading))
 
   if (currentView === 'start')
     return (
@@ -35,11 +37,11 @@ const View = ({level, currentView, levelHandler, periodHandler, period, quizHand
     );
   else if (currentView === 'question song')
     return (
-      <QuestionSong displayLoader={displayLoader(questionSongIsReady)} animHandler={animHandler} runAnim={runAnim(questionSongIsReady)} handler={viewHandler} question={currentQuestion} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
-    );
+      <QuestionSong displayLoader={displayLoader(questionSongIsLoading)} runAnim={runAnim(questionSongIsLoading)}  animHandler={animHandler} viewHandler={viewHandler} question={currentQuestion} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
+      );
   else if (currentView === 'score')
     return (
-      <Score score={score} />
+      <Score score={score} viewHandler={viewHandler} scoreHandler={scoreHandler}/>
     );
 }
 

@@ -126,8 +126,7 @@ const Question = ({level, question, period, questionNumber, questionChangeHandle
 
     return answerOptions 
   }
-  //console.log(level, question, answerOptions)
-  console.log(question.year, question.artist, question.winnerCountry)
+  //console.log(level, question.year, question.artist, question.winnerCountry)
 
 
   const handleClick = (id) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect} from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { Divider  } from '@material-ui/core';
+import { Divider, Button } from '@material-ui/core';
 import ScoreCounter from '../../features/ScoreCounter/ScoreCounter';
 import Confetti from 'react-confetti'
 
@@ -10,6 +10,8 @@ const divider = "divider";
 const header = "header";
 const block = "block";
 const title = "title";
+const button = "button";
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -23,6 +25,13 @@ const useStyles = makeStyles(theme => ({
       width: 30,
       margin: '0 auto',
       animation: `$${divider} 1s ease-in forwards`,
+    },
+    '& button': {
+      opacity: 0,
+      margin: 'auto',
+      top: 40,
+      animation: `$${button} 1.2s ease-out forwards`,
+      animationDelay: score => `calc(9s + ${score} * 0.3s)`,
     }
   },
   header: {
@@ -104,21 +113,35 @@ const useStyles = makeStyles(theme => ({
       height: 0,
       top: '100%',
     },
-
   },
+  [`@keyframes ${button}`]: {
+    '90%': {
+      top: -5,
+    },  
+    '100%': {
+      opacity: 1,
+      top: 0,
+    },  
+  },
+
 }));
 
 
-const Score = ({score}) => {
-  const classes = useStyles();
+const Score = ({score, viewHandler, scoreHandler}) => {
+  const classes = useStyles(score);
   const [finish, setFinish] = React.useState(false);
 
   useEffect(()=> {
     const timer = setTimeout(() => {
       setFinish(true)
-    }, 500);
+    }, 5000);
     return () => clearTimeout(timer);
   })
+
+  const resetQuiz = () => {
+    viewHandler("level") 
+    scoreHandler('reset')
+  }
 
   return (
     <div className={classes.root}>
@@ -144,6 +167,7 @@ const Score = ({score}) => {
           run={finish}
         />
       </div>
+      <Button variant="outlined" color="secondary" size="large" onClick={()=> resetQuiz()}>ZAGRAJ JESZCZE RAZ</Button>
     </div>
   );
 }

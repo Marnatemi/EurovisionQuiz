@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
       opacity: 0,
      },
      //eslint-disable-next-line no-useless-computed-key
-    ['@media (min-width:650px)']: { 
+    ['@media (min-width:500px)']: { 
       '&': {
         top: '30%',
       },

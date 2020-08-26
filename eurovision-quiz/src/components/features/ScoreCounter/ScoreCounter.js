@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
+import {Paper} from  '@material-ui/core'
+
 
 const border = 'border';
 const counter = 'counter';
@@ -77,7 +79,9 @@ const useStyles = makeStyles(theme => ({
   },
   [`@keyframes ${border}`]: {
     '100%': {
-      border: `2px dashed rgba(255,255,255,1)`    }
+      border: `2px dashed rgba(255,255,255,1)`,
+      boxShadow: '0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)',
+    }
   },
   [`@keyframes ${counter}`]: {
     '100%': {

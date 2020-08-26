@@ -17,6 +17,10 @@ const jump = 'jump';
 const useStyles = makeStyles(theme => ({
   player: {
     opacity: 0,
+    // width: 200,
+    // height: 200,
+    // top: '20%',
+    // margin: 'auto',
     position: 'absolute',
   },
   component: {
@@ -59,8 +63,11 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'center',
       height: 400,
       marginTop: 'calc((80vh - 400px)/2 - 24px);',
-      '& img, div': {
-        animationPlayState: props.runAnim,
+      '& img': {
+        animationPlayState: 'run',
+      },
+      '& div':{
+        animationPlayState: 'run',
       },
       '& div:first-child': {
         display: props.displayLoader,
@@ -125,13 +132,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const QuestionSong = (props) => {
-  //console.log(props);
+  console.log(props.runAnim);
   const classes = useStyles(props);
   return(
     <div className={classes.component}>  
-      <Button className={classes.button} variant="outlined" color="secondary" size="small" onClick={()=> props.handler("question")}><ForwardIcon/></Button>
+      <Button className={classes.button} variant="outlined" color="secondary" size="small" onClick={()=> props.viewHandler("question")}><ForwardIcon/></Button>
       <div className={classes.player}>
-        <Player songId={props.question.id} animHandler={props.animHandler} songStart={props.question.playerStart} songEnd={props.question.playerEnd} handler={()=> props.handler("question")}/>
+        <Player songId={props.question.id} animHandler={props.animHandler} songStart={props.question.playerStart} songEnd={props.question.playerEnd} viewHandler={()=> props.viewHandler("question")}/>
       </div>    
       <div className={classes.componentAnimation}> 
         <div className={classes.playerLoader}>

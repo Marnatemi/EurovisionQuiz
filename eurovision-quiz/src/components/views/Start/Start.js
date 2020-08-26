@@ -11,6 +11,19 @@ const useStyles = makeStyles(theme => ({
   root: {
     ...theme.size.fullByDivice,
     overflow: 'hidden',
+    '&:after': {
+      content: "''",
+      ...theme.center.absolute,
+      top: '37%',
+      width: '90vw',
+      height: '90vw',
+      maxWidth: '500px',
+      maxHeight: '500px',
+      border: '2px solid #fff',
+      borderRadius: '50%',
+      zIndex: 1,
+      boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
+    },
   },
   hero: {
     ...theme.center.absolute,
@@ -26,12 +39,12 @@ const useStyles = makeStyles(theme => ({
     boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
     '&::after': {
       ...theme.center.absolute,
+      top: '37%',
+      width: '90vw',
+      height: '90vw',
+      maxWidth: '500px',
+      maxHeight: '500px',
       content: "''",
-      width: '300%',
-      maxWidth: 1200,
-      maxHeight: 1300,
-      height: '200%',
-      top: '-30%',
       borderRadius: '40%',
       boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
       backgroundImage: 'linear-gradient(326deg, #1F95CE 0%, #ce581f 74%)',
@@ -40,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   button: {
-    height: 40,
+    fontSize: '1.3rem',
     alignSelf: 'flex-end',
     animation: `$${button} 2s forwards`,
     animationDelay: '6s',
@@ -60,7 +73,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   //eslint-disable-next-line no-useless-computed-key
-  ['@media (min-width:650px)']: {
+  ['@media (min-width:500px)']: {
     'root':{
       '&:after': {
         content: "''",
@@ -71,7 +84,7 @@ const useStyles = makeStyles(theme => ({
         borderRadius: '50%',
         zIndex: 1,
         boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
-        },
+      },
     },
     'wave': {
       '&:after': {
