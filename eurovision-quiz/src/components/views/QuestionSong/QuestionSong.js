@@ -1,12 +1,12 @@
 import React from 'react';
+import useSound from 'use-sound';
 import { makeStyles } from '@material-ui/styles';
 import Player from '../../common/Player/Player';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import ForwardIcon from '@material-ui/icons/Forward';
 import {Button} from '@material-ui/core';
-
-
+import clickSound from '../../../Sounds/click3.mp3';
 
 const dance = 'dance';
 const shadow = 'shadow';
@@ -30,6 +30,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 400,
     height: '80vh',
     textAlign: 'right',
+    position: 'relative',
   },
   playerLoader: {
     ...theme.center.absolute,
@@ -132,21 +133,26 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const QuestionSong = (props) => {
-  console.log(props.runAnim);
+  const [playButtonSound] = useSound(clickSound);
   const classes = useStyles(props);
+
+  const handler = () => {
+    playButtonSound()
+    props.viewHandler("question")
+  }
+
   return(
     <div className={classes.component}>  
-      <Button className={classes.button} variant="outlined" color="secondary" size="small" onClick={()=> props.viewHandler("question")}><ForwardIcon/></Button>
+      <Button className={classes.button} variant="outlined" color="secondary" size="small" onClick={() => handler()}><ForwardIcon/></Button>
       <div className={classes.player}>
         <Player songId={props.question.id} animHandler={props.animHandler} songStart={props.question.playerStart} songEnd={props.question.playerEnd} viewHandler={()=> props.viewHandler("question")}/>
-      </div>    
+      </div>
       <div className={classes.componentAnimation}> 
         <div className={classes.playerLoader}>
           <AudiotrackOutlinedIcon />
           <AudiotrackIcon />
           <AudiotrackOutlinedIcon />
         </div>
-        {/* przy state.questionSongIsReady= true playerLoader- display: none componentAnimation: bez pause */}
         <img className={classes.littleMan} alt='earphones' src="https://i.postimg.cc/B6MMMKck/earphones-152471-640.png"></img>
         <div className={classes.shadow}></div>
       </div>

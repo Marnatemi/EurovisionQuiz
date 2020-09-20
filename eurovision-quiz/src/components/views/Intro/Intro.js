@@ -1,8 +1,9 @@
 import React from 'react';
+import useSound from 'use-sound';
 import {Button} from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import Title from '../../common/Title/Title'
-
+import Title from '../../common/Title/Title';
+import clickSound from '../../../Sounds/click3.mp3';
 const wave = "wave";
 const button = "button";
 
@@ -96,19 +97,25 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Start = ({viewHandler}) => {
+const Intro = ({viewHandler}) => {
   const classes = useStyles();
+  const [play] = useSound(clickSound);
+
+  const clickHandler = () => {
+    viewHandler("level");
+    play()
+  }
 
   return (
     <div className={classes.root}>
     <header className={classes.wave} > 
       <div className={classes.hero}>
-        <Title title={'Eurowizja'} subtitle={'Quiz'} text={'muzyczny'}/>
+        <Title title={'Eurowizja'} subtitle={'Quiz'} text={'muzyczny'} />
         <Button className={classes.button}
           variant="outlined"
           color="primary"
           size="large"
-          onClick={() => viewHandler("level")} >
+          onClick={clickHandler} >
           Graj
         </Button>
       </div>
@@ -117,4 +124,4 @@ const Start = ({viewHandler}) => {
   );
 }
 
-export default Start;
+export default Intro;

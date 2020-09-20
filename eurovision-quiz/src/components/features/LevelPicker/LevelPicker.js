@@ -1,10 +1,12 @@
 import React from 'react';
+import useSound from 'use-sound';
 import { Box, Divider } from '@material-ui/core';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import Rating from '@material-ui/lab/Rating';
 import { makeStyles } from '@material-ui/styles';
 import {Paper} from  '@material-ui/core'
+import changeSound from '../../../Sounds/click1.mp3';
 //import levelQuestions from '../../../data/levelQuestions.json';
 
 
@@ -13,15 +15,12 @@ import {Paper} from  '@material-ui/core'
 const useStyles = makeStyles(theme => ({
   root: {
     width: 252,
+    height: 182,
     margin: 0,
     border: `2px dashed ${theme.palette.primary.light}` ,
     padding: '10px 20px',
     background: 'inherit',
     color: '#fff',
-  },
-  box: {
-    marginBottom: 15,
-    padding: 0,
   },
   labelsTop: {
     fontSize: 25,
@@ -62,6 +61,7 @@ const LevelPicker = ({handler}) => {
   const [value, setValue] = React.useState(1);
   const [hover, setHover] = React.useState(-1);
   const classes = useStyles();
+  const [playChangeSound] = useSound(changeSound);
   const setLevelFromLabel = (value) => {
     return labelsTopEng[value]
   }
@@ -86,6 +86,7 @@ const LevelPicker = ({handler}) => {
           }}
           onChangeActive={(event, newHover) => {
             setHover(newHover);
+            playChangeSound()
           }}
         />
         {value !== null && <Box className={classes.labelsTop} ml={2}>{labelsTop[hover !== -1 ? hover : value]}</Box>}

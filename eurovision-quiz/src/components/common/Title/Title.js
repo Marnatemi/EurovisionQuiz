@@ -1,4 +1,5 @@
 import React from 'react';
+import useSound from 'use-sound';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import { makeStyles } from '@material-ui/styles';
 
@@ -110,7 +111,7 @@ const Title = ({title, subtitle, text}) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} >
       <div className={classes.background}></div>
       <span ><AudiotrackOutlinedIcon className={classes.icon}/></span>
       <span className={classes.text}>{text}</span>

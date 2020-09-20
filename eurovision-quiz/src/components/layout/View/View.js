@@ -1,14 +1,20 @@
 import React from 'react';
-
-import Question from './../../views/Question/Question'
-import Start from './../../views/Start/Start';
+import useSound from 'use-sound';
+import Question from './../../views/Question/Question';
+import SetLanguage from './../../views/SetLanguage/SetLanguage';
+import Intro from '../../views/Intro/Intro';
 import Level from './../../views/Level/Level';
 import Score from './../../views/Score/Score';
 import QuestionSong from '../../views/QuestionSong/QuestionSong';
+import answersSound from '../../../Sounds/guitar.mp3';
+import introSound from '../../../Sounds/Intro.mp3';
+
  
 
-const View = ({level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
-  
+const View = ({languageHandler, level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
+  const [playAnswersSound] = useSound(answersSound);
+  const [playIntroSound, {stop}] = useSound(introSound);
+
   const displayLoader = (songIsLoading) => {
     let questionSongDisplay = 'flex'
     if (songIsLoading === false ) questionSongDisplay = 'none'
@@ -20,25 +26,30 @@ const View = ({level, currentView, levelHandler, periodHandler, period, quizHand
     return runAnim;
   }
 
-  console.log('STATE', questionSongIsLoading, 'DISPLAY NOTES', displayLoader(questionSongIsLoading))
-  console.log('STATE', questionSongIsLoading, 'RUN LITTLE MAN', runAnim(questionSongIsLoading))
+  // console.log('STATE', questionSongIsLoading, 'DISPLAY NOTES', displayLoader(questionSongIsLoading))
+  // console.log('STATE', questionSongIsLoading, 'RUN LITTLE MAN', runAnim(questionSongIsLoading))
 
-  if (currentView === 'start')
+  if (currentView === 'start'){
     return (
-      <Start viewHandler={viewHandler}/>
+      <SetLanguage viewHandler={viewHandler} playBgMusic={playIntroSound} languageHandler={languageHandler} />
     );
+  }
+  else if (currentView === 'intro')
+  return (
+    <Intro viewHandler={viewHandler} />
+  );
   else if (currentView === 'level')
     return (
-      <Level viewHandler={viewHandler} levelHandler={levelHandler} periodHandler={periodHandler} period={period} quizHandler={quizHandler}/>
-    );
-  else if (currentView === 'question')
-    return (
-      <Question level={level} period={period} question={currentQuestion} questionNumber={questionNumber} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}  />
+      <Level viewHandler={viewHandler} levelHandler={levelHandler} periodHandler={periodHandler} period={period} quizHandler={quizHandler} stopBgMusic={stop} />
     );
   else if (currentView === 'question song')
     return (
       <QuestionSong displayLoader={displayLoader(questionSongIsLoading)} runAnim={runAnim(questionSongIsLoading)}  animHandler={animHandler} viewHandler={viewHandler} question={currentQuestion} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
       );
+  else if (currentView === 'question')
+  return (
+    <Question level={level} period={period} question={currentQuestion} questionNumber={questionNumber} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}  />
+  );
   else if (currentView === 'score')
     return (
       <Score score={score} viewHandler={viewHandler} scoreHandler={scoreHandler}/>

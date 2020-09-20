@@ -1,7 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
-
 import quizData from './data/quizData.json';
 //import levelQuestions from './data/levelQuestions';
 import View from './components/layout/View/View';
@@ -20,7 +19,6 @@ const theme = createMuiTheme({
     }, 
     secondary: {
       main: '#97a6ab',
-      //lol: '#ce581f',
     },
   },
   typography: {
@@ -52,7 +50,12 @@ const theme = createMuiTheme({
       width: '100vw',
       height: '100vh',
     },
-  }
+  },
+  alert: {
+    margin: 'auto',
+    width: '80vw',
+    maxWidth: 350,
+  },
 });
 
 
@@ -61,13 +64,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      language: "english",
       level: "easy",
       period: {
         from: 1999, 
         to: 2019
       },
       questions: [],
-      currentQuestion: 9,
+      currentQuestion: 0,
       currentView: "start",
       score: 0,
       questionSongIsLoading: true,
@@ -79,6 +83,7 @@ class App extends React.Component {
     this.animHandler = this.animHandler.bind(this);
     this.levelHandler = this.levelHandler.bind(this);
     this.periodHandler = this.periodHandler.bind(this);
+    this.languageHandler = this.languageHandler.bind(this);
     this.quizHandler = this.quizHandler.bind(this);
 
 
@@ -118,6 +123,12 @@ class App extends React.Component {
     viewHandler = (view) => {
       this.setState({
         currentView: view,
+      });
+    }
+
+    languageHandler = (language) => {
+      this.setState({
+        language: language,
       });
     }
 
@@ -172,6 +183,11 @@ class App extends React.Component {
       this.getRandomizedQuestions(this.state.period.from, this.state.period.to)
     }
 
+    componentDidUpdate(){
+      console.log("app update", this.state)
+      console.log(this.state.language)
+    }
+
   render() {
     const currentView = this.state.currentView
     const questionSongIsLoading = this.state.questionSongIsLoading
@@ -181,7 +197,7 @@ class App extends React.Component {
     const period = this.state.period
     const level = this.state.level
 
-    console.log('NUMBER', currentQuestionNumber, 'QUESTION', currentQuestion)
+    //console.log('NUMBER', currentQuestionNumber, 'QUESTION', currentQuestion)
 
     const hide = () => {
       if (currentView === "start") {
@@ -204,6 +220,7 @@ class App extends React.Component {
             score={score}
             period={period}
             animHandler={this.animHandler} 
+            languageHandler={this.languageHandler}
             levelHandler={this.levelHandler}
             periodHandler={this.periodHandler}
             quizHandler={this.quizHandler}

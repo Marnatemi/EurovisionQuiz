@@ -1,4 +1,6 @@
 import React from 'react';
+import useSound from 'use-sound';
+import clickSound from '../../../Sounds/click3.mp3';
 import {useEffect} from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Divider, Button } from '@material-ui/core';
@@ -129,6 +131,7 @@ const useStyles = makeStyles(theme => ({
 
 const Score = ({score, viewHandler, scoreHandler}) => {
   const classes = useStyles(score);
+  const [play] = useSound(clickSound);
   const [finish, setFinish] = React.useState(false);
 
   useEffect(()=> {
@@ -139,6 +142,7 @@ const Score = ({score, viewHandler, scoreHandler}) => {
   })
 
   const resetQuiz = () => {
+    play()
     viewHandler("level") 
     scoreHandler('reset')
   }

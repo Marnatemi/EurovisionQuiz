@@ -1,6 +1,8 @@
 import React from 'react';
+import useSound from 'use-sound';
 import { Card, CardActions, CardHeader, Button, Divider  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import clickSound from '../../../Sounds/click3.mp3';
 
 const modal = "modal";
 
@@ -47,6 +49,12 @@ const useStyles = makeStyles(theme => ({
 
 const ModalCard = ({ message, button, children, handler}) => {
   const classes = useStyles();
+  const [playButtonSound] = useSound(clickSound);
+
+  const buttonHandler = () => {
+    handler();
+    playButtonSound();
+  }
 
   return (
     <Card className={classes.root} height="400px">
@@ -55,7 +63,7 @@ const ModalCard = ({ message, button, children, handler}) => {
       {children}
       <Divider variant="middle" />
       <CardActions className={classes.action}>
-        <Button variant="contained" color="primary" size="large" className={classes.button} onClick={handler} >
+        <Button variant="contained" color="primary" size="large" className={classes.button} onClick={buttonHandler} >
           {button}
         </Button>
       </CardActions>

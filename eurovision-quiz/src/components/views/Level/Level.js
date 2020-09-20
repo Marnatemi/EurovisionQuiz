@@ -1,11 +1,18 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
+import useSound from 'use-sound';
+import { Alert } from '@material-ui/lab';
+import { Button, Collapse } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import LevelPicker from '../../features/LevelPicker/LevelPicker';
 import YearsPicker from '../../features/YearsPicker/YearsPicker';
 import Instruction from '../../features/Instruction/Instruction';
 import { Modal } from '@material-ui/core';
+import clickSound from '../../../Sounds/click3.mp3';
+import alertSound from '../../../Sounds/alert.mp3';
+import cardSound from '../../../Sounds/cardOpen.mp3';
+
+
 
 const appear = 'appear'
 
@@ -39,6 +46,9 @@ const useStyles = makeStyles(theme => ({
     width: 80,
     margin: 31,
   },
+  alert: {
+    ...theme.alert
+  },
   [`@keyframes ${appear}`]: {
     '100%': {
       opacity: 1,
@@ -47,24 +57,49 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler}) => {
+const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler, stopBgMusic}) => {
   const classes = useStyles();
+  const [level, setLevel] = React.useState("easy");
+  const [customPeriod, setPeriod] = React.useState([1999, 2019]);
   const [open, setOpen] = React.useState(false);
+  const [openAlert, setOpenAlert] = React.useState(false);
+  const [playButtonSound] = useSound(clickSound);
+  const [playAlertSound] = useSound(alertSound);
+  const [playCardSound] = useSound(cardSound);
 
-  const handleClick = () => {
+
+
+  const handleModalClick = () => {
     setOpen(true);
+    playCardSound();
   };
   
   const handleClose = () => {
     setOpen(false);
+    setOpenAlert(false);
   };
 
+  const setLevelHandler = (lv) => {
+    console.log(lv)
+    setLevel(lv)
+  }
+  const setPeriodHandler = (period) => {
+    console.log(period)
+    setPeriod(period)
+  }
+
   const checkPeriod = () => {
-    if (period.to - period.from < 20) {
-      alert("Wybierz zakres przynajmniej 20lat, dla lepszej zabawy! :)")
+    playButtonSound()
+
+    if (customPeriod[1] - customPeriod[0] < 20) {
+      playAlertSound();
+      setOpenAlert(true);
     } else {
-      quizHandler()
-      viewHandler("question song")
+      quizHandler();
+      levelHandler(level)
+      periodHandler(customPeriod)
+      viewHandler("question song");
+      stopBgMusic();
     }
   }
 
@@ -76,14 +111,28 @@ const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler}) 
       onClose={handleClose}
       closeAfterTransition={true}
     >
-
       <div>
         <Instruction message="Instrukcja" button="OK" handler={handleClose}/>
       </div>
     </Modal>
-    <h1>Wybierz poziom <HelpOutlineIcon className={classes.icon} onClick={() => handleClick()}/></h1>
-    <LevelPicker handler={levelHandler}/>
-    <YearsPicker handler={periodHandler}/>
+    <h1>Wybierz poziom <HelpOutlineIcon className={classes.icon} onClick={() => handleModalClick()}/></h1>
+    <LevelPicker handler={setLevelHandler}/>
+    <Collapse in={openAlert}>
+      <Alert
+        action={
+          <Button color="inherit" size="small" onClick={() => {handleClose()}}>
+            OK
+          </Button>
+        }
+        className={classes.alert} 
+        variant="filled" 
+        severity="info"
+        color="warning" 
+      >
+            Wybierz zakres przynajmniej 20lat, dla lepszej zabawy! :)
+      </Alert>
+    </Collapse>
+    <YearsPicker handler={setPeriodHandler}/>
     <Button onClick={() => checkPeriod()} className={classes.button} variant="outlined" size="large" color="primary">START</Button>
     </div>
   );
