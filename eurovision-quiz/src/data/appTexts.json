@@ -1,0 +1,221 @@
+{
+  "start": {
+    "languages": [
+      {
+        "id": "english",
+        "name": "english",
+        "imgSrc":"https://i.postimg.cc/5yFWVWkH/united-kingdom-653010-640.png"
+      },
+      {
+        "id": "polish", 
+        "name": "polski",
+        "imgSrc":"https://i.postimg.cc/tTcGw4DQ/poland-653060-640.png"
+      },
+      {
+        "id": "french", 
+        "name": "français",
+        "imgSrc":"https://i.postimg.cc/nL0JKkDL/france-653001-640.png"
+      }  
+    ],
+  "title": "choose your language",
+  "button": "OK",
+  "alertMessage": "Please choose your language"
+  },
+
+
+  "polish": {
+    "intro": {
+      "title": "Eurowizja",
+      "subtitle": "Quiz",
+      "text": "muzyczny",
+      "button": "Graj"
+    },
+    "level": {
+      "title": "Wybierz poziom",
+      "modalTitle": "Instrukcja",
+      "instruction": { 
+        "phrase1": "Quiz składa się z",
+        "span1": " 10 różnych utworów ",
+        "phrase2": "które wygrywały konkurs piosenki Eurowizji na przestrzeni lat. Po odsłuchaniu ok.",
+        "span2": " 15 sekundowego fragmentu ",
+        "phrase3": "wykonania piosenki należy wskazać prawidłową odpowiedź. Rodzaj pytania zależy od wybranego poziomu trudności i pozostaje taki sam dla wszystkich 10 fragmentów. Dodatkowo można wybrać zakres edycji konkursu z których utwory mają znaleźć się w zestawieniu pytań. Zakres powinien obejmować",
+        "span3": " przynajmniej okres 20 lat"
+      },
+      "levelPicker": {
+        "labelsBottom": {
+          "1": "' Wskaż wykonawcę utworu' ",
+          "2": "' Wybierz który kraj reprezentował wykonawca piosenki '",
+          "3": "' Wskaż rok z którego pochodzi wykonanie '"
+        },
+        "labelsTop": {
+          "1": "Łatwy",
+          "2": "Średni",
+          "3": "Ekspert"
+        }
+      },
+      "yearsPickerText": "Przedział czasowy",
+      "alert": {
+        "message": "Wybierz zakres przynajmniej 20lat, dla lepszej zabawy! :)",
+        "button": "OK"
+      },
+      "button": "START"
+    },
+    "question": {
+      "succesMessage": "Dobrze!",
+      "failMessage": "Błędna odpowiedź",
+      "levelQuestions": {
+        "easy": "Kto wykonał tę piosenkę",
+        "medium": "Który kraj reprezentował ten wykonawca?",
+        "expert": "Z którego roku pochodzi to wykonanie?"  
+      },
+      "correctAnswer": {
+        "phrase1": "Tę piosenkę o tytule",
+        "verbPerform": "wykona",
+        "phrase2": "podczas konkursu eurowizji w mieście",
+        "phrase3": "w roku",
+        "phrase4": "Krajem który wówczas",
+        "verbRepresent": "reprezentowa",
+        "verbWas": "był",
+        "button": "dalej"
+      }
+    },
+    "score": {
+      "title": "Gratulacje!",
+      "subtitle": "Udało Ci się ukończyć QUIZ",
+      "text": "Twój wynik :",
+      "button": "ZAGRAJ JESZCZE RAZ"
+    }
+  },
+
+
+
+  "english": {
+    "intro": {
+      "title": "Eurovision",
+      "subtitle": "Quiz",
+      "text": "Music",
+      "button": "Play"
+    },
+    "level": {
+      "title": "choose level",
+      "modalTitle": "Instruction",
+      "instruction": { 
+        "phrase1": "The quiz consists of",
+        "span1": " 10 different songs ",
+        "phrase2": "that have won the Eurovision Song Contest over the years. After listening to the",
+        "span2": " 15-second fragment ",
+        "phrase3": "of the performance, you should select the correct answer. Type of questions depends on the level and stays the same for all 10 fragments. You can choose the period of the contest editions from which the songs are to be included in the list of questions. The period should be",
+        "span3": " at least 20 years"
+      },
+      "levelPicker": {
+        "labelsBottom": {
+          "1": "' Select the artist of the song ' ",
+          "2": "' Choose which country the song represented '",
+          "3": "' Select the year of the performance '"
+        },
+        "labelsTop": {
+          "1": "Easy",
+          "2": "Medium",
+          "3": "Expert"
+        }
+      },
+      "yearsPickerText": "Editions period",
+      "alert": {
+        "message": "Select a period of at least 20 years, let's have fun! :)",
+        "button": "OK"
+      },
+      "button": "START"
+    },
+    "question": {
+      "succesMessage": "Correct!",
+      "failMessage": "Wrong answer",
+      "levelQuestions": {
+        "easy": "Who performed this song",
+        "medium": "Which country did this song represent?",
+        "expert": "What year is this performance from?"  
+      },
+      "correctAnswer": {
+        "phrase1": "This song titled",
+        "verbPerform": "was performed by",
+        "phrase2": "during the Eurovision Song Contest in",
+        "phrase3": "in",
+        "phrase4": "With this song",
+        "verbRepresent": "represented",
+        "verbWas": "",
+        "button": "Next"
+      }  
+    },
+    "score": {
+      "title": "Congratulations!",
+      "subtitle": "You've finished the QUIZ",
+      "text": "Your result :",
+      "button": "PLAY AGAIN"
+    }
+  },
+
+
+
+  "french": {
+    "intro": {
+      "title": "Eurovision",
+      "subtitle": "Musical",
+      "text": "quiz",
+      "button": "Jouer"
+    },
+    "level": {
+      "title": "Choisissez un niveau",
+      "modalTitle": "Instruction",
+      "instruction": { 
+        "phrase1": "Le quiz est composé de",
+        "span1": " 10 chansons différentes ",
+        "phrase2": "qui ont gagné le Concours Eurovision de la Chanson au fil des ans. Après avoir écouté le",
+        "span2": " fragment de 15 secondes ",
+        "phrase3": "de l'interprétation de la chanson, vous devez sélectionner la bonne réponse. Le type de questions dépend du niveau et reste le même pour tout les 10 fragments. En plus, vous pouvez choisir la portée de l'édition du concours à partir de laquelle les chansons seront incluses dans la liste des questions. La période doit être",
+        "span3": " d'au moins 20 ans"
+      },
+      "levelPicker": {
+        "labelsBottom": {
+          "1": "' Indiquez l'interprète de la chanson ' ",
+          "2": "' Choisissez le pays représenté par cette chanson '",
+          "3": "' Indiquez l'année d'interprétation '"
+        },
+        "labelsTop": {
+          "1": "Facile",
+          "2": "Moyen",
+          "3": "Expert"
+        }
+      },
+      "yearsPickerText": "Period d'editions",
+      "alert": {
+        "message": "Choisissez période d'au moins 20 ans, Allez! On va s'amuser :)",
+        "button": "OK"
+      },
+      "button": "Lancer le quiz"
+    },
+    "question": {
+      "succesMessage": "Bravo! Bonne réponse",
+      "failMessage": "Mauvaise réponse",
+      "levelQuestions": {
+        "easy": "Qui a interprété cette chanson",
+        "medium": "Quel pays était représenté par cette chanson?",
+        "expert": "De quelle année provient cette performance?"  
+      },
+      "correctAnswer": {
+        "phrase1": "Cette chanson intitulée",
+        "verbPerform": "a été interprétée par",
+        "phrase2": "lors du Concours Eurovision de la chanson à",
+        "phrase3": "en",
+        "phrase4": "avec cette chanson",
+        "verbRepresent": "représentai",
+        "verbWas": "",
+        "button": "Continuer"
+      }
+    },
+    "score": {
+      "title": "Félicitations",
+      "subtitle": "Vous avez réussi à terminer le QUIZ",
+      "text": "Votre résultat :",
+      "button": "Rejouer"
+    }
+  }
+}

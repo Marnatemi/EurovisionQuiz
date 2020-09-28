@@ -1,4 +1,5 @@
 import React from 'react';
+import {useEffect} from 'react';
 import useSound from 'use-sound';
 import { makeStyles } from '@material-ui/styles';
 import Player from '../../common/Player/Player';
@@ -15,6 +16,7 @@ const jump = 'jump';
 
 
 const useStyles = makeStyles(theme => ({
+  
   player: {
     opacity: 0,
     // width: 200,
@@ -136,9 +138,16 @@ const QuestionSong = (props) => {
   const [playButtonSound] = useSound(clickSound);
   const classes = useStyles(props);
 
+  useEffect(() => {
+    props.stopBgMusic()
+  })
+
+
   const handler = () => {
     playButtonSound()
-    props.viewHandler("question")
+    setTimeout(() => {
+      props.viewHandler("question")
+    }, 500);
   }
 
   return(

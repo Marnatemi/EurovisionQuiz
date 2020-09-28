@@ -1,0 +1,207 @@
+{
+  "Lugano":{
+    "polish": "Lugano",
+    "french": "Lugano",
+    "country": "Switzerland"
+  },
+  "Frankfurt":{
+    "polish": "Frankfurt",
+    "french": "Francfort",
+    "country": "Germany"
+  },
+  "Hilversum":{
+    "polish": "Hilversum",
+    "french": "Hilversum",
+    "country": "The Netherlands"
+  },
+  "Cannes":{
+    "polish": "Cannes",
+    "french": "Cannes",
+    "country": "France"
+  },
+  "London":{
+    "polish": "Londyn",
+    "french": "Londres",
+    "country": "England"
+  },
+  "Luxembourg":{
+    "polish": "Luksemburg",
+    "french": "Luxembourg",
+    "country": "Luxembourg"
+  },
+  "Copenhagen":{
+    "polish": "Kopenhaga",
+    "french": "Copenhague",
+    "country": "Denmark"
+  },
+  "Neapol":{
+    "polish": "Neapol",
+    "french": "Néapol",
+    "country": "Italy"
+  },
+  "Vienna":{
+    "polish": "Wiedeń",
+    "french": "Vienne",
+    "country": "Austria"
+  },
+  "Amsterdam":{
+    "polish": "Amsterdam",
+    "french": "Amsterdam",
+    "country": "The Netherlands"
+  },
+  "Dublin":{
+    "polish": "Dublin",
+    "french": "Dublin",
+    "country": "Ireland"
+  },
+  "Edynburg":{
+    "polish": "Edynburg",
+    "french": "Edynburg",
+    "country": "Scotland"
+  },
+  "Brighton":{
+    "polish": "Brighton",
+    "french": "Brighton",
+    "country": "England"
+  },
+  "Stockholm":{
+    "polish": "Sztokholm",
+    "french": "Stockholm",
+    "country": "Sweden"
+  },
+  "the Hague":{
+    "polish": "Haga",
+    "french": "La Haye",
+    "country": "The Netherlands"
+  },
+  "Paris":{
+    "polish": "Paryż",
+    "french": "Lugano",
+    "country": "France"
+  },
+  "Jerusalem":{
+    "polish": "Jerozolima",
+    "french": "Jérusalem",
+    "country": "Israel"
+  },
+  "Harrogate":{
+    "polish": "Harrogate",
+    "french": "Harrogate",
+    "country": "England"
+  },
+  "Munich":{
+    "polish": "Monachium",
+    "french": "Munich",
+    "country": "Germany"
+  },
+  "Gothenburg":{
+    "polish": "Göteborg",
+    "french": "Göteborg",
+    "country": "Sweden"
+  },
+  "Bergen":{
+    "polish": "Bergen",
+    "french": "Bergen",
+    "country": "Norway"
+  },
+  "Brussels":{
+    "polish": "Bruksela",
+    "french": "Bruxelles",
+    "country": "Belgium"
+  },
+  "Lausanne":{
+    "polish": "Lozanna",
+    "french": "Lausanne",
+    "country": "Switzerland"
+  },
+  "Zagreb":{
+    "polish": "Zagrzeb",
+    "french": "Zagreb",
+    "country": "Croatia"
+  },
+  "Rome":{
+    "polish": "Rzym",
+    "french": "Rome",
+    "country": "Italy"
+  },
+  "Malmö":{
+    "polish": "Malmö",
+    "french": "Malmö",
+    "country": "Sweden"
+  },
+  "Millstreet":{
+    "polish": "Millstreet",
+    "french": "Millstreet",
+    "country": "Ireland"
+  },
+  "Oslo":{
+    "polish": "Oslo",
+    "french": "Oslo",
+    "country": "Norway"
+  },
+  "Birmingham":{
+    "polish": "Birmingham",
+    "french": "Birmingham",
+    "country": "England"
+  },
+  "Tallinn":{
+    "polish": "Tallinn",
+    "french": "Tallinn",
+    "country": "Estonia"
+  },
+  "Riga":{
+    "polish": "Ryga",
+    "french": "Riga",
+    "country": "Latvia"
+  },
+  "Istanbul":{
+    "polish": "Stambuł",
+    "french": "Istanbul",
+    "country": "Turkey"
+  },
+  "Kiev":{
+    "polish": "Kijów",
+    "french": "Kiev",
+    "country": "Ukraine"
+  },
+  "Athens":{
+    "polish": "Ateny",
+    "french": "Athènes",
+    "country": "Greece"
+  },
+  "Helsinki":{
+    "polish": "Helsinki",
+    "french": "Helsinki",
+    "country": "Finland"
+  },
+  "Belgrade":{
+    "polish": "Belgrad",
+    "french": "Belgrade",
+    "country": "Serbia"
+  },
+  "Moscow":{
+    "polish": "Moskwa",
+    "french": "Moscou",
+    "country": "Russia"
+  },
+  "Düsseldorf":{
+    "polish": "Düsseldorf",
+    "french": "Düsseldorf",
+    "country": "Germany"
+  },
+  "Baku":{
+    "polish": "Baku",
+    "french": "Bakou",
+    "country": "Azerbaijan"
+  },
+  "Lisbon":{
+    "polish": "Lizbona",
+    "french": "Lisbonne",
+    "country": "Portugal"
+  },
+  "Tel Aviv":{
+    "polish": "Tel Awiw",
+    "french": "Tel Aviv",
+    "country": "Israel"
+  }
+}

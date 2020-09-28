@@ -1,0 +1,214 @@
+{
+  "Switzerland": {
+    "polish": "Szwajcaria",
+    "french": "la Suisse"
+  },
+  "The Netherlands":{
+    "polish": "Holandia",
+    "french": "les Pays-Bas"
+  },
+  "France":{
+    "polish": "Francja",
+    "french": "la France"
+  },
+  "Luxembourg":{
+    "polish": "Luksemburg",
+    "french": "le Luxembourg"
+  },
+  "Denmark":{
+    "polish": "Dania",
+    "french": "le Danemark"
+  },
+  "Italy":{
+    "polish": "Włochy",
+    "french": "l'Italie"
+  },
+  "Austria":{
+    "polish": "Austria",
+    "french": "l'Autriche"
+  },
+  "Great Britain":{
+    "polish": "Wielka Brytania",
+    "french": "le Royaume-Uni"
+  },
+  "Spain":{
+    "polish": "Hiszpania",
+    "french": "L'Espagne"
+  },
+  "Ireland":{
+    "polish": "Irlandia",
+    "french": "l'Irlande"
+  },
+  "Monaco":{
+    "polish": "Monako",
+    "french": "le Monaco"
+  },
+  "Sweden":{
+    "polish": "Szwecja",
+    "french": "la Suède"
+  },
+  "Israel":{
+    "polish": "Izrael",
+    "french": "l'Israël"
+  },
+  "Germany": {
+    "polish": "Niemcy",
+    "french": "l'Allemagne"
+  },
+  "Norway": {
+    "polish": "Norwegia",
+    "french": "la Norvège"
+  },
+  "Belgium": {
+    "polish": "Belgia",
+    "french": "la Belgique"
+  },
+  "Yugoslavia": {
+    "polish": "Jugosławia",
+    "french": "la Yougoslavie"
+  },
+  "Estonia": {
+    "polish": "Estonia",
+    "french": "l'Estonie"
+  },
+  "Latvia": {
+    "polish": "Łotwa",
+    "french": "la Lettonie"
+  },
+  "Turkey": {
+    "polish": "Turcja",
+    "french": "la Turquie"
+  },
+  "Ukraine": {
+    "polish": "Ukraina",
+    "french": "l'Ukraine"
+  },
+  "Greece": {
+    "polish": "Grecja",
+    "french": "la Grèce"
+  },
+  "Finland": {
+    "polish": "Finlandia",
+    "french": "la Finlande"
+  },
+  "Serbia": {
+    "polish": "Serbia",
+    "french": "la Serbie"
+  },
+  "Russia": {
+    "polish": "Rosja",
+    "french": "la Russie"
+  },
+  "Azerbaijan": {
+    "polish": "Azerbejdżan",
+    "french": "l'Azerbaïdjan"
+  },
+  "Portugal": {
+    "polish": "Portugalia",
+    "french": "le Portugal"
+  },
+  "San Marino": {
+    "polish": "San Marino",
+    "french": "Saint Marin"
+  },
+  "Romania": {
+    "polish": "Rumunia",
+    "french": "la Roumanie"
+  },
+  "Iceland": {
+    "polish": "Islandia",
+    "french": "l'Islande"
+  },
+  "Malta": {
+    "polish": "Malta",
+    "french": "la Malte"
+  },
+  "Cyprus": {
+    "polish": "Cypr",
+    "french": "le Chypre"
+  },
+  "Croatia": {
+    "polish": "Chorwacja",
+    "french": "la Croatie"
+  },
+  "Morocco": {
+    "polish": "Maroko",
+    "french": "le Maroc"
+  },
+  "Moldova": {
+    "polish": "Mołdawia",
+    "french": "la Moldavie"
+  },
+  "Belarus": {
+    "polish": "Białoruś",
+    "french": "la Biêlorussie"
+  },
+  "Georgia": {
+    "polish": "Gruzja",
+    "french": "la Géorgie"
+  },
+  "Czech Republic": {
+    "polish": "Czechy",
+    "french": "la République tchèque"
+  },
+  "Armenia": {
+    "polish": "Armenia",
+    "french": "l'Arménie"
+  },
+  "Montenegro": {
+    "polish": "Czarnogóra",
+    "french": "le Monténégro"
+  },
+  "Albania": {
+    "polish": "Albania",
+    "french": "l'Albanie"
+  },
+  "Bosnie Herzégovine": {
+    "polish": "Bośnia i Hercerowina",
+    "french": "la Bosnie et Herzégovine"
+  },
+  "Slovénie": {
+    "polish": "Słowenia",
+    "french": "la Slovénie"
+  },
+  "Lituanie": {
+    "polish": "Litwa",
+    "french": "la Lituanie"
+  },
+  "Poland": {
+    "polish": "Polska",
+    "french": "la Pologne"
+  },
+  "Slovaquie": {
+    "polish": "Słowacja",
+    "french": "la Slovaquie"
+  },
+  "Hungary": {
+    "polish": "Wegry",
+    "french": "l'Hongorie"
+  },
+  "Macedonia": {
+    "polish": "Macedonia",
+    "french": "la Macédoine"
+  },
+  "Andora": {
+    "polish": "Andora",
+    "french": "l'Andora"
+  },
+  "Bulgaria": {
+    "polish": "Bułgaria",
+    "french": "la Bulgarie"
+  },
+  "Australia": {
+    "polish": "Australia",
+    "french": "l'Australie'"
+  },
+  "England": {
+    "polish": "Anglia",
+    "french": "l'Angleterre"
+  },
+  "Scotland":{
+    "polish": "Anglia",
+    "french": "l'Écosse"
+  }
+}

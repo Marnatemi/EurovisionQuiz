@@ -4,240 +4,320 @@
   "songTitle": "Refrain",
   "playerStart": 990,
   "playerEnd": 1007,
-  "artist": "Lys Assia",
+  "artist": 
+    {
+      "id": "she",
+      "name": "Lys Assia"
+    },
   "year": 1956,
-  "winnerCountry": "Szwajcaria",
-  "place": "Lugano (Szwajcaria)",
+ "winnerCountry": "Switzerland",
+  "place": "Lugano",
   "easyQuestionOptions": ["Liane Augustin", "Lys Assia", "Semiha Yankı"],
-  "mediumQuestionOptions": ["Francja", "San Marino", "Szwajcaria"]  
+  "mediumQuestionOptions": ["France", "San Marino", "Switzerland"]  
   },       
   {
   "id": 2,
   "songTitle": "Net als toen",
   "playerStart": 975,
   "playerEnd": 989,
-  "artist": "Corry Brokken",
+  "artist": 
+    {
+      "id": "she",
+      "name": "Corry Brokken"
+    },
   "year": 1957,
-  "winnerCountry": "Holandia",
-  "place": "Frankfurt (Niemcy)",
+ "winnerCountry":  "The Netherlands",
+  "place": "Frankfurt",
   "easyQuestionOptions": ["Margot Hielscher", "Danièle Dupré", "Corry Brokken"],
-  "mediumQuestionOptions": ["Holandia", "Belgia", "Turcja"]  
+  "mediumQuestionOptions": ["The Netherlands", "Belgium", "Turkey"]  
   },       
   {
   "id": 3,
   "songTitle": "Dors, mon amour",
   "playerStart": 960,
   "playerEnd": 974,
-  "artist": "André Claveau",
+  "artist": 
+    {
+      "id": "he",
+      "name": "André Claveau"
+    },
   "year": 1958,
-  "winnerCountry": "Francja",
-  "place": "Hilversum (Holandia)",
+ "winnerCountry":  "France",
+  "place": "Hilversum",
   "easyQuestionOptions": ["André Claveau", "Dario Campeotto", "Eduardo Nascimento"],
-  "mediumQuestionOptions": ["Portugalia", "Francja", "Szwajcaria"]  
+  "mediumQuestionOptions": ["Portugal", "France", "Switzerland"]  
   },       
   {
   "id": 4,
   "songTitle": "Een beetje",
   "playerStart": 943,
   "playerEnd": 959,
-  "artist": "Teddy Scholten",
+  "artist":     
+    {
+      "id": "she",
+      "name": "Teddy Scholten"
+    },
   "year": 1959,
-  "winnerCountry": "Holandia",
-  "place": "Cannes (Francja)",
+ "winnerCountry":  "The Netherlands",
+  "place": "Cannes",
   "easyQuestionOptions": ["Simone de Oliveira", "Teddy Scholten", "Dany Dauberson"],
-  "mediumQuestionOptions": ["Rumunia", "Dania", "Holandia"]  
+  "mediumQuestionOptions": ["Romania", "Denmark", "The Netherlands"]  
   },       
   {
   "id": 5,
   "songTitle": "Tom Pillibi",
   "playerStart": 927,
   "playerEnd": 939,
-  "artist": "Jacqueline Boyerl",
+  "artist": 
+    {
+      "id": "she",
+      "name": "Jacqueline Boyerl"
+    },
   "year": 1960,
-  "winnerCountry": "Francja",
-  "place": "Londyn (Anglia)",
+ "winnerCountry":  "France",
+  "place": "London",
   "easyQuestionOptions": ["Jacques Philippe", "Kirsti Sparboe", "Jacqueline Boyerl"],
-  "mediumQuestionOptions": ["Francja", "Luksemburg", "Norwegia"]  
+  "mediumQuestionOptions": ["France", "Luxembourg", "Norway"]  
   },       
   {
   "id": 6,
   "songTitle": "Nous, les amoureux",
   "playerStart": 914,
   "playerEnd": 926,
-  "artist": "Jean-Claude Pascal",
+  "artist": 
+    {
+      "id": "he",
+      "name": "Jean-Claude Pascal"
+    },
   "year": 1961,
-  "winnerCountry": "Luksemburg",
-  "place": "Cannes (Francja)",
+ "winnerCountry": "Luxembourg",
+  "place": "Cannes",
   "easyQuestionOptions": ["Jean-Claude Pascal", "Jacques Raymond", "Jimmy Makulis"],
-  "mediumQuestionOptions": ["Austria", "Luksemburg", "Grecja"]  
+  "mediumQuestionOptions": ["Austria", "Luxembourg", "Greece"]  
   },       
   {
   "id": 7,
   "songTitle": "Un premier amour",
   "playerStart": 899,
   "playerEnd": 913,
-  "artist": "Isabelle Aubret",
+  "artist": 
+    {
+      "id": "she",
+      "name": "Isabelle Aubret"
+    },
   "year": 1962,
-  "winnerCountry": "Francja",
-  "place": "Luksemburg (Luksemburg)",
+ "winnerCountry":  "France",
+  "place": "Luxembourg",
   "easyQuestionOptions": ["Nana Mouskouri", "Isabelle Aubret", "Lize Marke"],
-  "mediumQuestionOptions": ["Belgia", "Holandia", "Francja"]  
+  "mediumQuestionOptions": ["Belgium", "The Netherlands", "France"]  
   },       
   {
   "id": 8,
   "songTitle": "Dansevise",
   "playerStart": 885,
   "playerEnd": 897,
-  "artist": "Grethe i Jørgen Ingmannow",
+  "artist": 
+    {
+      "id": "they",
+      "name": "Grethe & Jørgen Ingmannow"
+    },
   "year": 1963,
-  "winnerCountry": "Dania",
-  "place": "Londyn (Anglia)",
-  "easyQuestionOptions": ["Stavros i Constantina", "Nilüfer i Nazar", "Grethe i Jørgen Ingmannow"],
-  "mediumQuestionOptions": ["Dania", "Finlandia", "Niemcy"]  
+ "winnerCountry": "Denmark",
+  "place": "London",
+  "easyQuestionOptions": ["Stavros & Constantina", "Nilüfer & Nazar", "Grethe & Jørgen Ingmannow"],
+  "mediumQuestionOptions": ["Denmark", "Finland", "Germany"]  
   },       
   {
   "id": 9,
   "songTitle": "Non ho l’età",
   "playerStart": 868,
   "playerEnd": 881,
-  "artist": "Gigliola Cinquetti",
+  "artist": 
+    {
+      "id": "she",
+      "name": "Gigliola Cinquetti"
+    },
   "year": 1964,
-  "winnerCountry": "Włochy",
-  "place": "Kopenhaga (Dania)",
+ "winnerCountry": "Italy",
+  "place": "Copenhagen",
   "easyQuestionOptions": ["Gigliola Cinquetti", "Gianni Morandi", "Jimmy Fontana"],
-  "mediumQuestionOptions": ["Hiszpania", "Włochy", "Portugalia"]
+  "mediumQuestionOptions": ["Spain", "Italy", "Portugal"]
   },
   {
   "id": 10,
   "songTitle": "Poupée de cire, poupée de son",
   "playerStart": 851,
   "playerEnd": 862,
-  "artist": "France Gall",
+  "artist": 
+    {
+      "id": "she",
+      "name": "France Gall"
+    },
   "year": 1965,
-  "winnerCountry": "Luksemburg",
-  "place": "Neapol (Włochy)",
+ "winnerCountry": "Luxembourg",
+  "place": "Neapol",
   "easyQuestionOptions": ["Noëlle Cordier", "France Gall", "Birgit Brüel"],
-  "mediumQuestionOptions": ["Monako", "Holandia", "Luksemburg"]  
+  "mediumQuestionOptions": ["Monaco", "The Netherlands", "Luxembourg"]  
   },       
   {
   "id": 11,
   "songTitle": "Merci, Chérie",
   "playerStart": 838,
   "playerEnd": 850,
-  "artist": "Udo Jürgens",
+  "artist": 
+    {
+      "id": "he",
+      "name": "Udo Jürgens"
+    },
   "year": 1966,
-  "winnerCountry": "Austria",
-  "place": "Luksemburg (Luksemburg)",
+ "winnerCountry": "Austria",
+  "place": "Luxembourg",
   "easyQuestionOptions": ["Udo Jürgens", "Jean-Paul Mauric", "Eduardo Nascimento"],
-  "mediumQuestionOptions": ["Hiszpania", "Austria", "Luksemburg"]  
+  "mediumQuestionOptions": ["Spain", "Austria", "Luxembourg"]  
   },       
   {
   "id": 12,
   "songTitle": "Puppet on a String",
   "playerStart": 823,
   "playerEnd": 837,
-  "artist": "Sandie Shaw",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Sandie Shaw"
+    },
   "year": 1967,
-  "winnerCountry": "Wielka Brytania",
-  "place": "Wiedeń (Austria)",
+ "winnerCountry": "Great Britain",
+  "place": "Vienna",
   "easyQuestionOptions": ["Inge Brück", "Tonicha", "Sandie Shaw"],
-  "mediumQuestionOptions": ["Wielka Brytania", "Norwegia", "Szwajcaria"]  
+  "mediumQuestionOptions": ["Great Britain", "Norway", "Switzerland"]  
   },       
   {
   "id": 13,
   "songTitle": "La, la, la",
   "playerStart": 810,
   "playerEnd": 821,
-  "artist": "Massiel",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Massiel"
+    },
   "year": 1968,
-  "winnerCountry": "Hiszpania",
-  "place": "Londyn (Anglia)",
+  "winnerCountry": "Spain",
+  "place": "London",
   "easyQuestionOptions": ["Patricia Kraus", "Massiel", "Karina"],
-  "mediumQuestionOptions": ["Hiszpania", "Szwajcaria", "Belgia"]  
+  "mediumQuestionOptions": ["Spain", "Switzerland", "Belgium"]  
   },  
   {
   "id": 14,
   "songTitle": "All Kinds of Everything",
   "playerStart": 740,
   "playerEnd": 753,
-  "artist": "Dana",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Dana"
+    },
   "year": 1970,
-  "winnerCountry": "Irlandia",
-  "place": "Amsterdam (Holandia)",
+ "winnerCountry": "Ireland",
+  "place": "Amsterdam",
   "easyQuestionOptions": ["Dana", "Tonia", "Sonia"],
-  "mediumQuestionOptions": ["Wielka Brytania", "Irlandia", "Belgia"]  
+  "mediumQuestionOptions": ["Great Britain", "Ireland", "Belgium"]  
   },       
   {
   "id": 15,
   "songTitle": "Un banc, un arbre, une rue",
   "playerStart": 723,
   "playerEnd": 736,
-  "artist": "Séverine",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Séverine"
+    },
   "year": 1971,
-  "winnerCountry": "Monako",
-  "place": "Dublin (Irlandia)",
+ "winnerCountry": "Monaco",
+  "place": "Dublin",
   "easyQuestionOptions": ["Rachel", "Séverine", "Ulla Pia"],
-  "mediumQuestionOptions": ["Francja", "Dania", "Monako"]  
+  "mediumQuestionOptions": ["France", "Denmark", "Monaco"]  
   },       
   {
   "id": 16,
   "songTitle": "Après toi",
   "playerStart": 708,
   "playerEnd": 722,
-  "artist": "Vicky Leandros",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Vicky Leandros"
+    },
   "year": 1972,
-  "winnerCountry": "Luksemburg",
-  "place": "Edynburg (Szkocja)",
+ "winnerCountry": "Luxembourg",
+  "place": "Edynburg",
   "easyQuestionOptions": ["Dominique Dussault", "Veronique Müller", "Vicky Leandros"],
-  "mediumQuestionOptions": ["Luksemburg", "Monako", "Jugosławia"]  
+  "mediumQuestionOptions": ["Luxembourg", "Monaco", "Yugoslavia"]  
   },       
   {
   "id": 17,
   "songTitle": "Tu te reconnaîtras",
   "playerStart": 694,
   "playerEnd": 707,
-  "artist": "Anne-Marie David",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Anne-Marie David"
+    },
   "year": 1973,
-  "winnerCountry": "Luksemburg",
-  "place": "Luksemburg (Luksemburg)",
+ "winnerCountry": "Luxembourg",
+  "place": "Luxembourg",
   "easyQuestionOptions": ["Mariella Farré", "Mia Martini", "Anne-Marie David"],
-  "mediumQuestionOptions": ["Szwajcaria", "Luksemburg", "Portugalia"]  
+  "mediumQuestionOptions": ["Switzerland", "Luxembourg", "Portugal"]  
   },       
   {
   "id": 18,
   "songTitle": "Waterloo",
   "playerStart": 680,
   "playerEnd": 691,
-  "artist": "ABBA",
+    "artist": 
+    {
+      "id": "group",
+      "name": "ABBA"
+    },
   "year": 1974,
-  "winnerCountry": "Szwecja",
-  "place": "Brighton (Anglia)",
+ "winnerCountry": "Sweden",
+  "place": "Brighton",
   "easyQuestionOptions": ["Waterloo & Robinson", "ABBA", "KEiiNO"],
-  "mediumQuestionOptions": ["Norwegia", "Wielka Brytania", "Szwecja"]  
+  "mediumQuestionOptions": ["Norway", "Great Britain", "Sweden"]  
   },
   {
   "id": 19,
   "songTitle": "Ding-a-dong",
   "playerStart": 663,
   "playerEnd": 673,
-  "artist": "Teach-In",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Teach-In"
+    },
   "year": 1975,
-  "winnerCountry": "Holandia",
-  "place": "Sztokholm (Szwecja)",
+ "winnerCountry":  "The Netherlands",
+  "place": "Stockholm",
   "easyQuestionOptions": ["Teach-In", "Bee Gees", "Brotherhood of Man"],
-  "mediumQuestionOptions": ["Holandia", "Turcja", "Irlandia"]  
+  "mediumQuestionOptions": ["The Netherlands", "Turkey", "Ireland"]  
   },
   {
   "id": 20,
   "songTitle": "Save Your Kisses for Me",
   "playerStart": 650,
   "playerEnd": 661,
-  "artist": "Brotherhood of Man",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Brotherhood of Man"
+    },
   "year": 1976,
-  "winnerCountry": "Wielka Brytania",
-  "place": "Haga (Holandia)",
+ "winnerCountry": "Great Britain",
+  "place": "the Hague",
   "easyQuestionOptions": ["Fleetwood Mac", "Brotherhood of Man", "Village People"],
-  "mediumQuestionOptions": ["Malta", "Wielka Brytania", "Szwecja"]  
+  "mediumQuestionOptions": ["Malta", "Great Britain", "Sweden"]  
   
   },
   {
@@ -245,515 +325,687 @@
   "songTitle": "L’oiseau et l’enfant",
   "playerStart": 634,
   "playerEnd": 648,
-  "artist": "Marie Myriam",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Marie Myriam"
+    },
   "year": 1977,
-  "winnerCountry": "Francja",
-  "place": "Londyn (Anglia)",
+ "winnerCountry":  "France",
+  "place": "London",
   "easyQuestionOptions": ["Marie Myriam", "Celine Dion", "Edith Piaf"],
-  "mediumQuestionOptions": ["Monako", "Austria", "Francja"]  
+  "mediumQuestionOptions": ["Monaco", "Austria", "France"]  
   },
   {
   "id": 22,
   "songTitle": "A-Ba-Ni-Bi",
   "playerStart": 620,
   "playerEnd": 633,
-  "artist": "Jizhar Kohen i Alphabeta",
+    "artist": 
+    {
+      "id": "they",
+      "name": "Jizhar Kohen & Alphabeta"
+    },
   "year": 1978,
-  "winnerCountry": "Izrael",
-  "place": "Paryż (Francja)",
-  "easyQuestionOptions": ["Modern Folk Trio i Ayşegül", "Jizhar Kohen i Alphabeta", "Os Amigos"],
-  "mediumQuestionOptions": ["Austria", "Portugalia", "Izrael"]  
+ "winnerCountry": "Israel",
+  "place": "Paris",
+  "easyQuestionOptions": ["Modern Folk Trio & Ayşegül", "Jizhar Kohen & Alphabeta", "Os Amigos"],
+  "mediumQuestionOptions": ["Austria", "Portugal", "Israel"]  
   },     
   {
   "id": 23,
   "songTitle": "Hallelujah",
   "playerStart": 602,
   "playerEnd": 617,
-  "artist": "Gali Atari i Milk and Honey",
+    "artist": 
+    {
+      "id": "they",
+      "name": "Gali Atari & Milk and Honey"
+    },
   "year": 1979,
-  "winnerCountry": "Izrael",
-  "place": "Jerozolima (Izrael)",
-  "easyQuestionOptions": ["Münchener Freiheit", "Park Café", "Gali Atari i Milk and Honey"],
-  "mediumQuestionOptions": ["Izrael", "Francja", "Włochy"]  
+ "winnerCountry": "Israel",
+  "place": "Jerusalem",
+  "easyQuestionOptions": ["Münchener Freiheit", "Park Café", "Gali Atari &  Milk and Honey"],
+  "mediumQuestionOptions": ["Israel", "France", "Italy"]  
   },     
   {
   "id": 24,
   "songTitle": "What’s Another Year",
   "playerStart": 587,
   "playerEnd": 601,
-  "artist": "Johnny Logan",
+    "artist": 
+    {
+      "id": "he",
+      "name": "Johnny Logan"
+    },
   "year": 1980,
-  "winnerCountry": "Irlandia",
-  "place": "Haga (Holandia)",
+ "winnerCountry": "Ireland",
+  "place": "the Hague",
   "easyQuestionOptions": ["Johnny Hallyday", "Johnny Logan", "Bono"],
-  "mediumQuestionOptions": ["Holandia", "Irlandia", "Islandia"]  
+  "mediumQuestionOptions": ["The Netherlands", "Ireland", "Iceland"]  
   },
   {
   "id": 25,
   "songTitle": "Making Your Mind Up",
   "playerStart": 572,
   "playerEnd": 586,
-  "artist": "Bucks Fizz",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Bucks Fizz"
+    },
   "year": 1981,
-  "winnerCountry": "Wielka Brytania",
-  "place": "Dublin (Irlandia)",
+ "winnerCountry": "Great Britain",
+  "place": "Dublin",
   "easyQuestionOptions": ["Bucks Fizz", "Mess", "De Spelbrekers"],
-  "mediumQuestionOptions": ["Szwecja", "Wielka Brytania", "Luksemburg"]  
+  "mediumQuestionOptions": ["Sweden", "Great Britain", "Luxembourg"]  
   },     
   {
   "id": 26,
   "songTitle": "Ein bißchen Frieden",
   "playerStart": 558,
   "playerEnd": 570,
-  "artist": "Nicole",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Nicole"
+    },
   "year": 1982,
-  "winnerCountry": "Niemcy",
-  "place": "Harrogate (Anglia)",
+ "winnerCountry": "Germany",
+  "place": "Harrogate",
   "easyQuestionOptions": ["Sophie", "Vajta", "Nicole"],
-  "mediumQuestionOptions": ["Niemcy", "Jugosławia", "Monako"]  
+  "mediumQuestionOptions": ["Germany", "Yugoslavia", "Monaco"]  
   },     
   {
   "id": 27,
   "songTitle": "Si la vie est cadeau",
   "playerStart": 539,
   "playerEnd": 554,
-  "artist": "Corinne Hermès",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Corinne Hermès"
+    },
   "year": 1983,
-  "winnerCountry": "Luksemburg",
-  "place": "Monachium (Niemcy)",
+ "winnerCountry": "Luxembourg",
+  "place": "Munich",
   "easyQuestionOptions": ["Nathalie Pâque", "Corinne Hermès", "Anita Spanner"],
-  "mediumQuestionOptions": ["Francja", "Austria", "Luksemburg"]  
+  "mediumQuestionOptions": ["France", "Austria", "Luxembourg"]  
   },     
   {
   "id": 28,
   "songTitle": "Diggi-Loo Diggi-Ley",
   "playerStart": 525,
   "playerEnd": 538,
-  "artist": "Herreys",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Herreys"
+    },
   "year": 1985,
-  "winnerCountry": "Szwecja",
-  "place": "Luksemburg (Luksemburg)",
+ "winnerCountry": "Sweden",
+  "place": "Luxembourg",
   "easyQuestionOptions": ["Herreys", "Maxi & Chris Garden", "Brixx"],
-  "mediumQuestionOptions": ["Izrael", "Szwecja", "Niemcy"]  
+  "mediumQuestionOptions": ["Israel", "Sweden", "Germany"]  
   },     
   {
   "id": 29,
   "songTitle": "La det swinge",
   "playerStart": 510,
   "playerEnd": 523,
-  "artist": "Bobbysocks",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Bobbysocks"
+    },
   "year": 1985,
-  "winnerCountry": "Norwegia",
-  "place": "Göteborg (Szwecja)",
+ "winnerCountry": "Norway",
+  "place": "Gothenburg",
   "easyQuestionOptions": ["ABBA", "Duo Datz", "Bobbysocks"],
-  "mediumQuestionOptions": ["Norwegia", "Szwecja", "Szwajcaria"]  
+  "mediumQuestionOptions": ["Norway", "Sweden", "Switzerland"]  
   },     
   {
   "id": 30,
   "songTitle": "J’aime la vie",
   "playerStart": 495,
   "playerEnd": 508,
-  "artist": "Sandra Kim",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Sandra Kim"
+    },
   "year": 1986,
-  "winnerCountry": "Belgia",
-  "place": "Bergen (Norwegia)",
+ "winnerCountry": "Belgium",
+  "place": "Bergen",
   "easyQuestionOptions": ["Lara Fabian", "Sandra Kim", "Maria Rita"],
-  "mediumQuestionOptions": ["Luksemburg", "Turcja", "Belgia"]  
+  "mediumQuestionOptions": ["Luxembourg", "Turkey", "Belgium"]  
   },     
   {
   "id": 31,
   "songTitle": "Hold Me Now",
   "playerStart": 480,
   "playerEnd": 492,
-  "artist": "Johnny Logan",
+    "artist": 
+    {
+      "id": "he",
+      "name": "Johnny Logan"
+    },
   "year": 1987,
-  "winnerCountry": "Irlandia",
-  "place": "Bruksela (Belgia)",
+ "winnerCountry": "Ireland",
+  "place": "Brussels",
   "easyQuestionOptions": ["Johnny Logan", "Jizhar Kohen", "Gerard Joling"],
-  "mediumQuestionOptions": ["Izrael", "Irlandia", "Holandia"]  
+  "mediumQuestionOptions": ["Israel", "Ireland", "The Netherlands"]  
   },    
   {
   "id": 32,
   "songTitle": "Ne partez pas sans moi",
   "playerStart": 463,
   "playerEnd": 478,
-  "artist": "Céline Dion",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Céline Dion"
+    },
   "year": 1988,
-  "winnerCountry": "Szwajcaria",
-  "place": "Dublin (Irlandia)",
+ "winnerCountry": "Switzerland",
+  "place": "Dublin",
   "easyQuestionOptions": ["Noëlle Cordier", "Vanessa Pardis", "Céline Dion"],
-  "mediumQuestionOptions": ["Szwajcaria", "Francja", "Niemcy"]  
+  "mediumQuestionOptions": ["Switzerland", "France", "Germany"]  
   },
   {
   "id": 33,
   "songTitle": "Rock Me",
   "playerStart": 448,
   "playerEnd": 461,
-  "artist": "Riva",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Riva"
+    },
   "year": 1989,
-  "winnerCountry": "Jugosławia",
-  "place": "Lozanna (Szwajcaria)",
+ "winnerCountry": "Yugoslavia",
+  "place": "Lausanne",
   "easyQuestionOptions": ["Pihasoittajat", "Franka", "Riva"],
-  "mediumQuestionOptions": ["Norwegia", "Grecja", "Jugosławia"]  
+  "mediumQuestionOptions": ["Norway", "Greece", "Yugoslavia"]  
   },    
   {
   "id": 34,
   "songTitle": "Insieme: 1992",
   "playerStart": 432,
   "playerEnd": 444,
-  "artist": "Toto Cutugno",
+    "artist": 
+    {
+      "id": "he",
+      "name": "Toto Cutugno"
+    },
   "year": 1990,
-  "winnerCountry": "Włochy",
-  "place": "Zagrzeb (Chorwacja)",
+ "winnerCountry": "Italy",
+  "place": "Zagreb",
   "easyQuestionOptions": ["Toto Cutugno", "Tó Cruz", "Konstandinos Christoforu"],
-  "mediumQuestionOptions": ["Cypr", "Włochy", "Portugalia"]  
+  "mediumQuestionOptions": ["Cyprus", "Italy", "Portugal"]  
   },  
   {
   "id": 35,
   "songTitle": "Fångad av en stormvind",
   "playerStart": 415,
   "playerEnd": 428,
-  "artist": "Carola",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Carola"
+    },
   "year": 1991,
-  "winnerCountry": "Szwecja",
-  "place": "Rzym (Włochy)",
+ "winnerCountry": "Sweden",
+  "place": "Rome",
   "easyQuestionOptions": ["Wind", "Carola", "Stella"],
-  "mediumQuestionOptions": ["Szwecja", "Belgia", "Niemcy"]  
+  "mediumQuestionOptions": ["Sweden", "Belgium", "Germany"]  
   },  
   {
   "id": 36,
   "songTitle": "Why Me?",
   "playerStart": 401,
   "playerEnd": 413,
-  "artist": "Linda Martin",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Linda Martin"
+    },
   "year": 1992,
-  "winnerCountry": "Irlandia",
-  "place": "Malmö (Szwecja)",
+ "winnerCountry": "Ireland",
+  "place": "Malmö",
   "easyQuestionOptions": ["Linda Martin", "Ingrid Peters", "Aylin Vatankoş"],
-  "mediumQuestionOptions": ["Wielka Brytania", "Niemcy", "Irlandia"]  
+  "mediumQuestionOptions": ["Great Britain", "Germany", "Ireland"]  
   },  
   {
   "id": 37,
   "songTitle": "In Your Eyes",
   "playerStart": 385,
   "playerEnd": 399,
-  "artist": "Niamh Kavanagh",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Niamh Kavanagh"
+    },
   "year": 1993,
-  "winnerCountry": "Irlandia",
-  "place": "Millstreet (Irlandia)",
+ "winnerCountry": "Ireland",
+  "place": "Millstreet",
   "easyQuestionOptions": ["Ana Wisi", "Paola del Medico", "Niamh Kavanagh"],
-  "mediumQuestionOptions": ["Szwajcaria", "Irlandia", "Cypr"]  
+  "mediumQuestionOptions": ["Switzerland", "Ireland", "Cyprus"]  
   },
   {
   "id": 38,
   "songTitle": "Rock ’n’ Roll Kids",
   "playerStart": 366,
   "playerEnd": 380,
-  "artist": "Paul Harrington i Charlie McGettigan",
+    "artist": 
+    {
+      "id": "they",
+      "name": "Paul Harrington & Charlie McGettigan"
+    },
   "year": 1994,
-  "winnerCountry": "Irlandia",
-  "place": "Dublin (Irlandia)",
-  "easyQuestionOptions": ["Anti Social Media", "Paul Harrington i Charlie McGettigan", "Markku Aro & Koivistolaiset"],
-  "mediumQuestionOptions": ["Irlandia", "Dania", "Holandia"]  
+ "winnerCountry": "Ireland",
+  "place": "Dublin",
+  "easyQuestionOptions": ["Anti Social Media", "Paul Harrington & Charlie McGettigan", "Markku Aro & Koivistolaiset"],
+  "mediumQuestionOptions": ["Ireland", "Denmark", "The Netherlands"]  
   },
   {
   "id": 39,
   "songTitle": "Nocturne",
   "playerStart": 352,
   "playerEnd": 365,
-  "artist": "Secret Garden",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Secret Garden"
+    },
   "year": 1995,
-  "winnerCountry": "Norwegia",
-  "place": "Dublin (Irlandia)",
+ "winnerCountry": "Norway",
+  "place": "Dublin",
   "easyQuestionOptions": ["Secret Garden", "Dragon Fly", "The Ark"],
-  "mediumQuestionOptions": ["Chorwacja", "Włochy", "Norwegia"]  
+  "mediumQuestionOptions": ["Croatia", "Italy", "Norway"]  
   },
   {
   "id": 40,
   "songTitle": "The Voice",
   "playerStart": 337,
   "playerEnd": 351,
-  "artist": "Eimear Quinn",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Eimear Quinn"
+    },
   "year": 1996,
-  "winnerCountry":  "Irlandia",
-  "place": "Oslo (Norwegia)",
+  "winnerCountry":  "Ireland",
+  "place": "Oslo",
   "easyQuestionOptions": ["Monica Aspelund", "Tanja", "Eimear Quinn"],
-  "mediumQuestionOptions": ["Irlandia", "Finlandia", "Hiszpania"]  
+  "mediumQuestionOptions": ["Ireland", "Finland", "Spain"]  
   },
   {
   "id": 41,
   "songTitle": "Love Shine a Light",
   "playerStart": 320,
   "playerEnd": 334,
-  "artist": "Katrina & The Waves",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Katrina and The Waves"
+    },
   "year": 1997,
-  "winnerCountry":  "Wielka Brytania",
-  "place": "Dublin (Irlandia)",
-  "easyQuestionOptions": ["The Islanders", "Katrina & The Waves", "Belle i The Devotions"],
-  "mediumQuestionOptions": ["Malta", "Wielka Brytania", "Estonia"]  
+ "winnerCountry": "Great Britain",
+  "place": "Dublin",
+  "easyQuestionOptions": ["The Islanders", "Katrina and The Waves", "Belle and The Devotions"],
+  "mediumQuestionOptions": ["Malta", "Great Britain", "Estonia"]  
   },
   {
   "id": 42,
   "songTitle": "Diva",
   "playerStart": 303,
   "playerEnd": 318,
-  "artist": "Dana International",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Dana International"
+    },
   "year": 1998,
-  "winnerCountry": "Izrael",
-  "place": "Birmingham (Anglia)",
+ "winnerCountry": "Israel",
+  "place": "Birmingham",
   "easyQuestionOptions": ["Dana International", "Liora", "Moran Mazor"],
-  "mediumQuestionOptions": ["Jugosławia", "Turcja", "Izrael"]  
+  "mediumQuestionOptions": ["Yugoslavia", "Turkey", "Israel"]  
   },
   {
   "id": 43,
   "songTitle": "Take Me to Your Heaven",
   "playerStart": 288,
   "playerEnd": 302,
-  "artist": "Charlotte Nilsson",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Charlotte Nilsson"
+    },
   "year": 1999,
-  "winnerCountry": "Szwecja",
-  "place": "Jerozolima (Izrael)",
+ "winnerCountry": "Sweden",
+  "place": "Jerusalem",
   "easyQuestionOptions": ["Kikki Danielsson", "Evridiki", "Charlotte Nilsson"],
-  "mediumQuestionOptions": ["Szwecja", "Islandia", "Wielka Brytania"]  
+  "mediumQuestionOptions": ["Sweden", "Iceland", "Great Britain"]  
   },
   {
   "id": 44,
   "songTitle": "Fly on the Wings of Love",
   "playerStart": 271,
   "playerEnd": 286,
-  "artist": "Olsen Brothers",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Olsen Brothers"
+    },
   "year": 2000,
-  "winnerCountry": "Dania",
-  "place": "Sztokholm (Szwecja)",
-  "easyQuestionOptions": ["Brotherhood of Man", "Olsen Brothers", "Dorthe Andersen i Martin Loft"],
-  "mediumQuestionOptions": ["Szwecja", "Dania", "Francja"]  
+ "winnerCountry": "Denmark",
+  "place": "Stockholm",
+  "easyQuestionOptions": ["Brotherhood of Man", "Olsen Brothers", "Dorthe Andersen & Martin Loft"],
+  "mediumQuestionOptions": ["Sweden", "Denmark", "France"]  
   },
   {
   "id": 45,
   "songTitle": "Everybody",
   "playerStart": 256,
   "playerEnd": 270,
-  "artist": "Tanel Padar, Dave Benton i 2XL",
+    "artist": 
+    {
+      "id": "they",
+      "name": "Tanel Padar, Dave Benton & 2XL"
+    },
   "year": 2001,
   "winnerCountry": "Estonia",
-  "place": "Kopenhaga (Dania)",
-  "easyQuestionOptions": ["E.N.I.", "Jorgos Alkieos i Przyjaciele", "Tanel Padar, Dave Benton i 2XL"],
-  "mediumQuestionOptions": ["Maroko", "Islandia", "Estonia"]    
+  "place": "Copenhagen",
+  "easyQuestionOptions": ["E.N.I.", "Jorgos Alkieos & Friends", "Tanel Padar, Dave Benton & 2XL"],
+  "mediumQuestionOptions": ["Morocco", "Iceland", "Estonia"]    
   }, 
   {
   "id": 46,
   "songTitle": "I Wanna",
   "playerStart": 240,
   "playerEnd": 255,
-  "artist": "Marie N",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Marie N"
+    },
   "year": 2002,
-  "winnerCountry": "Łotwa",
-  "place": "Tallinn (Estonia)",
+  "winnerCountry": "Latvia",
+  "place": "Tallinn",
   "easyQuestionOptions": ["Pastora Soler", "Marie N", "Moran Mazor"],
-  "mediumQuestionOptions": ["Łotwa", "Austria", "Estonia"]    
+  "mediumQuestionOptions": ["Latvia", "Austria", "Estonia"]    
   },
   {
   "id": 47,
   "songTitle": "Everyway That I Can",
   "playerStart": 226,
   "playerEnd": 239,
-  "artist": "Sertab Erener",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Sertab Erener"
+    },
   "year": 2003,
-  "winnerCountry": "Turcja",
-  "place": "Ryga (Łotwa)",
+  "winnerCountry": "Turkey",
+  "place": "Riga",
   "easyQuestionOptions": ["", "", "Sertab Erener"],
-  "mediumQuestionOptions": ["Wielka Brytania", "Cypr", "Turcja"]    
+  "mediumQuestionOptions": ["Great Britain", "Cyprus", "Turkey"]    
   },
   {
   "id": 48,
   "songTitle": "Wild Dances",
   "playerStart": 209,
   "playerEnd": 224,
-  "artist": "Rusłana",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Rusłana"
+    },
   "year": 2004,
-  "winnerCountry": "Ukraina",
-  "place": "Stambuł (Turcja)",
+ "winnerCountry": "Ukraine",
+  "place": "Istanbul",
   "easyQuestionOptions": ["Barei", "Rusłana", "Mandinga"],
-  "mediumQuestionOptions": ["Ukraina", "Szwajcaria", "Dania"]    
+  "mediumQuestionOptions": ["Ukraine", "Switzerland", "Denmark"]    
   },
   {
   "id": 49,
   "songTitle": "My Number One",
   "playerStart": 193,
   "playerEnd": 207,
-  "artist": "Elena Paparizou",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Elena Paparizou"
+    },
   "year": 2005,
-  "winnerCountry": "Grecja",
-  "place": "Kijów (Ukraina)",
+ "winnerCountry": "Greece",
+  "place": "Kiev",
   "easyQuestionOptions": ["Elena Paparizou", "Nathalie Pâque", "Eleni Fureira"],
-  "mediumQuestionOptions": ["Rosja", "Grecja", "Chorwacja"]    
+  "mediumQuestionOptions": ["Russia", "Greece", "Croatia"]    
   },
   {
   "id": 50,
   "songTitle": "Hard Rock Hallelujah",
   "playerStart": 178,
   "playerEnd": 191,
-  "artist": "Lordi",
+    "artist": 
+    {
+      "id": "group",
+      "name": "Lordi"
+    },
   "year": 2006,
-  "winnerCountry": "Finlandia",
-  "place": "Ateny (Grecja)",
+  "winnerCountry": "Finland",
+  "place": "Athens",
   "easyQuestionOptions": ["Hatari", "IMRI", "Lordi"],
-  "mediumQuestionOptions": ["Finlandia", "Norwegia", "Ukraina"]    
+  "mediumQuestionOptions": ["Finland", "Norway", "Ukraine"]    
   },
   {
   "id": 51,
   "songTitle": "Molitva",
   "playerStart": 163,
   "playerEnd": 177,
-  "artist": "Marija Šerifović",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Marija Šerifović"
+    },
   "year": 2007,
   "winnerCountry": "Serbia",
-  "place": "Helsinki (Finlandia)",
+  "place": "Helsinki",
   "easyQuestionOptions": ["Elena Paparizou", "Marija Šerifović", "Jelena Tomašević"],
-  "mediumQuestionOptions": ["Hiszpania", "Mołdawia", "Serbia"]      
+  "mediumQuestionOptions": ["Spain", "Moldova", "Serbia"]      
   },
   {
   "id": 52,
   "songTitle": "Believe",
   "playerStart": 145,
   "playerEnd": 162,
-  "artist": "Dima Biłan",
+    "artist": 
+    {
+      "id": "he",
+      "name": "Dima Biłan"
+    },
   "year": 2008,
-  "winnerCountry": "Rosja",
-  "place": "Belgrad (Serbia)",
+  "winnerCountry": "Russia",
+  "place": "Belgrade",
   "easyQuestionOptions": ["Johnny Logan", "Siergiej Łazariew", "Dima Biłan"],
-  "mediumQuestionOptions": ["Rosja", "Białoruś", "Turcja"]      
+  "mediumQuestionOptions": ["Russia", "Belarus", "Turkey"]      
   },
   {
   "id": 53,
   "songTitle": "Fairytale",
   "playerStart": 130,
   "playerEnd": 143,
-  "artist": "Alexander Rybak",
+    "artist": 
+    {
+      "id": "he",
+      "name": "Alexander Rybak"
+    },
   "year": 2009,
-  "winnerCountry": "Norwegia",
-  "place": "Moskwa (Rosja)",
+ "winnerCountry": "Norway",
+  "place": "Moscow",
   "easyQuestionOptions": ["Alexander Rybak", "Siergiej Łazariew", "Andrius Pojavis"],
-  "mediumQuestionOptions": ["Finlandia", "Norwegia", "Gruzja"]      
+  "mediumQuestionOptions": ["Finland", "Norway", "Georgia"]      
   },
   {
   "id": 54,
   "songTitle": "Satellite",
   "playerStart": 114,
   "playerEnd": 128,
-  "artist": "Lena Meyer-Landrut",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Lena Meyer-Landrut"
+    },
   "year": 2010,
-  "winnerCountry": "Niemcy",
-  "place": "Oslo (Norwegia)",
+ "winnerCountry": "Germany",
+  "place": "Oslo",
   "easyQuestionOptions": ["Lonnie Devantier", "Lena Meyer-Landrut", "Mélanie Cohl"],
-  "mediumQuestionOptions": ["Czechy", "Belgia", "Niemcy"]      
+  "mediumQuestionOptions": ["Czech Republic", "Belgium", "Germany"]      
   },
   {
   "id": 55,
   "songTitle": "Running Scared",
   "playerStart": 97,
   "playerEnd": 113,
-  "artist": "Ell i Nikki",
+    "artist": 
+    {
+      "id": "they",
+      "name": "Ell & Nikki"
+    },
   "year": 2011,
-  "winnerCountry": "Azerbejdżan",
-  "place": "Düsseldorf (Niemcy)",
-  "easyQuestionOptions": ["Ell i Nikki", "Nico i Vlad", "Evridiki i Dimitris Korjalas"],
-  "mediumQuestionOptions": ["Cypr", "Azerbejdżan", "Niemcy"]      
+  "winnerCountry": "Azerbaijan",
+  "place": "Düsseldorf",
+  "easyQuestionOptions": ["Ell & Nikki", "Nico & Vlad", "Evridiki & Dimitris Korjalas"],
+  "mediumQuestionOptions": ["Cyprus", "Azerbaijan", "Germany"]      
   },
   {
   "id": 56,
   "songTitle": "Euphoria",
   "playerStart": 79,
   "playerEnd": 96,
-  "artist": "Loreen",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Loreen"
+    },
   "year": 2012,
-  "winnerCountry": "Szwecja",
-  "place": "Baku (Azerbejdżan)",
+ "winnerCountry": "Sweden",
+  "place": "Baku",
   "easyQuestionOptions": ["Leonora", "Loreen", "Dana International"],
-  "mediumQuestionOptions": ["Szwecja", "Wielka Brytania", "Holandia"]      
+  "mediumQuestionOptions": ["Sweden", "Great Britain", "The Netherlands"]      
   },
   {
   "id": 57,
   "songTitle": "Only Teardrops",
   "playerStart": 63,
   "playerEnd": 79,
-  "artist": "Emmelie de Forest",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Emmelie de Forest"
+    },
   "year": 2013,
-  "winnerCountry": "Dania",
-  "place": "Malmö (Szwecja)",
+ "winnerCountry": "Denmark",
+  "place": "Malmö",
   "easyQuestionOptions": ["Lena Meyer-Landrut", "Pastora Soler", "Emmelie de Forest"],
-  "mediumQuestionOptions": ["Portugalia", "Rosja", "Dania"]      
+  "mediumQuestionOptions": ["Portugal", "Russia", "Denmark"]      
   },
   {
   "id": 58,
   "songTitle": "Rise Like a Phoenix",
   "playerStart": 47,
   "playerEnd": 62,
-  "artist": "Conchita Wurst",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Conchita Wurst"
+    },
   "year": 2014,
-  "winnerCountry": "Austria",
-  "place": "Kopenhaga (Dania)",
+ "winnerCountry": "Austria",
+  "place": "Copenhagen",
   "easyQuestionOptions": ["Dana International", "Conchita Wurst", "Elnur Hüseynov"],
-  "mediumQuestionOptions": ["Niemcy", "Austria", "Azerbejdżan"]      
+  "mediumQuestionOptions": ["Germany", "Austria", "Azerbaijan"]      
   },
   {
   "id": 59,
   "songTitle": "Heroes",
   "playerStart": 32,
   "playerEnd": 46,
-  "artist": "Måns Zelmerlöw",
+    "artist": 
+    {
+      "id": "he",
+      "name": "Måns Zelmerlöw"
+    },
   "year": 2015,
-  "winnerCountry": "Szwecja",
-  "place": "Wiedeń (Austria)",
+ "winnerCountry": "Sweden",
+  "place": "Vienna",
   "easyQuestionOptions": ["Måns Zelmerlöw", "Elnur Hüseynov", "Tony Cetinski"],
-  "mediumQuestionOptions": ["Szwecja", "Rosja", "Malta"]      
+  "mediumQuestionOptions": ["Sweden", "Russia", "Malta"]      
   },
   {
   "id": 60,
   "songTitle": "1944",
   "playerStart": 15,
   "playerEnd": 31,
-  "artist": "Jamala",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Jamala"
+    },
   "year": 2016,
-  "winnerCountry": "Ukraina",
-  "place": "Sztokholm (Szwecja)",
+ "winnerCountry": "Ukraine",
+  "place": "Stockholm",
   "easyQuestionOptions": ["Feminnem", "Netta", "Jamala"],
-  "mediumQuestionOptions": ["Armenia", "Czarnogóra", "Ukraina"]      
+  "mediumQuestionOptions": ["Armenia", "Montenegro", "Ukraine"]      
   },
   {
   "id": 61,
   "songTitle": "Amar pelos dois",
   "playerStart": 0,
   "playerEnd": 14,
-  "artist": "Salvador Sobral",
+    "artist": 
+    {
+      "id": "he",
+      "name": "Salvador Sobral"
+    },
   "year": 2017,
-  "winnerCountry": "Portugalia",
-  "place": "Kijów (Ukraina)",
+  "winnerCountry": "Portugal",
+  "place": "Kiev",
   "easyQuestionOptions": ["Jonatan Cerrada", "Salvador Sobral", "Simon Mathew"],
-  "mediumQuestionOptions": ["Hiszpania", "Portugalia", "Serbia"]      
+  "mediumQuestionOptions": ["Spain", "Portugal", "Serbia"]      
   },
   {
   "id": 62,
   "songTitle": "Toy",
   "playerStart": 183,
   "playerEnd": 198,
-  "artist": "Netta",
+    "artist": 
+    {
+      "id": "she",
+      "name": "Netta"
+    },
   "year": 2018,
-  "winnerCountry": "Izrael",
-  "place": "Lizbona (Portugalia)",
+ "winnerCountry": "Israel",
+  "place": "Lisbon",
   "easyQuestionOptions": ["Netta", "Xandee", "Agnete"],
-  "mediumQuestionOptions": ["Izrael", "San Marino", "Albania"]       
+  "mediumQuestionOptions": ["Israel", "San Marino", "Albania"]       
   },
   {
   "id": 63,
   "songTitle": "Arcade",
   "playerStart": 200,
   "playerEnd": 218,
-  "artist": "Duncan Laurence",
+    "artist": 
+    {
+      "id": "he",
+      "name": "Duncan Laurence"
+    },
   "year": 2019,
-  "winnerCountry": "Holandia",
-  "place": "Tel Awiw-Jafa (Izrael)",
+ "winnerCountry":  "The Netherlands",
+  "place": "Tel Aviv",
   "easyQuestionOptions": ["Roberto Bellarosa", "Tomas Thordarson", "Duncan Laurence"],
-  "mediumQuestionOptions": ["Irlandia", "Szwecja", "Holandia"]       
+  "mediumQuestionOptions": ["Ireland", "Sweden", "The Netherlands"]       
   }
 ]

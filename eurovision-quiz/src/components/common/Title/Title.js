@@ -1,5 +1,4 @@
 import React from 'react';
-import useSound from 'use-sound';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import { makeStyles } from '@material-ui/styles';
 

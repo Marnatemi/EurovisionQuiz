@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import {Paper} from  '@material-ui/core'
+// import useSound from 'use-sound';
+// import clickSound from '../../../Sounds/click3.mp3';
+// import {useEffect} from 'react';
 
 
 const border = 'border';
@@ -13,6 +15,7 @@ const show = 'show';
 const useStyles = makeStyles(theme => ({
   root: {
     border: '2px solid rgba(255,255,255,0)',
+    borderRadius: 4,
     padding: '10px 20px',
     width: 250,
     height: 100,
@@ -103,6 +106,21 @@ const useStyles = makeStyles(theme => ({
 
 const ScoreCounter = (props) => {
   const classes = useStyles(props);
+  // const [playClickSound] = useSound(clickSound);
+  // const [isPlaying, setClickSoundsStatus] = React.useState(false);
+
+  
+
+
+  // useEffect(() => {
+  //   //setClickSoundsStatus(true)  
+  //   console.log("SCORE Counter USE EFF", isPlaying)
+  //   setTimeout(() => {
+  //       console.log("SCORE Counter USE EFF 2", isPlaying)
+  //       setInterval(playClickSound(), 300);
+  //   }, 5000);
+  // })
+
 
   return (
     <div className={classes.root}>

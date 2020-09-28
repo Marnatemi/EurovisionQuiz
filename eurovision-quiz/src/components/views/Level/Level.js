@@ -1,13 +1,12 @@
 import React from 'react';
 import useSound from 'use-sound';
 import { Alert } from '@material-ui/lab';
-import { Button, Collapse } from '@material-ui/core';
+import { Button, Collapse, Modal } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import LevelPicker from '../../features/LevelPicker/LevelPicker';
 import YearsPicker from '../../features/YearsPicker/YearsPicker';
 import Instruction from '../../features/Instruction/Instruction';
-import { Modal } from '@material-ui/core';
 import clickSound from '../../../Sounds/click3.mp3';
 import alertSound from '../../../Sounds/alert.mp3';
 import cardSound from '../../../Sounds/cardOpen.mp3';
@@ -43,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   button: {
-    width: 80,
+    // width: 80,
     margin: 31,
   },
   alert: {
@@ -57,7 +56,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler, stopBgMusic}) => {
+const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler, stopBgMusic}) => {
   const classes = useStyles();
   const [level, setLevel] = React.useState("easy");
   const [customPeriod, setPeriod] = React.useState([1999, 2019]);
@@ -66,7 +65,6 @@ const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler, s
   const [playButtonSound] = useSound(clickSound);
   const [playAlertSound] = useSound(alertSound);
   const [playCardSound] = useSound(cardSound);
-
 
 
   const handleModalClick = () => {
@@ -80,27 +78,25 @@ const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler, s
   };
 
   const setLevelHandler = (lv) => {
-    console.log(lv)
     setLevel(lv)
   }
   const setPeriodHandler = (period) => {
-    console.log(period)
     setPeriod(period)
   }
 
   const checkPeriod = () => {
     playButtonSound()
-
-    if (customPeriod[1] - customPeriod[0] < 20) {
-      playAlertSound();
-      setOpenAlert(true);
-    } else {
-      quizHandler();
-      levelHandler(level)
-      periodHandler(customPeriod)
-      viewHandler("question song");
-      stopBgMusic();
-    }
+    setTimeout(() => {
+      if (customPeriod[1] - customPeriod[0] < 20) {
+        playAlertSound();
+        setOpenAlert(true);
+      } else {
+        levelHandler(level)
+        periodHandler(customPeriod)
+        quizHandler();
+        viewHandler("question song");
+      }
+    }, 200);
   }
 
   return (
@@ -112,16 +108,16 @@ const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler, s
       closeAfterTransition={true}
     >
       <div>
-        <Instruction message="Instrukcja" button="OK" handler={handleClose}/>
+        <Instruction message={text.modalTitle} text={text.instruction} button="OK" handler={handleClose}/>
       </div>
     </Modal>
-    <h1>Wybierz poziom <HelpOutlineIcon className={classes.icon} onClick={() => handleModalClick()}/></h1>
-    <LevelPicker handler={setLevelHandler}/>
+    <h1>{text.title} <HelpOutlineIcon className={classes.icon} onClick={() => handleModalClick()}/></h1>
+    <LevelPicker text={text.levelPicker} handler={setLevelHandler}/>
     <Collapse in={openAlert}>
       <Alert
         action={
           <Button color="inherit" size="small" onClick={() => {handleClose()}}>
-            OK
+            {text.alert.button}
           </Button>
         }
         className={classes.alert} 
@@ -129,11 +125,11 @@ const Level = ({levelHandler, viewHandler, periodHandler, period, quizHandler, s
         severity="info"
         color="warning" 
       >
-            Wybierz zakres przynajmniej 20lat, dla lepszej zabawy! :)
+            {text.alert.message}
       </Alert>
     </Collapse>
-    <YearsPicker handler={setPeriodHandler}/>
-    <Button onClick={() => checkPeriod()} className={classes.button} variant="outlined" size="large" color="primary">START</Button>
+    <YearsPicker  text={text.yearsPickerText} handler={setPeriodHandler}/>
+    <Button onClick={() => checkPeriod()} className={classes.button} variant="outlined" size="large" color="primary">{text.button}</Button>
     </div>
   );
 }

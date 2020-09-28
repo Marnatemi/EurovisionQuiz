@@ -4,7 +4,7 @@ import CorrectAnswer from '../../features/CorrectAnswer/CorrectAnswer';
 import AnswerCard from '../../common/AnswerCard/AnswerCard.js';
 import { makeStyles } from '@material-ui/styles';
 import {Card, CardContent, CardHeader,  Modal} from '@material-ui/core';
-import levelQuestions from '../../../data/levelQuestions.json';
+// import levelQuestions from '../../../data/levelQuestions.json';
 import clickSound from '../../../Sounds/click3.mp3';
 import succesSound from '../../../Sounds/SaxBeep.mp3';
 import failureSound from '../../../Sounds/SaxHonk.mp3';
@@ -101,9 +101,9 @@ let answerMessage = ""
 
 
 
-const Question = ({level, question, period, questionNumber, questionChangeHandler, scoreHandler}) => {
+const Question = ({text, language, level, question, period, questionNumber, questionChangeHandler, scoreHandler}) => {
   const classes = useStyles();
-  const [playbackRate, setPlaybackRate] = React.useState(1);
+  const [playbackRate] = React.useState(1);
   const [playClickSound] = useSound(clickSound, {playbackRate});
   const [playSuccesSound] = useSound(succesSound);
   const [playFailureSound] = useSound(failureSound);
@@ -115,7 +115,7 @@ const Question = ({level, question, period, questionNumber, questionChangeHandle
   const randomizedAnswerOptions = []
 
   const setLevelQuestion = () => {
-    return levelQuestions[level];
+    return text.levelQuestions[level];
   }
   const setLevelAnswers = () => {
     if (level === 'expert'){
@@ -133,9 +133,9 @@ const Question = ({level, question, period, questionNumber, questionChangeHandle
         answerOptions.splice(randomElement, 1)
       }  
       answerOptions = randomizedAnswerOptions
-    } else {
-      answerOptions = question[level + 'QuestionOptions']
-    }
+  } else {
+    answerOptions = question[level + 'QuestionOptions']
+  }
     // // randomize for all 
     // for( let i = 0; i < 3; i++ ){
     //   const randomElement = Math.floor(Math.random() * (answerOptions.length))
@@ -149,17 +149,19 @@ const Question = ({level, question, period, questionNumber, questionChangeHandle
 
   const handleClick = (id) => {
     playClickSound()
-    playCardSound()
-    if(id === question.artist || id === question.winnerCountry || id === question.year){
-      playSuccesSound();
-      answerMessage = "Dobrze!";
-      scoreHandler();
-    }
-    else {
-      playFailureSound();
-      answerMessage = "Błędna odpowiedź";
-    }
-    setOpen(true);
+    setTimeout(() => {
+      playCardSound()
+      if(id === question.artist.name || id === question.winnerCountry || id === question.year){
+        playSuccesSound();
+        answerMessage = text.succesMessage;
+        scoreHandler();
+      }
+      else {
+        playFailureSound();
+        answerMessage = text.failMessage;
+      }
+      setOpen(true);  
+    }, 300);
   };
   
   const handleClose = () => {
@@ -195,6 +197,8 @@ const Question = ({level, question, period, questionNumber, questionChangeHandle
           >
             <div>
               <CorrectAnswer 
+                text={text.correctAnswer}
+                language={language}
                 message={answerMessage}
                 title={question.songTitle} 
                 artist={question.artist} 

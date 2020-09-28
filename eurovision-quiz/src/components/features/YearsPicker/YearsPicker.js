@@ -38,7 +38,7 @@ function valuetext(value) {
   return `${value}`;
 }
 
- const YearsPicker = ({handler}) => {
+ const YearsPicker = ({text, handler}) => {
   const classes = useStyles();
   const [playChangeSound] = useSound(changeSound);
   const [value, setValue] = React.useState([1999, 2019]);
@@ -52,12 +52,11 @@ function valuetext(value) {
   return (
     <Paper className={classes.root}>
       <Typography id="years-picker" gutterBottom>
-        Przedział czasowy
+        {text}
       </Typography>
       <Slider
 
         color="primary"
-        //track="inverted"
         value={value}
         min={1956}
         max={2019}

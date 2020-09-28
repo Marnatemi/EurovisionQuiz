@@ -1,6 +1,8 @@
 import React from 'react';
 import useSound from 'use-sound';
 import clickSound from '../../../Sounds/click3.mp3';
+import applause from '../../../Sounds/applause.mp3';
+
 import {useEffect} from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Divider, Button } from '@material-ui/core';
@@ -129,35 +131,44 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Score = ({score, viewHandler, scoreHandler}) => {
+const Score = ({text, score, viewHandler, scoreHandler}) => {
   const classes = useStyles(score);
-  const [play] = useSound(clickSound);
+  const [playClickSound] = useSound(clickSound);
+  const [playApplause] = useSound(applause);
   const [finish, setFinish] = React.useState(false);
+  const [isPlaying, setPlayingApplause] = React.useState(false);
 
   useEffect(()=> {
+    //playApplause()
+    setPlayingApplause(true)
+
     const timer = setTimeout(() => {
       setFinish(true)
     }, 5000);
     return () => clearTimeout(timer);
-  })
+  }, [playApplause, isPlaying])
+  
+
 
   const resetQuiz = () => {
-    play()
-    viewHandler("level") 
-    scoreHandler('reset')
+    playClickSound()
+    setTimeout(() => {
+      viewHandler("level") 
+      scoreHandler('reset')
+    }, 500);
   }
 
   return (
     <div className={classes.root}>
       <div className={classes.header}>
-        <h2>Gratulacje!</h2>
-        <p>Udało Ci się ukończyć QUIZ</p>
+        <h2>{text.title}</h2>
+        <p>{text.subtitle}</p>
       </div>
       <Divider />
       <div className={classes.score}>
         <div className={classes.titleContainer}>
           <span className={classes.block}></span>
-          <h1 className={classes.title}>Twój wynik :</h1>
+          <h1 className={classes.title}>{text.text}</h1>
         </div>
         <ScoreCounter  
           scoreNumber={score}
@@ -171,7 +182,7 @@ const Score = ({score, viewHandler, scoreHandler}) => {
           run={finish}
         />
       </div>
-      <Button variant="outlined" color="secondary" size="large" onClick={()=> resetQuiz()}>ZAGRAJ JESZCZE RAZ</Button>
+      <Button variant="outlined" color="secondary" size="large" onClick={()=> resetQuiz()}>{text.button}</Button>
     </div>
   );
 }

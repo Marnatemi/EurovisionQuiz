@@ -1,4 +1,5 @@
 import React from 'react';
+import {useEffect} from 'react';
 import useSound from 'use-sound';
 import {Button} from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
@@ -97,26 +98,34 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Intro = ({viewHandler}) => {
+const Intro = ({text, viewHandler, playBgMusic}) => {
   const classes = useStyles();
   const [play] = useSound(clickSound);
+  const [isPlaying, setBgMusicStatus] = React.useState(false);
 
   const clickHandler = () => {
-    viewHandler("level");
     play()
+    setTimeout(() => {
+      viewHandler("level")
+    }, 500);
   }
+
+  useEffect(() => {
+    setBgMusicStatus(true)  
+    playBgMusic()
+  }, [playBgMusic, isPlaying])
 
   return (
     <div className={classes.root}>
     <header className={classes.wave} > 
       <div className={classes.hero}>
-        <Title title={'Eurowizja'} subtitle={'Quiz'} text={'muzyczny'} />
+        <Title title={text.title} subtitle={text.subtitle} text={text.text} />
         <Button className={classes.button}
           variant="outlined"
           color="primary"
           size="large"
           onClick={clickHandler} >
-          Graj
+          {text.button}
         </Button>
       </div>
     </header>

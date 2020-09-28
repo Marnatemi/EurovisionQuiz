@@ -3,9 +3,9 @@ import useSound from 'use-sound';
 import { makeStyles } from '@material-ui/styles';
 import {Button, Paper, Collapse} from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
-import introSound from '../../../Sounds/Intro.mp3';
 import clickSound from '../../../Sounds/click3.mp3';
 import changeSound from '../../../Sounds/click1.mp3';
+import alertSound from '../../../Sounds/alert.mp3';
 
 
 const useStyles = makeStyles(theme => ({
@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: 0.8,
     "&>h1": {
       letterSpacing: 0.8,
-      marginTop: 0,
+      margin: 0,
     },
   },
   languages: {
@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     height: '45vh',
+    maxHeight: 300,
     margin: '50px 0 30px 0',
   },
   alert: {
@@ -34,6 +35,7 @@ const useStyles = makeStyles(theme => ({
   language: {
     width: 200,
     height: '10vh',
+    maxHeight: 67,
     margin: 0,
     border: `2px dashed ${theme.palette.primary.light}` ,
     padding: '10px 20px',
@@ -62,24 +64,14 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const SetLanguage = ({languageHandler, viewHandler, playBgMusic}) => {
+const SetLanguage = ({text, languageHandler, viewHandler}) => {
   const classes = useStyles();
 
   const [language, setLanguage] = React.useState();
   const [openAlert, setOpenAlert] = React.useState(false);
   const [playClickSound] = useSound(clickSound);
   const [playChangeSound] = useSound(changeSound);
-
-
-  React.useEffect(() => {
-    console.log("SETLNG USE EFF", language)
-  }) 
-
-  const languages = [
-    {id: "english", imgSrc:"https://i.postimg.cc/5yFWVWkH/united-kingdom-653010-640.png"},
-    {id: "polski", imgSrc:"https://i.postimg.cc/tTcGw4DQ/poland-653060-640.png"},
-    {id: "francais", imgSrc:"https://i.postimg.cc/nL0JKkDL/france-653001-640.png"}
-  ]
+  const [playAlertSound] = useSound(alertSound);
 
   const handleClose = () => {
     setOpenAlert(false);
@@ -91,24 +83,26 @@ const SetLanguage = ({languageHandler, viewHandler, playBgMusic}) => {
   }
 
   const buttonHandler = () => {
-    if(language === undefined){
-      setOpenAlert(true);
-    } else {
-      playClickSound()
-      viewHandler("intro")
-      languageHandler(language)
-      playBgMusic()  
-    }
+    playClickSound()
+    setTimeout(() => {
+      if(language === undefined){
+        playAlertSound();
+        setOpenAlert(true);
+      } else {
+        languageHandler(language)
+        viewHandler("intro")
+      }
+    }, 200);
   }
 
   return(
     <div className={classes.component}>
-      <h1>choose your language</h1>
+      <h1>{text.title}</h1>
       <Collapse in={openAlert}>
         <Alert
           action={
-            <Button color="inherit" size="small" onClick={() => {handleClose()}}>
-              OK
+            <Button color="inherit" size="small" onClick={() => handleClose()}>
+              {text.button}
             </Button>
           }
           className={classes.alert} 
@@ -116,17 +110,17 @@ const SetLanguage = ({languageHandler, viewHandler, playBgMusic}) => {
           severity="info"
           color="warning" 
         >
-              Please choose your language
+              {text.alertMessage}
         </Alert>
       </Collapse>
       <div className={classes.languages}>
-        {languages.map(language => (
+        {text.languages.map(language => (
           <Paper
           className={classes.language}
           key={language.id}
           onClick={() => optionHandler(language.id)}
           >
-            <p>{language.id}</p>
+            <p>{language.name}</p>
             <img className={classes.image} alt="fingerprint-flag" src={language.imgSrc}/> 
           </Paper>
         ))}
@@ -135,7 +129,7 @@ const SetLanguage = ({languageHandler, viewHandler, playBgMusic}) => {
       variant="outlined"
       color="primary"
       size="large"
-      onClick={buttonHandler} >
+      onClick={() => buttonHandler()} >
       OK
     </Button>
     </div>
