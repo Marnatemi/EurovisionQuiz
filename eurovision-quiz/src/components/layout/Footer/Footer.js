@@ -8,9 +8,13 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     bottom: 0,
     fontSize: 11,
-    zIndex: -1,
+    zIndex: 0,
     display: 'flex',
     justifyContent: 'space-between',
+    "& *":{
+      color: "inherit",
+      textDecoration: 'none',
+    }
   },
   icon: {
     textTransform: 'uppercase',
@@ -19,9 +23,8 @@ const useStyles = makeStyles(theme => ({
     fontSize: 13,
     letterSpacing: -0.2,
     },
-  link: {
-    textDecoration: 'none',
-    color: 'inherit',
+  porfolioLink: {
+    color:  theme.palette.primary.main,
   }
 }));
 
@@ -35,8 +38,8 @@ const Footer = ({hide}) => {
   else
     return (
       <div className={classes.root}>
-        <p>Made with <span className={classes.icon}>passion</span> by Mar</p>
-        <p>Sound from <a className={classes.link} target="_blank" href="https://www.zapsplat.com">Zapsplat.com</a></p>
+        <p>Made with <span className={classes.icon}>passion</span> by <a className={classes.porfolioLink} target="_blank" href="https://marnatemi.github.io/Portfolio/">Mar</a></p>
+        <p>Sound from <a target="_blank" href="https://www.zapsplat.com">Zapsplat.com</a></p>
       </div> 
     );
 }

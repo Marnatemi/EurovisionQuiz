@@ -15,9 +15,10 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     letterSpacing: 0.8,
     "&>h1": {
-      letterSpacing: 0.8,
       margin: 0,
     },
+    "& *":{
+    }
   },
   languages: {
     fontSize: '1.2em',
@@ -32,26 +33,23 @@ const useStyles = makeStyles(theme => ({
   alert: {
     ...theme.alert
   },
-  language: {
-    width: 200,
-    height: '10vh',
-    maxHeight: 67,
+  lgButton: {
+    width: 230,
+    height: '30%',
+    letterSpacing: 0.8,
     margin: 0,
     border: `2px dashed ${theme.palette.primary.light}` ,
-    padding: '10px 20px',
     background: 'inherit',
     color: '#fff',
     position: 'relative',
-    "& p": {
-      margin: 0,
-      ...theme.center.absolute,
-    },
-    "&:hover": {
+    fontSize: '1em',  
+    boxShadow: "0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)",    
+    "&:focus": {
       border: `2px dashed ${theme.palette.primary.main}` ,
       color: theme.palette.primary.main,
-      width: 210,
-      height: '11vh',
-      fontSize: '1.3em',
+      width: 250,
+      height: '31%',
+      fontSize: '1.3em',  
     }
   },
   image: {
@@ -59,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     transform: "rotate(24deg)",
     right: -10,
-    top: 0,
+    top: 0
   }
 }));
 
@@ -69,10 +67,12 @@ const SetLanguage = ({text, languageHandler, viewHandler}) => {
 
   const [language, setLanguage] = React.useState();
   const [openAlert, setOpenAlert] = React.useState(false);
+  const [variant, setVariant] = React.useState();
   const [playClickSound] = useSound(clickSound);
   const [playChangeSound] = useSound(changeSound);
   const [playAlertSound] = useSound(alertSound);
 
+  
   const handleClose = () => {
     setOpenAlert(false);
   };
@@ -80,6 +80,7 @@ const SetLanguage = ({text, languageHandler, viewHandler}) => {
   const optionHandler = (id) => {
     setLanguage(id)
     playChangeSound()
+    console.log(variant)
   }
 
   const buttonHandler = () => {
@@ -115,14 +116,13 @@ const SetLanguage = ({text, languageHandler, viewHandler}) => {
       </Collapse>
       <div className={classes.languages}>
         {text.languages.map(language => (
-          <Paper
-          className={classes.language}
+        <Button className={classes.lgButton}
           key={language.id}
           onClick={() => optionHandler(language.id)}
-          >
+        >
             <p>{language.name}</p>
             <img className={classes.image} alt="fingerprint-flag" src={language.imgSrc}/> 
-          </Paper>
+        </Button>
         ))}
       </div>
     <Button 

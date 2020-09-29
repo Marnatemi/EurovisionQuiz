@@ -72,7 +72,7 @@ class App extends React.Component {
         to: 2019
       },
       questions: [],
-      currentQuestion: 0,
+      currentQuestion: 9,
       currentView: "start",
       score: 0,
       questionSongIsLoading: true,
