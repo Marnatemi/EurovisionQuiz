@@ -55,7 +55,7 @@ const ModalCard = ({ message, button, children, handler}) => {
     playButtonSound();
     setTimeout(() => {
       handler();
-    }, 50);
+    }, 200);
   }
 
   return (

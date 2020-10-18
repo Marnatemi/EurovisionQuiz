@@ -3,10 +3,9 @@ import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import quizData from './data/quizData.json';
 import textData from './data/appTexts.json';
-import countries from './data/countries.json';
-import cities from './data/cities.json';
+import translateCountriesNames from './utils/translateCountriesNames';
+import getRandomizedQuestionSongs from './utils/randomizeSongs';
 import View from './components/layout/View/View';
-import CorrectAnswer from './components/features/CorrectAnswer/CorrectAnswer';
 import Footer from './components/layout/Footer/Footer';
 
 import './App.css';
@@ -65,17 +64,18 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: "",
+      language: "polish",
       level: "easy",
       period: {
         from: 1999, 
         to: 2019
       },
       questions: [],
-      currentQuestion: 9,
+      currentQuestion: 0,
       currentView: "start",
       score: 0,
       questionSongIsLoading: true,
+      showFooter: true
     };
 
     this.viewHandler = this.viewHandler.bind(this);
@@ -90,72 +90,12 @@ class App extends React.Component {
 
     this.render = this.render.bind(this);  
   }
-    // newHandler = () => { //to delete
-    //   this.setState({
-    //     currentQuestion: this.state.currentQuestion + 1,
-    //   }); 
-    // }
-
-    translateCountriesNames = (questions) => {
-      const language = this.state.language
-
-      console.log(language, questions)
-      let countriesNamesforAnswers = []
-
-        for (let question of questions){
-          const city = question.place
-          console.log("CITY", city)
-          if (language !== "english"){
-           countriesNamesforAnswers = question.mediumQuestionOptions
-           question.winnerCountry = countries[question.winnerCountry][language]
-           question.place = cities[question.place][language]
-          console.log('DONE', question)
-           for( let i = 0; i < 3; i++ ){
-             const country = question.mediumQuestionOptions[i]
-             countriesNamesforAnswers.splice(i, 1, countries[country][language])
-           }  
-         }
-         // add country for city in "place"
-         const countryForCity = cities[city].country
-         let correctCityName = ""
-         language !== "english" ? correctCityName = countries[countryForCity][language] : correctCityName = countryForCity
-         question.place = question.place + " (" + correctCityName + ")"
-      } 
-    }
-
-
-    getRandomizedQuestions = (from, to) => {
-
-  
-      this.setState(
-        () => {
-          const questions = [];
-          const randomizedQuestions = [];
-    
-          for (let question of quizData){
-            if(question.year <= to && question.year >= from){
-              questions.push(question);
-            }
-          }
-        
-          while (randomizedQuestions.length < 10) {
-            const randomQuestion = Math.floor(Math.random() * (questions.length))
-            const selectedQuestion = questions[randomQuestion]
-        
-            if(randomizedQuestions.indexOf(selectedQuestion) === -1){
-              randomizedQuestions.push(selectedQuestion)
-            }
-          }
-          return { questions: randomizedQuestions }
-        }
-      )
-    
-    }
 
     viewHandler = (view) => {
       this.setState({
         currentView: view,
       });
+      view === "intro" ? this.setState({showFooter: false}) : this.setState({showFooter: true})
     }
 
     languageHandler = (language) => {
@@ -163,7 +103,7 @@ class App extends React.Component {
         language: language,
       });
 
-      this.translateCountriesNames(quizData)
+      translateCountriesNames(quizData, this.state.language)
     }
 
     animHandler = (status) => {
@@ -216,11 +156,9 @@ class App extends React.Component {
     }
 
     quizHandler(){
-      this.getRandomizedQuestions(this.state.period.from, this.state.period.to)
-    }
-
-    componentDidUpdate(){
-      console.log("app update", this.state)
+      this.setState(
+        getRandomizedQuestionSongs(this.state.period.from, this.state.period.to)
+      )
     }
 
   render() {
@@ -233,25 +171,11 @@ class App extends React.Component {
     const level = this.state.level
     const language = this.state.language
 
-    // let x = this.state.currentQuestion // to delete
-    // let question = quizData[x] // to delete
-
-
-
-    //console.log('NUMBER', currentQuestionNumber, 'QUESTION', currentQuestion)
-
-    const hide = () => {
-      if (currentView === "start") {
-        return true
-      }
-    }
-
     return (
       <ThemeProvider theme={theme}>
         <div className="App" >
           <View 
             text={textData[language]}
-            startText={textData.start}
             translateCountriesNames={this.translateCountriesNames}
             language={language}
             level={level}
@@ -259,32 +183,18 @@ class App extends React.Component {
             questionNumber={currentQuestionNumber}
             currentView={currentView} 
             questionSongIsLoading={questionSongIsLoading} 
+            score={score}
+            period={period}
             viewHandler={this.viewHandler} 
             questionChangeHandler={this.questionChangeHandler} 
             scoreHandler={this.scoreHandler}
-            score={score}
-            period={period}
             animHandler={this.animHandler} 
             languageHandler={this.languageHandler}
             levelHandler={this.levelHandler}
             periodHandler={this.periodHandler}
             quizHandler={this.quizHandler}
           />
-          {/* <CorrectAnswer 
-            text={textData[language].correctAnswer}
-            handler = {this.newHandler}
-            language={language}
-            message={'Dobrze'}
-            title={question.songTitle} 
-            artist={question.artist} 
-            year={question.year} 
-            country={question.winnerCountry} 
-            place={question.place} 
-            songId={question.id}
-            playerStart={question.playerStart}
-            playerEnd={question.playerEnd}
-          /> */}
-          <Footer status={hide()} />
+          {/* <Footer status={this.state.showFooter} /> */}
         </div>
       </ThemeProvider>
     );

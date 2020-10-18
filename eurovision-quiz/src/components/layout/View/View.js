@@ -10,9 +10,9 @@ import introSound from '../../../Sounds/Intro.mp3';
 
  
 
-const View = ({text, startText, language, languageHandler, level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
+const View = ({text, language, languageHandler, level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
   const [playIntroSound, {stop}] = useSound(introSound);
-  const displayLoader = (songIsLoading) => {
+  const displayLoaderforQS = (songIsLoading) => {
     let questionSongDisplay = 'flex'
     if (songIsLoading === false ) questionSongDisplay = 'none'
     return questionSongDisplay;
@@ -20,7 +20,7 @@ const View = ({text, startText, language, languageHandler, level, currentView, l
 
   if (currentView === 'start'){
     return (
-      <SetLanguage text={startText} viewHandler={viewHandler} languageHandler={languageHandler} />
+      <SetLanguage viewHandler={viewHandler} languageHandler={languageHandler} />
     );
   }
   else if (currentView === 'intro')
@@ -33,11 +33,11 @@ const View = ({text, startText, language, languageHandler, level, currentView, l
     );
   else if (currentView === 'question song')
     return (
-      <QuestionSong stopBgMusic={stop} displayLoader={displayLoader(questionSongIsLoading)} animHandler={animHandler} viewHandler={viewHandler} question={currentQuestion} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
+      <QuestionSong stopBgMusic={stop} displayLoader={displayLoaderforQS(questionSongIsLoading)} animHandler={animHandler} viewHandler={viewHandler} songId={currentQuestion.id} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
       );
   else if (currentView === 'question')
   return (
-    <Question text={text.question} language={language} level={level} period={period} question={currentQuestion} questionNumber={questionNumber} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}  />
+    <Question text={text.question} level={level} period={period} question={currentQuestion} questionNumber={questionNumber} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}  />
   );
   else if (currentView === 'score')
     return (

@@ -197,7 +197,7 @@
       "failMessage": "Mauvaise réponse",
       "levelQuestions": {
         "easy": "Qui a interprété cette chanson",
-        "medium": "Quel pays était représenté par cette chanson?",
+        "medium": "Quel pays cette chanson représentait?",
         "expert": "De quelle année provient cette performance?"  
       },
       "correctAnswer": {

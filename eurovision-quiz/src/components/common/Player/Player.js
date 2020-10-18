@@ -4,10 +4,14 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import { withStyles } from '@material-ui/core/styles';
 
 const useStyles = ({
+  component: {
+    height: '100%',
+    '&>div':{
+      height: 'inherit',
+    } 
+  },
   active: {
     width: '60%',
-    height: 260,
-    marginTop: 40,
     left: '50%',
     transform: 'translateX(-50%)',
     position: 'absolute',
@@ -26,39 +30,39 @@ class Player extends React.Component {
     this.state = {
       isLoading: true
     }
-    //console.log(props);
   }
 
 
   render() {
-    const { classes, songStart, songEnd, songId } = this.props;
-    //console.log(this.state);
+    console.log(this.props)
+    const { classes, playerStart, playerEnd, songId} = this.props;
     const opts = {
-      height: '260',
+      height: '100%',
       width: '100%',
       playerVars: {
-        //host: 'https://www.youtube.com',
+        host: 'https://www.youtube.com',
         autoplay: 1,
-        start: songStart,
-        end: songEnd,
+        start: playerStart,
+        end: playerEnd,
         controls: 0, 
         disablekb: 1,
         fs: 0,
         showinfo: 0,
         rel: 1,
-        //origin: 'http://localhost:3000',
+        origin: 'http://localhost:3000',
         //widget_referrer:'http://localhost:3000',
       },
     };
 
     const setVideoId = () => {
       let videoId = "MB8cNvZ5ymQ" // from 1956 to 2017
+      
       if (songId === 62 || songId === 63){videoId = "GCIa80rd7sM"} // 2018, 2019
       return videoId
     }
     
     return (
-      <div>
+      <div className={classes.component}>
         <div className={this.state.isLoading ? `${classes.active}` : `${classes.hide}`}>
           <Skeleton variant="text" width={'100%'} />
           <Skeleton variant="circle" width={40} height={40} />

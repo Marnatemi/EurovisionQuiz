@@ -22,6 +22,8 @@ const useStyles = makeStyles(theme => ({
    animationDelay: '1.2s',
    transformStyle: 'preserve-3d',
    overflow: 'visible',
+   '-moz-backface-visibility': 'hidden',
+   
    '& figure' : {
      ...theme.center.flexbox,   
      ...theme.size.fullByPercent,

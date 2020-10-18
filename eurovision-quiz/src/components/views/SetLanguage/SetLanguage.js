@@ -1,7 +1,8 @@
 import React from 'react';
 import useSound from 'use-sound';
+import textData from '../../../data/appTexts.json';
 import { makeStyles } from '@material-ui/styles';
-import {Button, Paper, Collapse} from '@material-ui/core';
+import {Button, Collapse} from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
 import clickSound from '../../../Sounds/click3.mp3';
 import changeSound from '../../../Sounds/click1.mp3';
@@ -62,12 +63,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const SetLanguage = ({text, languageHandler, viewHandler}) => {
+const SetLanguage = ({languageHandler, viewHandler}) => {
   const classes = useStyles();
-
+  const text = textData.start
   const [language, setLanguage] = React.useState();
   const [openAlert, setOpenAlert] = React.useState(false);
-  const [variant, setVariant] = React.useState();
   const [playClickSound] = useSound(clickSound);
   const [playChangeSound] = useSound(changeSound);
   const [playAlertSound] = useSound(alertSound);
@@ -80,7 +80,6 @@ const SetLanguage = ({text, languageHandler, viewHandler}) => {
   const optionHandler = (id) => {
     setLanguage(id)
     playChangeSound()
-    console.log(variant)
   }
 
   const buttonHandler = () => {

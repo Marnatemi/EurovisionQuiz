@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles(theme => ({
   root: {
     width: '90vw',
+    maxWidth: 340,
     position: 'absolute',
     bottom: 0,
     fontSize: 11,
@@ -28,10 +29,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Footer = ({hide}) => {
+const Footer = ({status}) => {
   const classes = useStyles();
-  //console.log(hide);
-  if (hide === true)
+  if (status === false)
     return (
       null
     );

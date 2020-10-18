@@ -4,7 +4,7 @@ import CorrectAnswer from '../../features/CorrectAnswer/CorrectAnswer';
 import AnswerCard from '../../common/AnswerCard/AnswerCard.js';
 import { makeStyles } from '@material-ui/styles';
 import {Card, CardContent, CardHeader,  Modal} from '@material-ui/core';
-// import levelQuestions from '../../../data/levelQuestions.json';
+import setLevelAnswers from '../../../utils/setLevelAnswers'; 
 import clickSound from '../../../Sounds/click3.mp3';
 import succesSound from '../../../Sounds/SaxBeep.mp3';
 import failureSound from '../../../Sounds/SaxHonk.mp3';
@@ -20,8 +20,6 @@ const appear = 'appear'
 const useStyles = makeStyles(theme => ({
   card: {
     transition: '0.3s',
-    display: 'flex',
-    position: 'relative',
     width: '95%',
     height: '80vh',
     maxHeight: 600,
@@ -29,7 +27,6 @@ const useStyles = makeStyles(theme => ({
     margin: '50px 0',
     overflow: 'initial',
     maxWidth: 450,
-    flexDirection: 'column',
     animation: `$${appear} .8s ease forwards`,
     opacity: 0,
     top: '10%',
@@ -43,15 +40,15 @@ const useStyles = makeStyles(theme => ({
     boxShadow: '0px 3px 5px #000',
   },
   answers: {
-    height: '70%',
+    position: 'relative',
+    height: '65%',
     margin: 'auto 0',
   },
   answer : {
     position: 'absolute',
     left: '50%',
-    bottom: '10%',
+    bottom: 0,
     marginLeft: -110,
-    marginBottom: -35,
     transform: 'scale(0.5)',
     animation: `$${growFirst} 0.65s ease-in-out forwards`,
     animationDelay: '1.2s',
@@ -64,8 +61,9 @@ const useStyles = makeStyles(theme => ({
       animationDelay: '1.4s',
     },
   },
-  'questionNumber': {
-    alignSelf: 'flex-end',
+  questionNumber: {
+    textAlign: 'right',
+    marginBottom: 0,
     marginRight: 20,
     fontFamily: 'Anton',
     color: theme.palette.primary.main,
@@ -80,19 +78,19 @@ const useStyles = makeStyles(theme => ({
   [`@keyframes ${growFirst}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '70%',
+      bottom: '72%',
     }
   },
   [`@keyframes ${growThird}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '50%',
+      bottom: '46%',
     }
   },
   [`@keyframes ${growSecond}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '30%',
+      bottom: '20%',
     }
   },
 }));
@@ -101,7 +99,7 @@ let answerMessage = ""
 
 
 
-const Question = ({text, language, level, question, period, questionNumber, questionChangeHandler, scoreHandler}) => {
+const Question = ({text, level, question, period, questionNumber, scoreHandler, ...otherProps}) => {
   const classes = useStyles();
   const [playbackRate] = React.useState(1);
   const [playClickSound] = useSound(clickSound, {playbackRate});
@@ -111,40 +109,9 @@ const Question = ({text, language, level, question, period, questionNumber, ques
 
 
   const [open, setOpen] = React.useState(false);
-  let answerOptions = []
-  const randomizedAnswerOptions = []
 
   const setLevelQuestion = () => {
     return text.levelQuestions[level];
-  }
-  const setLevelAnswers = () => {
-    if (level === 'expert'){
-      answerOptions = [question.year]
-      while (answerOptions.length < 3) {
-        const randomYear = Math.floor(Math.random() * (period.to - period.from + 1)) + period.from;
-        if(answerOptions.indexOf(randomYear) === -1){
-          answerOptions.push(randomYear);
-        } 
-      }
-      // randomize for expert
-      for( let i = 0; i < 3; i++ ){
-        const randomElement = Math.floor(Math.random() * (answerOptions.length))
-        randomizedAnswerOptions.push(answerOptions[randomElement])
-        answerOptions.splice(randomElement, 1)
-      }  
-      answerOptions = randomizedAnswerOptions
-  } else {
-    answerOptions = question[level + 'QuestionOptions']
-  }
-    // // randomize for all 
-    // for( let i = 0; i < 3; i++ ){
-    //   const randomElement = Math.floor(Math.random() * (answerOptions.length))
-    //   randomizedAnswerOptions.push(answerOptions[randomElement])
-    //   answerOptions.splice(randomElement, 1)
-    // }
-    // return randomizedAnswerOptions
-
-    return answerOptions
   }
 
   const handleClick = (id) => {
@@ -161,14 +128,14 @@ const Question = ({text, language, level, question, period, questionNumber, ques
         answerMessage = text.failMessage;
       }
       setOpen(true);  
-    }, 300);
+    }, 50);
   };
   
   const handleClose = () => {
     setOpen(false);
   };
   
-  setLevelAnswers()
+  const answerOptions = setLevelAnswers(level, question, period)
 
   return (
       <Card className={classes.card}>
@@ -198,17 +165,9 @@ const Question = ({text, language, level, question, period, questionNumber, ques
             <div>
               <CorrectAnswer 
                 text={text.correctAnswer}
-                language={language}
                 message={answerMessage}
-                title={question.songTitle} 
-                artist={question.artist} 
-                year={question.year} 
-                country={question.winnerCountry} 
-                place={question.place} 
-                questionChangeHandler={questionChangeHandler}
-                songId={question.id}
-                playerStart={question.playerStart}
-                playerEnd={question.playerEnd}
+                question={question}
+                {...otherProps}
               />
             </div>
           </Modal>

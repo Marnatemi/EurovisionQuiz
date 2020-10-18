@@ -13,19 +13,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     ...theme.size.fullByDivice,
     overflow: 'hidden',
-    '&:after': {
-      content: "''",
-      ...theme.center.absolute,
-      top: '37%',
-      width: '90vw',
-      height: '90vw',
-      maxWidth: '500px',
-      maxHeight: '500px',
-      border: '2px solid #fff',
-      borderRadius: '50%',
-      zIndex: 1,
-      boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
-    },
   },
   hero: {
     ...theme.center.absolute,
@@ -53,6 +40,20 @@ const useStyles = makeStyles(theme => ({
       background: '#ce581f',  
       animation: `$${wave} 10s linear infinite`,
     },
+    '&::before': {
+      content: "''",
+      ...theme.center.absolute,
+      top: '37%',
+      width: '90vw',
+      height: '90vw',
+      maxWidth: '500px',
+      maxHeight: '500px',
+      border: '2px solid #fff',
+      borderRadius: '50%',
+      zIndex: 1,
+      boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
+    },
+
   },
   button: {
     fontSize: '1.3rem',
@@ -60,10 +61,13 @@ const useStyles = makeStyles(theme => ({
     animation: `$${button} 2s forwards`,
     animationDelay: '6s',
     opacity: 0,
+    pointerEvents: "none"
   },
   [`@keyframes ${button}`]: {
     '100%': {
-      opacity: '1', 
+      opacity: '1',
+      pointerEvents: 'auto',
+      'webkit-pointer-events': "auto"
     }
   },
   [`@keyframes ${wave}`]: {
@@ -76,24 +80,21 @@ const useStyles = makeStyles(theme => ({
   },
   //eslint-disable-next-line no-useless-computed-key
   ['@media (min-width:500px)']: {
-    'root':{
-      '&:after': {
-        content: "''",
-        ...theme.center.absolute,
+    'wave': {
+      '&::after': {
+        top: '50%',
+        width: '500px',
+        height: '500px',
+      },
+      '&::before': {
+        top: '50%',
         width: '500px',
         height: '500px',
         border: '2px solid #fff',
         borderRadius: '50%',
         zIndex: 1,
         boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
-      },
-    },
-    'wave': {
-      '&:after': {
-        top: '50%',
-        width: '500px',
-        height: '500px',
-      },
+      }
     },
   },
 }));
@@ -102,6 +103,7 @@ const Intro = ({text, viewHandler, playBgMusic}) => {
   const classes = useStyles();
   const [play] = useSound(clickSound);
   const [isPlaying, setBgMusicStatus] = React.useState(false);
+
 
   const clickHandler = () => {
     play()
@@ -124,7 +126,7 @@ const Intro = ({text, viewHandler, playBgMusic}) => {
           variant="outlined"
           color="primary"
           size="large"
-          onClick={clickHandler} >
+          onClick={clickHandler}> 
           {text.button}
         </Button>
       </div>

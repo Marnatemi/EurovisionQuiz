@@ -12,12 +12,16 @@ import changeSound from '../../../Sounds/click1.mp3';
 const useStyles = makeStyles(theme => ({
   root: {
     width: 292,
-    height: 182,
+    height: '31%',
     margin: 0,
     border: `2px dashed ${theme.palette.primary.light}` ,
     padding: '10px 0',
     background: 'inherit',
     color: '#fff',
+    "& fieldset":{
+      paddingLeft: 0,
+      paddingRight: 0,
+    }
   },
   labelsTop: {
     fontSize: 25,
@@ -64,12 +68,13 @@ const LevelPicker = ({text, handler}) => {
           emptyIcon={<AudiotrackOutlinedIcon fontSize="inherit" />}
           icon={<AudiotrackIcon fontSize="inherit" />}
           onChange={(event, newValue) => {
+            playChangeSound()
             setValue(newValue);
             handler(setLevelFromLabel(newValue));
           }}
           onChangeActive={(event, newHover) => {
             setHover(newHover);
-            playChangeSound()
+            //playChangeSound()
           }}
         />
         {value !== null && <Box className={classes.labelsTop} ml={2}>{text.labelsTop[hover !== -1 ? hover : value]}</Box>}

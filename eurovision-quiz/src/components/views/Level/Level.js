@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   icon: {
     position: 'absolute',
-    marginLeft: 5,
+    //marginLeft: 5,
     opacity: 0.5,
     "&:hover" : {
       opacity: 1,
@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler, stopBgMusic}) => {
+const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler}) => {
   const classes = useStyles();
   const [level, setLevel] = React.useState("easy");
   const [customPeriod, setPeriod] = React.useState([1999, 2019]);

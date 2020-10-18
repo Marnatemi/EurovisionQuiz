@@ -139,7 +139,7 @@ const Score = ({text, score, viewHandler, scoreHandler}) => {
   const [isPlaying, setPlayingApplause] = React.useState(false);
 
   useEffect(()=> {
-    //playApplause()
+    playApplause()
     setPlayingApplause(true)
 
     const timer = setTimeout(() => {
@@ -157,6 +157,7 @@ const Score = ({text, score, viewHandler, scoreHandler}) => {
       scoreHandler('reset')
     }, 500);
   }
+
 
   return (
     <div className={classes.root}>

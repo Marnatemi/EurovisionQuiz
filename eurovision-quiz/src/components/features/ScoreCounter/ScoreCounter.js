@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-// import useSound from 'use-sound';
-// import clickSound from '../../../Sounds/click3.mp3';
-// import {useEffect} from 'react';
+import useSound from 'use-sound';
+import clickSound from '../../../Sounds/coin.mp3';
+import {useEffect} from 'react';
 
 
 const border = 'border';
@@ -65,9 +65,9 @@ const useStyles = makeStyles(theme => ({
         position: 'relative',
         whiteSpace: 'pre-wrap',
         content: "' 0\\A  1\\A  2\\A  3\\A  4\\A  5\\A  6\\A  7\\A  8\\A  9\\A 10'",
-        animation: `$${counter} steps(${props.scoreNumber}) forwards`,
+        animation: `$${counter} steps(${props.scoreNumber}, start) forwards`,
         animationDuration: `calc(${props.scoreNumber} * 0.3s)`,
-        animationDelay: '5s',
+        animationDelay: '5.3s',
         top: 0,
       },
     }
@@ -106,20 +106,29 @@ const useStyles = makeStyles(theme => ({
 
 const ScoreCounter = (props) => {
   const classes = useStyles(props);
-  // const [playClickSound] = useSound(clickSound);
-  // const [isPlaying, setClickSoundsStatus] = React.useState(false);
+  const [playClickSound] = useSound(clickSound);
+  const [isPlaying, setClickSoundsStatus] = React.useState(false);
 
   
 
+  let i = 0;
 
-  // useEffect(() => {
-  //   //setClickSoundsStatus(true)  
-  //   console.log("SCORE Counter USE EFF", isPlaying)
-  //   setTimeout(() => {
-  //       console.log("SCORE Counter USE EFF 2", isPlaying)
-  //       setInterval(playClickSound(), 300);
-  //   }, 5000);
-  // })
+
+  useEffect(() => {
+    setClickSoundsStatus(true)  
+    setTimeout(() => {
+        const time = setInterval(() => {
+          i++;
+          console.log(i, props.scoreNumber);
+          if(props.scoreNumber > 0){
+            playClickSound()
+          }
+          if (i >= props.scoreNumber) {
+              clearInterval(time);
+          }
+      }, 280);
+    }, 5000);
+  }, [i, props.scoreNumber, playClickSound, isPlaying])
 
 
   return (

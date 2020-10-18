@@ -61,35 +61,43 @@ const useStyles = makeStyles(theme => ({
   },
   componentAnimation: (props) => (
     {
-      width: 212,
+      width: 250,
       margin: 'auto',
       textAlign: 'center',
       height: 400,
       marginTop: 'calc((80vh - 400px)/2 - 24px);',
-      '& img': {
-        animationPlayState: 'run',
-      },
-      '& div':{
-        animationPlayState: 'run',
-      },
       '& div:first-child': {
         display: props.displayLoader,
-      }
+      },
+      // position: 'relative',
+      // '&:after':{
+      //   content: '""',
+      //   ...theme.center.absolute,
+      //   top: '100%',
+      //   height: 18,
+      //   width: '80%',
+      //   borderRadius: '50%',
+      //   background: '#000',
+      //   opacity: 0.5,
+      //   animation: `$${shadow} 2s ease-in-out infinite`,  
+      // }
+  
     }
   ),
   littleMan: {
     animation: `$${dance} 2s ease-in-out infinite`,
-    height: '50vh',
+    height: '90%',
   },
   shadow: {
     height: 18,
-    width: '60%',
+    //width: '60%',
     borderRadius: '50%',
     background: '#000',
     opacity: 0.5,
     margin: 'auto',
     marginTop: 50,
     animation: `$${shadow} 2s ease-in-out infinite`,
+    transition: 'width 2s'
   },
   [`@keyframes ${appear}`]: {
     '100%': {
@@ -137,24 +145,26 @@ const useStyles = makeStyles(theme => ({
 const QuestionSong = (props) => {
   const [playButtonSound] = useSound(clickSound);
   const classes = useStyles(props);
+  const {stopBgMusic, viewHandler, ...otherProps} = props
 
   useEffect(() => {
-    props.stopBgMusic()
+    stopBgMusic()
   })
 
 
   const handler = () => {
     playButtonSound()
     setTimeout(() => {
-      props.viewHandler("question")
+      viewHandler("question")
     }, 500);
   }
 
   return(
-    <div className={classes.component}>  
+    <div className={classes.component}> 
+    {/* <input type="button" value="Play" onclick="document.widget4.play()"></input>  */}
       <Button className={classes.button} variant="outlined" color="secondary" size="small" onClick={() => handler()}><ForwardIcon/></Button>
       <div className={classes.player}>
-        <Player songId={props.question.id} animHandler={props.animHandler} songStart={props.question.playerStart} songEnd={props.question.playerEnd} viewHandler={()=> props.viewHandler("question")}/>
+        <Player viewHandler={viewHandler} {...otherProps}/>
       </div>
       <div className={classes.componentAnimation}> 
         <div className={classes.playerLoader}>

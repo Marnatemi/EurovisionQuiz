@@ -749,7 +749,7 @@
   "year": 2003,
   "winnerCountry": "Turkey",
   "place": "Riga",
-  "easyQuestionOptions": ["", "", "Sertab Erener"],
+  "easyQuestionOptions": ["Soraya Arnelas", "Elefteria Elefteriu", "Sertab Erener"],
   "mediumQuestionOptions": ["Great Britain", "Cyprus", "Turkey"]    
   },
   {
@@ -760,12 +760,12 @@
     "artist": 
     {
       "id": "she",
-      "name": "Rusłana"
+      "name": "Ruslana"
     },
   "year": 2004,
  "winnerCountry": "Ukraine",
   "place": "Istanbul",
-  "easyQuestionOptions": ["Barei", "Rusłana", "Mandinga"],
+  "easyQuestionOptions": ["Barei", "Ruslana", "Mandinga"],
   "mediumQuestionOptions": ["Ukraine", "Switzerland", "Denmark"]    
   },
   {
