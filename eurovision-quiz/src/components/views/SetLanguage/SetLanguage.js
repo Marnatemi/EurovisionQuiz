@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import useSound from 'use-sound';
 import textData from '../../../data/appTexts.json';
 import { makeStyles } from '@material-ui/styles';
@@ -15,8 +15,10 @@ const useStyles = makeStyles(theme => ({
     fontFamily: 'Anton',
     textTransform: 'uppercase',
     letterSpacing: 0.8,
+    minHeight: 420,
     "&>h1": {
       margin: 0,
+      fontSize: '1.9rem'
     },
     "& *":{
     }
@@ -29,7 +31,8 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     height: '45vh',
     maxHeight: 300,
-    margin: '50px 0 30px 0',
+    minHeight: 230,
+    margin: '5vh 0 30px 0',
   },
   alert: {
     ...theme.alert
@@ -37,6 +40,7 @@ const useStyles = makeStyles(theme => ({
   lgButton: {
     width: 230,
     height: '30%',
+    minHeight: 70,
     letterSpacing: 0.8,
     margin: 0,
     border: `2px dashed ${theme.palette.primary.light}` ,
@@ -51,7 +55,7 @@ const useStyles = makeStyles(theme => ({
       width: 250,
       height: '31%',
       fontSize: '1.3em',  
-    }
+    },
   },
   image: {
     height: 90,
@@ -59,7 +63,13 @@ const useStyles = makeStyles(theme => ({
     transform: "rotate(24deg)",
     right: -10,
     top: 0
-  }
+  },
+  //eslint-disable-next-line no-useless-computed-key
+  ['@media (max-height:500px)']: {
+    component: {
+      paddingTop: 20,
+    }
+  },
 }));
 
 
@@ -71,7 +81,11 @@ const SetLanguage = ({languageHandler, viewHandler}) => {
   const [playClickSound] = useSound(clickSound);
   const [playChangeSound] = useSound(changeSound);
   const [playAlertSound] = useSound(alertSound);
+  //const button = useRef(null);
 
+  // useEffect(() => {
+  //   button.current.focus();
+  // }, []);
   
   const handleClose = () => {
     setOpenAlert(false);
@@ -115,9 +129,12 @@ const SetLanguage = ({languageHandler, viewHandler}) => {
       </Collapse>
       <div className={classes.languages}>
         {text.languages.map(language => (
-        <Button className={classes.lgButton}
+        <Button tabindex="0" className={classes.lgButton}
           key={language.id}
           onClick={() => optionHandler(language.id)}
+          //ref={button} 
+         // autoFocus
+          //onFocus={e => e.currentTarget.select()}
         >
             <p>{language.name}</p>
             <img className={classes.image} alt="fingerprint-flag" src={language.imgSrc}/> 

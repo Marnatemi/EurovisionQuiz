@@ -10,6 +10,7 @@ import Instruction from '../../features/Instruction/Instruction';
 import clickSound from '../../../Sounds/click3.mp3';
 import alertSound from '../../../Sounds/alert.mp3';
 import cardSound from '../../../Sounds/cardOpen.mp3';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 
 
@@ -23,6 +24,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     height: '95vh',
     maxHeight: 600,
+    minHeight: 530,
     letterSpacing: 0.5,
     animation: `$${appear} .8s ease forwards`,
     opacity: 0,
@@ -44,6 +46,9 @@ const useStyles = makeStyles(theme => ({
   button: {
     // width: 80,
     margin: 31,
+  },
+  alertWrapper:{
+    zIndex: 1,
   },
   alert: {
     ...theme.alert
@@ -113,7 +118,7 @@ const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler}) =>
     </Modal>
     <h1>{text.title} <HelpOutlineIcon className={classes.icon} onClick={() => handleModalClick()}/></h1>
     <LevelPicker text={text.levelPicker} handler={setLevelHandler}/>
-    <Collapse in={openAlert}>
+    <Collapse in={openAlert} className={classes.alertWrapper}>
       <Alert
         action={
           <Button color="inherit" size="small" onClick={() => {handleClose()}}>

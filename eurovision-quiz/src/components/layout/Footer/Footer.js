@@ -6,7 +6,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '90vw',
     maxWidth: 340,
-    position: 'absolute',
+    //position: 'fixed',
+    //position: 'absolute',
     bottom: 0,
     fontSize: 11,
     zIndex: 0,
@@ -26,7 +27,17 @@ const useStyles = makeStyles(theme => ({
     },
   porfolioLink: {
     color:  theme.palette.primary.main,
-  }
+    marginRight: 10,
+  },
+  zapsplat: {
+    marginTop: 13,
+  },
+  //eslint-disable-next-line no-useless-computed-key
+  // ['@media (max-height:500px) and (orientation: landscape)']: {
+  //   root: {
+  //     position: 'unset',
+  //   }
+  // },
 }));
 
 const Footer = ({status}) => {
@@ -39,7 +50,7 @@ const Footer = ({status}) => {
     return (
       <div className={classes.root}>
         <p>Made with <span className={classes.icon}>passion</span> by <a className={classes.porfolioLink} target="_blank" href="https://marnatemi.github.io/Portfolio/">Mar</a></p>
-        <p>Sound from <a target="_blank" href="https://www.zapsplat.com">Zapsplat.com</a></p>
+        <p  className={classes.zapsplat}>Sound from <a target="_blank" href="https://www.zapsplat.com">Zapsplat.com</a></p>
       </div> 
     );
 }

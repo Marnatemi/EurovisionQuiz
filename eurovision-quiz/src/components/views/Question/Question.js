@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
     height: '80vh',
     maxHeight: 600,
     backgroundColor: theme.palette.primary.light,
-    margin: '50px 0',
+    //margin: '50px 0',
+    marginBottom: -30,
     overflow: 'initial',
     maxWidth: 450,
     animation: `$${appear} .8s ease forwards`,
@@ -41,7 +42,7 @@ const useStyles = makeStyles(theme => ({
   },
   answers: {
     position: 'relative',
-    height: '65%',
+    height: '70%',
     margin: 'auto 0',
   },
   answer : {
@@ -78,19 +79,19 @@ const useStyles = makeStyles(theme => ({
   [`@keyframes ${growFirst}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '72%',
+      bottom: '70%',
     }
   },
   [`@keyframes ${growThird}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '46%',
+      bottom: '43%',
     }
   },
   [`@keyframes ${growSecond}`]: {
     '100%': {
       transform: 'rotate(0) scale(1)',
-      bottom: '20%',
+      bottom: '16%',
     }
   },
 }));

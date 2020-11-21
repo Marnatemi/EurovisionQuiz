@@ -1,15 +1,16 @@
 import React from 'react';
-import useSound from 'use-sound';
+//import useSound from 'use-sound';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import {Paper} from  '@material-ui/core'
-import changeSound from '../../../Sounds/click1.mp3';
+//import changeSound from '../../../Sounds/click1.mp3';
 
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: 250,
+    maxWidth: 250,
+    width: '80vw',
     padding: '17px 20px 10px',
     background: 'inherit',
     color: '#fff',
@@ -40,13 +41,13 @@ function valuetext(value) {
 
  const YearsPicker = ({text, handler}) => {
   const classes = useStyles();
-  const [playChangeSound] = useSound(changeSound);
+  //const [playChangeSound] = useSound(changeSound);
   const [value, setValue] = React.useState([1999, 2019]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
     handler(newValue)
-    playChangeSound()
+    //playChangeSound()
   };
 
   return (

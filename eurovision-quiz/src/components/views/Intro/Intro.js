@@ -61,13 +61,12 @@ const useStyles = makeStyles(theme => ({
     animation: `$${button} 2s forwards`,
     animationDelay: '6s',
     opacity: 0,
-    pointerEvents: "none"
+    //pointerEvents: "none"
   },
   [`@keyframes ${button}`]: {
     '100%': {
       opacity: '1',
-      pointerEvents: 'auto',
-      'webkit-pointer-events': "auto"
+      //pointerEvents: 'auto',
     }
   },
   [`@keyframes ${wave}`]: {

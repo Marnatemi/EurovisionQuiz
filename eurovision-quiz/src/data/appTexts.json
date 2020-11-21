@@ -55,7 +55,7 @@
       },
       "yearsPickerText": "Przedział czasowy",
       "alert": {
-        "message": "Wybierz zakres przynajmniej 20lat, dla lepszej zabawy! :)",
+        "message": "Wybierz zakres przynajmniej 20lat.",
         "button": "OK"
       },
       "button": "START"
@@ -121,7 +121,7 @@
       },
       "yearsPickerText": "Editions period",
       "alert": {
-        "message": "Select a period of at least 20 years, let's have fun! :)",
+        "message": "Select a period of at least 20 years.",
         "button": "OK"
       },
       "button": "START"
@@ -187,7 +187,7 @@
       },
       "yearsPickerText": "Period d'editions",
       "alert": {
-        "message": "Choisissez période d'au moins 20 ans, Allez! On va s'amuser :)",
+        "message": "Choisissez période d'au moins 20 ans.",
         "button": "OK"
       },
       "button": "Lancer le quiz"

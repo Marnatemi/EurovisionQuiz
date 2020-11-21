@@ -19,20 +19,15 @@ const useStyles = makeStyles(theme => ({
   
   player: {
     opacity: 0,
-    // width: 200,
-    // height: 200,
-    // top: '20%',
-    // margin: 'auto',
     position: 'absolute',
   },
   component: {
     animation: `$${appear} .8s ease forwards`,
     opacity: 0,
-    width: '75%',
-    maxWidth: 400,
-    height: '80vh',
     textAlign: 'right',
-    position: 'relative',
+  },
+  button: {
+    zIndex: 2,
   },
   playerLoader: {
     ...theme.center.absolute,
@@ -59,38 +54,29 @@ const useStyles = makeStyles(theme => ({
       animationDelay: '0.4s',
     },
   },
+  //hide loader when video is loaded
   componentAnimation: (props) => (
     {
       width: 250,
-      margin: 'auto',
       textAlign: 'center',
-      height: 400,
-      marginTop: 'calc((80vh - 400px)/2 - 24px);',
+      marginTop: '15%',
       '& div:first-child': {
         display: props.displayLoader,
       },
-      // position: 'relative',
-      // '&:after':{
-      //   content: '""',
-      //   ...theme.center.absolute,
-      //   top: '100%',
-      //   height: 18,
-      //   width: '80%',
-      //   borderRadius: '50%',
-      //   background: '#000',
-      //   opacity: 0.5,
-      //   animation: `$${shadow} 2s ease-in-out infinite`,  
-      // }
-  
+    //eslint-disable-next-line no-useless-computed-key
+    ['@media (max-height:500px) and (orientation: landscape)']: {
+      marginTop: 0,
+      width: '20vw',
     }
+  }
   ),
   littleMan: {
     animation: `$${dance} 2s ease-in-out infinite`,
-    height: '90%',
+    height: '55vh',
+    maxHeight: 370,
   },
   shadow: {
     height: 18,
-    //width: '60%',
     borderRadius: '50%',
     background: '#000',
     opacity: 0.5,
@@ -140,6 +126,16 @@ const useStyles = makeStyles(theme => ({
       width: '80%',
     }  
   },
+  //eslint-disable-next-line no-useless-computed-key
+  ['@media (max-height:500px) and (orientation: landscape)']: {
+    button: {
+      marginRight: -40,
+    },
+    shadow: {
+      marginTop: 15,
+      height: 10,
+    }
+  },
 }));
 
 const QuestionSong = (props) => {
@@ -161,8 +157,7 @@ const QuestionSong = (props) => {
 
   return(
     <div className={classes.component}> 
-    {/* <input type="button" value="Play" onclick="document.widget4.play()"></input>  */}
-      <Button className={classes.button} variant="outlined" color="secondary" size="small" onClick={() => handler()}><ForwardIcon/></Button>
+      <Button className={classes.button} variant="outlined" color="primary" size="small" onClick={() => handler()}>skip</Button>
       <div className={classes.player}>
         <Player viewHandler={viewHandler} {...otherProps}/>
       </div>

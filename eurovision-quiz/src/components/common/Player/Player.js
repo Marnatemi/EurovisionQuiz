@@ -6,15 +6,18 @@ import { withStyles } from '@material-ui/core/styles';
 const useStyles = ({
   component: {
     height: '100%',
+    position: 'relative',
     '&>div':{
       height: 'inherit',
     } 
   },
   active: {
     width: '60%',
-    left: '50%',
-    transform: 'translateX(-50%)',
     position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+
   },
   hide: {
     display: 'none',
@@ -68,7 +71,7 @@ class Player extends React.Component {
           <Skeleton variant="circle" width={40} height={40} />
           <Skeleton variant="rect" width={"100%"} height={118} />
         </div>
-      <YouTube videoId={setVideoId()} opts={opts} onReady={this.onReady} onEnd={this.onEnded} />
+      {/* <YouTube videoId={setVideoId()} opts={opts} onReady={this.onReady} onEnd={this.onEnded} /> */}
       </div>
     );
   }

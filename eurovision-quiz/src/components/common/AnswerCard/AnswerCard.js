@@ -8,7 +8,8 @@ const flip = 'flip';
 const useStyles = makeStyles(theme => ({
  cardContainer: {
    width: 220,
-   height: 70,
+   height: 80,
+
    '&:hover': {
      '& figure:first-of-type': {
       background: '#dddedd',
@@ -23,7 +24,6 @@ const useStyles = makeStyles(theme => ({
    transformStyle: 'preserve-3d',
    overflow: 'visible',
    '-moz-backface-visibility': 'hidden',
-   
    '& figure' : {
      ...theme.center.flexbox,   
      ...theme.size.fullByPercent,
@@ -33,9 +33,10 @@ const useStyles = makeStyles(theme => ({
      borderRadius: 4,
      boxShadow: 'inset -1px -1px 7px 0px #0000001f',
    },
-   answer: {
-     padding: 0,
-   }
+ },
+ answer: {
+  lineHeight: 'inherit',
+  fontSize: '1.2rem'
  },
  front: {
   transform: 'rotateX(180deg)',
@@ -65,8 +66,8 @@ const AnswerCard = ({answer}) => {
     <div className={classes.cardContainer}>
       <Card className={classes.card}>
       <figure className={classes.front}>
-        <CardContent className={classes.answer}>
-          <Typography align="center">
+        <CardContent >
+          <Typography align="center" className={classes.answer}>
             {answer}
           </Typography>
         </CardContent>

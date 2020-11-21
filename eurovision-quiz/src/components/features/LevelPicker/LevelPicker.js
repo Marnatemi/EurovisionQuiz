@@ -11,8 +11,10 @@ import changeSound from '../../../Sounds/click1.mp3';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: 292,
+    maxWidth: 292,
+    width: '94vw',
     height: '31%',
+    minHeight: 130,
     margin: 0,
     border: `2px dashed ${theme.palette.primary.light}` ,
     padding: '10px 0',
