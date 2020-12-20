@@ -17,7 +17,9 @@ const useStyles = makeStyles(theme => ({
     border: '2px solid rgba(255,255,255,0)',
     borderRadius: 4,
     padding: '10px 20px',
+    margin: 'auto',
     width: 250,
+    maxWidth: '70vw',
     height: 100,
     letterSpacing: 6,
     position: 'relative',
@@ -102,6 +104,14 @@ const useStyles = makeStyles(theme => ({
       opacity: 1,
     },
   },
+  //eslint-disable-next-line no-useless-computed-key
+  ['@media (max-height:500px) and (orientation: landscape)']: {
+    // root: {
+    //   height: 30,
+    //   width: 100,
+    // }
+  },
+  
 }));
 
 const ScoreCounter = (props) => {

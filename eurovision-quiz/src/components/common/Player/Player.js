@@ -71,7 +71,7 @@ class Player extends React.Component {
           <Skeleton variant="circle" width={40} height={40} />
           <Skeleton variant="rect" width={"100%"} height={118} />
         </div>
-      {/* <YouTube videoId={setVideoId()} opts={opts} onReady={this.onReady} onEnd={this.onEnded} /> */}
+      <YouTube videoId={setVideoId()} opts={opts} onReady={this.onReady} onEnd={this.onEnded} />
       </div>
     );
   }

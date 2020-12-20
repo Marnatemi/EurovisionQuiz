@@ -21,16 +21,16 @@ const useStyles = makeStyles(theme => ({
   card: {
     transition: '0.3s',
     width: '95%',
-    height: '80vh',
-    maxHeight: 600,
-    backgroundColor: theme.palette.primary.light,
-    //margin: '50px 0',
-    marginBottom: -30,
-    overflow: 'initial',
+    minWidth: 260,
     maxWidth: 450,
+    height: '80vh',
+    minHeight: 375,
+    maxHeight: 530,
+    backgroundColor: theme.palette.primary.light,
+    overflow: 'initial',
     animation: `$${appear} .8s ease forwards`,
     opacity: 0,
-    top: '10%',
+    marginTop: 'auto'
   },
   header: {
     background: theme.palette.primary.main,
@@ -43,12 +43,13 @@ const useStyles = makeStyles(theme => ({
   answers: {
     position: 'relative',
     height: '70%',
+    minHeight: 295,
     margin: 'auto 0',
   },
   answer : {
     position: 'absolute',
     left: '50%',
-    bottom: 0,
+    bottom: 10,
     marginLeft: -110,
     transform: 'scale(0.5)',
     animation: `$${growFirst} 0.65s ease-in-out forwards`,
@@ -64,8 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
   questionNumber: {
     textAlign: 'right',
-    marginBottom: 0,
-    marginRight: 20,
+    margin: '5px 20px 0',
     fontFamily: 'Anton',
     color: theme.palette.primary.main,
     letterSpacing: 1.5,
@@ -94,11 +94,21 @@ const useStyles = makeStyles(theme => ({
       bottom: '16%',
     }
   },
+  //eslint-disable-next-line no-useless-computed-key
+  ['@media (max-height:780px)']: {
+    card: {
+      marginTop: 60,
+    }
+  },
+  //eslint-disable-next-line no-useless-computed-key
+  ['@media (max-width:315px)']: {
+    card: {
+      minHeight: 410,
+    }
+  }
 }));
 
 let answerMessage = ""
-
-
 
 const Question = ({text, level, question, period, questionNumber, scoreHandler, ...otherProps}) => {
   const classes = useStyles();
@@ -139,7 +149,7 @@ const Question = ({text, level, question, period, questionNumber, scoreHandler, 
   const answerOptions = setLevelAnswers(level, question, period)
 
   return (
-      <Card className={classes.card}>
+      <Card className={[classes.card, "question"].join(' ')} >
         <CardHeader
               className={classes.header}
               title={setLevelQuestion()}

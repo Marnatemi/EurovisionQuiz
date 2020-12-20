@@ -129,7 +129,7 @@ const SetLanguage = ({languageHandler, viewHandler}) => {
       </Collapse>
       <div className={classes.languages}>
         {text.languages.map(language => (
-        <Button tabindex="0" className={classes.lgButton}
+        <Button tabIndex="0" className={classes.lgButton}
           key={language.id}
           onClick={() => optionHandler(language.id)}
           //ref={button} 

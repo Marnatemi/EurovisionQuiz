@@ -70,57 +70,9 @@ class App extends React.Component {
         from: 1999, 
         to: 2019
       },
-      questions: [  {
-        "id": 1,
-        "songTitle": "Refrain",
-        "playerStart": 990,
-        "playerEnd": 1007,
-        "artist": 
-          {
-            "id": "she",
-            "name": "Lys Assia"
-          },
-        "year": 1956,
-       "winnerCountry": "Switzerland",
-        "place": "Lugano",
-        "easyQuestionOptions": ["Liane Augustin", "Lys Assia", "Semiha Yankı"],
-        "mediumQuestionOptions": ["France", "San Marino", "Switzerland"]  
-        },       
-        {
-        "id": 2,
-        "songTitle": "Net als toen",
-        "playerStart": 975,
-        "playerEnd": 989,
-        "artist": 
-          {
-            "id": "she",
-            "name": "Corry Brokken"
-          },
-        "year": 1957,
-       "winnerCountry":  "The Netherlands",
-        "place": "Frankfurt",
-        "easyQuestionOptions": ["Margot Hielscher", "Danièle Dupré", "Corry Brokken"],
-        "mediumQuestionOptions": ["The Netherlands", "Belgium", "Turkey"]  
-        },       
-        {
-        "id": 3,
-        "songTitle": "Dors, mon amour",
-        "playerStart": 960,
-        "playerEnd": 974,
-        "artist": 
-          {
-            "id": "he",
-            "name": "André Claveau"
-          },
-        "year": 1958,
-       "winnerCountry":  "France",
-        "place": "Hilversum",
-        "easyQuestionOptions": ["André Claveau", "Dario Campeotto", "Eduardo Nascimento"],
-        "mediumQuestionOptions": ["Portugal", "France", "Switzerland"]  
-        },       
-      ],
+      questions: [],
       currentQuestion: 0,
-      currentView: "level",
+      currentView: "start",
       score: 0,
       questionSongIsLoading: true,
       showFooter: true

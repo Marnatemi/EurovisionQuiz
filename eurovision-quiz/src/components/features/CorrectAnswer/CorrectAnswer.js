@@ -8,6 +8,9 @@ import correctVerbFormForCountry from '../../../utils/correctVerbFormForCountry'
 //import QuestionSong from '../../views/QuestionSong/QuestionSong';
 
 const useStyles = makeStyles(theme => ({
+  answer: {
+    padding: '10px 16px',
+  },
   props: {
     fontSize: "1rem",
     textTransform: 'uppercase',
@@ -15,6 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
   player: {
     height: '45%',
+    minHeight: 240,
     padding: '5px',
   },
 }));
@@ -24,7 +28,7 @@ const Answer = ({text, message, question, questionChangeHandler}) => {
   
   return ( 
     <ModalCard message={message} button={text.button} handler={questionChangeHandler}>
-      <CardContent>
+      <CardContent className={classes.answer}>
         {text.phrase1}
         <Typography className={classes.props} color="primary"> "{question.songTitle}" </Typography>
         {correctVerbFormForArtist(text.verbPerform, question.artist)}

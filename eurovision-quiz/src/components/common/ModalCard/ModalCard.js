@@ -14,23 +14,28 @@ const useStyles = makeStyles(theme => ({
     maxWidth: 450,
     maxHeight: '700px',
     height: '95%',
+    minHeight: 'min-content',
+    overflowY: 'scroll',
+    justifyContent: 'flex-start',
     width: '95%',
     textAlign: 'center',
     background: theme.palette.primary.light,
     ...theme.center.absolute,
-    top: '60%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
     letterSpacing: 0.7,
     animation: `$${modal} 0.3s ease-in forwards`,
     "& p span": {
       color: theme.palette.primary.main,
+    },
+    '& *':{
+      marginTop: 'auto',
     }
   },
   header: {
     textAlign: 'left',
     spacing: 10,
+    padding: '10px 16px',
   },
   button: {
     marginBottom: '14px',
@@ -44,7 +49,7 @@ const useStyles = makeStyles(theme => ({
       opacity: 1,
       top: '50%',
     }
-  }
+  },
 }));
 
 const ModalCard = ({ message, button, children, handler}) => {
