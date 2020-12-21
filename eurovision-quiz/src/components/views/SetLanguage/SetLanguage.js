@@ -132,9 +132,6 @@ const SetLanguage = ({languageHandler, viewHandler}) => {
         <Button tabIndex="0" className={classes.lgButton}
           key={language.id}
           onClick={() => optionHandler(language.id)}
-          //ref={button} 
-         // autoFocus
-          //onFocus={e => e.currentTarget.select()}
         >
             <p>{language.name}</p>
             <img className={classes.image} alt="fingerprint-flag" src={language.imgSrc}/> 

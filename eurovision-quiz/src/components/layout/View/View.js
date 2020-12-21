@@ -1,5 +1,6 @@
 import React from 'react';
 import useSound from 'use-sound';
+import ForIOS from './../../views/ForIOS/ForIOS';
 import Question from './../../views/Question/Question';
 import SetLanguage from './../../views/SetLanguage/SetLanguage';
 import Intro from '../../views/Intro/Intro';
@@ -11,6 +12,16 @@ import introSound from '../../../Sounds/Intro.mp3';
  
 
 const View = ({text, language, languageHandler, level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
+  const ua = navigator.userAgent;
+  const info = {
+          browser: /Edge\/\d+/.test(ua) ? 'ed' : /MSIE 9/.test(ua) ? 'ie9' : /MSIE 10/.test(ua) ? 'ie10' : /MSIE 11/.test(ua) ? 'ie11' : /MSIE\s\d/.test(ua) ? 'ie?' : /rv\:11/.test(ua) ? 'ie11' : /Firefox\W\d/.test(ua) ? 'ff' : /Chrom(e|ium)\W\d|CriOS\W\d/.test(ua) ? 'gc' : /\bSafari\W\d/.test(ua) ? 'sa' : /\bOpera\W\d/.test(ua) ? 'op' : /\bOPR\W\d/i.test(ua) ? 'op' : typeof MSPointerEvent !== 'undefined' ? 'ie?' : '',
+          os: /Mac/.test(ua) ? "mac" : "",
+  };
+  console.log("PRZEGLADARKA:", info)
+
+
+
+  
   const [playIntroSound, {stop}] = useSound(introSound);
   const displayLoaderforQS = (songIsLoading) => {
     let questionSongDisplay = 'flex'
@@ -18,7 +29,12 @@ const View = ({text, language, languageHandler, level, currentView, levelHandler
     return questionSongDisplay;
   }
 
-  if (currentView === 'start'){
+  if(info.os === "mac"){
+    return (
+    <ForIOS/>
+    );
+  }
+  else if (currentView === 'start'){
     return (
       <SetLanguage viewHandler={viewHandler} languageHandler={languageHandler} />
     );

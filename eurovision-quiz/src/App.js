@@ -77,7 +77,7 @@ class App extends React.Component {
       questionSongIsLoading: true,
       showFooter: true
     };
-
+  
     this.viewHandler = this.viewHandler.bind(this);
     this.questionChangeHandler = this.questionChangeHandler.bind(this);
     this.scoreHandler= this.scoreHandler.bind(this);
