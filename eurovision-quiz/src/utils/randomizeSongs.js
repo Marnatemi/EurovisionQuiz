@@ -19,7 +19,6 @@ const getRandomizedQuestionSongs = (from, to) => {
       randomizedQuestions.push(selectedQuestion)
     }
   }
-  console.log( questions, randomizedQuestions )
   return { questions: randomizedQuestions }
 }
 
