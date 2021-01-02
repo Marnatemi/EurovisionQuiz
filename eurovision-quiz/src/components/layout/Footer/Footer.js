@@ -6,8 +6,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '90vw',
     maxWidth: 340,
-    //position: 'fixed',
-    //position: 'absolute',
     bottom: 0,
     fontSize: 11,
     zIndex: 0,
@@ -32,12 +30,6 @@ const useStyles = makeStyles(theme => ({
   zapsplat: {
     marginTop: 13,
   },
-  //eslint-disable-next-line no-useless-computed-key
-  // ['@media (max-height:500px) and (orientation: landscape)']: {
-  //   root: {
-  //     position: 'unset',
-  //   }
-  // },
 }));
 
 const Footer = ({status}) => {

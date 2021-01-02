@@ -19,6 +19,7 @@ const theme = createMuiTheme({
     }, 
     secondary: {
       main: '#97a6ab',
+      dark: '#000'
     },
   },
   typography: {
@@ -28,17 +29,24 @@ const theme = createMuiTheme({
       'sans-serif',
     ].join(','),
   },
-  center: {
-    absolute: {
+  positioning: {
+    absoluteCenter: {
       position: 'absolute',
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
     },
-    flexbox: {
+    flexboxCenter: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      flexDirection: 'column',
+    },
+    flexboxBetween: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      flexDirection: 'column',
     }
   },
   size: {
@@ -56,6 +64,12 @@ const theme = createMuiTheme({
     width: '80vw',
     maxWidth: 350,
   },
+  importantText: {
+    fontFamily: 'Anton',
+    textTransform: 'uppercase',
+    letterSpacing: 0.8,
+    color: '#deb445',
+  }
 });
 
 
@@ -77,7 +91,6 @@ class App extends React.Component {
       questionSongIsLoading: true,
       showFooter: true
     };
-  
     this.viewHandler = this.viewHandler.bind(this);
     this.questionChangeHandler = this.questionChangeHandler.bind(this);
     this.scoreHandler= this.scoreHandler.bind(this);

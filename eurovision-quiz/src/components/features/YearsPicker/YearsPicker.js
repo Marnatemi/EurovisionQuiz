@@ -1,11 +1,9 @@
 import React from 'react';
-//import useSound from 'use-sound';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import {Paper} from  '@material-ui/core'
-//import changeSound from '../../../Sounds/click1.mp3';
-
+import {Paper} from  '@material-ui/core';
+import quizData from '../../../data/quizData.json';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,19 +17,22 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const firstESCYear = quizData[0].year
+const lastESCYear = quizData[quizData.length - 1].year
+const erlierESCYear = quizData[quizData.length - 21].year
 
 const marks = [
   {
-    value: 1956,
-    label: '1956',
+    value: firstESCYear,
+    label: firstESCYear,
   },
   {
-    value: 1999,
-    label: '1999',
+    value: erlierESCYear,
+    label: erlierESCYear,
   },
   {
-    value: 2019,
-    label: '2019',
+    value: lastESCYear,
+    label: lastESCYear,
   },
 ];
 
@@ -41,14 +42,13 @@ function valuetext(value) {
 
  const YearsPicker = ({text, handler}) => {
   const classes = useStyles();
-  //const [playChangeSound] = useSound(changeSound);
-  const [value, setValue] = React.useState([1999, 2019]);
+  const [value, setValue] = React.useState([erlierESCYear, lastESCYear]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
     handler(newValue)
-    //playChangeSound()
   };
+
 
   return (
     <Paper className={classes.root}>
@@ -56,11 +56,10 @@ function valuetext(value) {
         {text}
       </Typography>
       <Slider
-
         color="primary"
         value={value}
-        min={1956}
-        max={2019}
+        min={firstESCYear}
+        max={lastESCYear}
         onChange={handleChange}
         valueLabelDisplay="auto"
         aria-labelledby="years-picker"

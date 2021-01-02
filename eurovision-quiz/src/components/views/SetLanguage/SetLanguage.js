@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import useSound from 'use-sound';
 import textData from '../../../data/appTexts.json';
 import { makeStyles } from '@material-ui/styles';
@@ -12,11 +12,10 @@ import alertSound from '../../../Sounds/alert.mp3';
 const useStyles = makeStyles(theme => ({
   component: {
     width: '100%',
-    fontFamily: 'Anton',
-    textTransform: 'uppercase',
-    letterSpacing: 0.8,
+    ...theme.importantText,
     minHeight: 420,
     "&>h1": {
+      color: '#fff',
       margin: 0,
       fontSize: '1.9rem'
     },
@@ -81,11 +80,6 @@ const SetLanguage = ({languageHandler, viewHandler}) => {
   const [playClickSound] = useSound(clickSound);
   const [playChangeSound] = useSound(changeSound);
   const [playAlertSound] = useSound(alertSound);
-  //const button = useRef(null);
-
-  // useEffect(() => {
-  //   button.current.focus();
-  // }, []);
   
   const handleClose = () => {
     setOpenAlert(false);

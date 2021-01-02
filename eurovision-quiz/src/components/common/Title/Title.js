@@ -11,18 +11,15 @@ const subtitle = "subtitle";
 
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    ...theme.center.absolute,
+  component: {
+    ...theme.positioning.absoluteCenter,
     top: '20%',
     lineHeight: 1,
+    ...theme.importantText,
     letterSpacing: '-.07em',
     fontSize: '2em',
-    textTransform: 'uppercase',
     animation: `$${hero} 1.2s forwards`,
     animationDelay: '4.3s',
-    '&>*': {
-      fontFamily: 'Anton',
-    },
     '&>span+span': {
       opacity: 0,
      },
@@ -34,17 +31,16 @@ const useStyles = makeStyles(theme => ({
     },
   },
   background: {
-    ...theme.center.absolute,
+    ...theme.positioning.absoluteCenter,
     width: '150vw',
     height: '150vh',
-    background: '#000',
+    background: theme.palette.secondary.dark,
     zIndex: '-1',
     animation: `$${background} 2.5s forwards`,
     animationDelay: '3s',
   },
   icon: {
-    animation: `$${icon} 0.7s forwards`,
-    animationTimingFunction: 'ease-in-out',
+    animation: `$${icon} 0.7s ease-in-out forwards`,
     opacity: 0,
     transform: 'rotate(30deg)',
   },
@@ -53,7 +49,6 @@ const useStyles = makeStyles(theme => ({
     lineHeight: 1,
     marginTop: -11,
     letterSpacing: -1,
-    color: theme.palette.primary.main,
     animation: `$${title} 0.7s forwards`,
     animationDelay: '1.9s',
     transform: 'translateX(-1000%)',
@@ -61,10 +56,12 @@ const useStyles = makeStyles(theme => ({
   subtitle: {
     animation: `$${subtitle} 0.7s forwards cubic-bezier(0.02, 0.01, 0.21, 1) `,
     animationDelay: '1.4s',
+    color: '#fff',
   },
   text: {
     animation: `$${text} 0.7s forwards cubic-bezier(0.02, 0.01, 0.21, 1)`,
     animationDelay: '0.7s',
+    color: '#fff',
   },
 
 
@@ -110,7 +107,7 @@ const Title = ({title, subtitle, text}) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root} >
+    <div className={classes.component} >
       <div className={classes.background}></div>
       <span ><AudiotrackOutlinedIcon className={classes.icon}/></span>
       <span className={classes.text}>{text}</span>

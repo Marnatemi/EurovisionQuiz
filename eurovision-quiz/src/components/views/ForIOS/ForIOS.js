@@ -1,30 +1,17 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 
-const imgMove = 'imgMove'
+const imgAnim = 'imgAnim'
 const dotAnim = 'dotAnim'
 
 const useStyles = makeStyles(theme => ({
-  component: {
-    // boxShadow: "inset 0 0 50px rgba(0,0,0,0.5)",
-    // height: '100vh',
-    // width: '100vw',
-    // display: 'flex',
-    // flexDirection: 'column',
-    // justifyContent: 'center',
-    // alignItems: 'center'
-  },
-  image:{
+  image: {
     width: '80%',
     borderRadius: '5%',
-    animation: `$${imgMove} 2.1s ease-in-out infinite`,
+    animation: `$${imgAnim} 2.1s ease-in-out infinite`,
   },
   importantText: {
-    fontFamily: 'Anton',
-    textTransform: 'uppercase',
-    letterSpacing: 1,
-    fontSize: 25,
-    color: theme.palette.primary.main,
+    ...theme.importantText,
     marginBottom: 0,
     '& span:nth-of-type(2n)': {
       animationDelay : '.5s'
@@ -32,7 +19,6 @@ const useStyles = makeStyles(theme => ({
     '& span:nth-of-type(3n)': {
       animationDelay : '1s'
     },
-  
   },
   message: {
     marginBottom: 0
@@ -44,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     opacity: 0,
     animation: `$${dotAnim} 2s ease-in-out infinite`,
   },
-  [`@keyframes ${imgMove}`]: {
+  [`@keyframes ${imgAnim}`]: {
     '50%': {
       borderRadius: '50%',
     },

@@ -76,7 +76,6 @@ const LevelPicker = ({text, handler}) => {
           }}
           onChangeActive={(event, newHover) => {
             setHover(newHover);
-            //playChangeSound()
           }}
         />
         {value !== null && <Box className={classes.labelsTop} ml={2}>{text.labelsTop[hover !== -1 ? hover : value]}</Box>}

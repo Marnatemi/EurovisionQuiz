@@ -40,11 +40,13 @@ const useStyles = makeStyles(theme => ({
         strokeDashoffset: 1000,
         animation: `$${borderDraw} 3s forwards`,
         animationDelay: props => `calc(5.5s + ${props.scoreNumber} * 0.3s)`,
-      }    }, 
+      }    
+    }, 
   },
   scoreWrapper: {
-    ...theme.center.absolute,
-    ...theme.center.flexbox,
+    ...theme.positioning.absoluteCenter,
+    ...theme.positioning.flexboxCenter,
+    flexDirection: 'row',
     opacity: 0,
     fontSize: '2em',
     animation: `$${show} 1s forwards`,
@@ -104,14 +106,6 @@ const useStyles = makeStyles(theme => ({
       opacity: 1,
     },
   },
-  //eslint-disable-next-line no-useless-computed-key
-  ['@media (max-height:500px) and (orientation: landscape)']: {
-    // root: {
-    //   height: 30,
-    //   width: 100,
-    // }
-  },
-  
 }));
 
 const ScoreCounter = (props) => {
@@ -129,7 +123,6 @@ const ScoreCounter = (props) => {
     setTimeout(() => {
         const time = setInterval(() => {
           i++;
-          console.log(i, props.scoreNumber);
           if(props.scoreNumber > 0){
             playClickSound()
           }

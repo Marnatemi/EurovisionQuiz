@@ -5,21 +5,19 @@ import { makeStyles } from '@material-ui/styles';
 import ModalCard from '../../common/ModalCard/ModalCard';
 import correctVerbFormForArtist from '../../../utils/correctVerbFormForArtist';
 import correctVerbFormForCountry from '../../../utils/correctVerbFormForCountry';
-//import QuestionSong from '../../views/QuestionSong/QuestionSong';
 
 const useStyles = makeStyles(theme => ({
   answer: {
     padding: '10px 16px',
   },
   props: {
-    fontSize: "1rem",
-    textTransform: 'uppercase',
+    ...theme.importantText,
     display: "inline"
   },
   player: {
     height: '45%',
     minHeight: 240,
-    padding: '5px',
+    padding: 5,
   },
 }));
 
@@ -30,15 +28,15 @@ const Answer = ({text, message, question, questionChangeHandler}) => {
     <ModalCard message={message} button={text.button} handler={questionChangeHandler}>
       <CardContent className={classes.answer}>
         {text.phrase1}
-        <Typography className={classes.props} color="primary"> "{question.songTitle}" </Typography>
+        <Typography className={classes.props}> "{question.songTitle}" </Typography>
         {correctVerbFormForArtist(text.verbPerform, question.artist)}
-        <Typography className={classes.props} color="primary"> {question.artist.name} </Typography>
+        <Typography className={classes.props}> {question.artist.name} </Typography>
         {text.phrase2}
-        <Typography className={classes.props} color="primary"> {question.place} </Typography> 
+        <Typography className={classes.props}> {question.place} </Typography> 
         {text.phrase3}
-        <Typography className={classes.props} color="primary"> {question.year}</Typography>. <br/>
+        <Typography className={classes.props}> {question.year}</Typography>. <br/>
         {text.phrase4} {correctVerbFormForArtist(text.verbRepresent, question.artist)} {correctVerbFormForCountry(text.verbWas, question.winnerCountry)}
-        <Typography className={classes.props} color="primary"> {question.winnerCountry}</Typography>.
+        <Typography className={classes.props}> {question.winnerCountry}</Typography>.
       </CardContent>
       <Divider variant="middle" />
       <CardContent className={classes.player}>

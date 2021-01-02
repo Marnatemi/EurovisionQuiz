@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     width: '95%',
     textAlign: 'center',
     background: theme.palette.primary.light,
-    ...theme.center.absolute,
+    ...theme.positioning.absoluteCenter,
     display: 'flex',
     flexDirection: 'column',
     letterSpacing: 0.7,

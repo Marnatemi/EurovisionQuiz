@@ -10,18 +10,12 @@ import Instruction from '../../features/Instruction/Instruction';
 import clickSound from '../../../Sounds/click3.mp3';
 import alertSound from '../../../Sounds/alert.mp3';
 import cardSound from '../../../Sounds/cardOpen.mp3';
-import zIndex from '@material-ui/core/styles/zIndex';
-
-
 
 const appear = 'appear'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    ...theme.positioning.flexboxBetween,
     height: '95vh',
     maxHeight: 600,
     minHeight: 530,
@@ -30,21 +24,18 @@ const useStyles = makeStyles(theme => ({
     opacity: 0,
 
     "&>h1": {
-      fontFamily: 'Anton',
-      textTransform: 'uppercase',
-      letterSpacing: 0.8,
+      ...theme.importantText,
+      color: 'inherit',
     },
   },
   icon: {
     position: 'absolute',
-    //marginLeft: 5,
     opacity: 0.5,
     "&:hover" : {
       opacity: 1,
     }
   },
   button: {
-    // width: 80,
     margin: 31,
   },
   alertWrapper:{

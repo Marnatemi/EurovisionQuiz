@@ -7,7 +7,7 @@ const useStyles = ({
   component: {
     height: '100%',
     position: 'relative',
-    '&>div':{
+    '&>div:nth-of-type(2)':{
       height: 'inherit',
     } 
   },
@@ -17,7 +17,6 @@ const useStyles = ({
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-
   },
   hide: {
     display: 'none',
@@ -37,7 +36,6 @@ class Player extends React.Component {
 
 
   render() {
-    console.log(this.props)
     const { classes, playerStart, playerEnd, songId} = this.props;
     const opts = {
       height: '100%',
@@ -83,7 +81,6 @@ class Player extends React.Component {
     })
     if(this.props.animHandler !== undefined){
       this.props.animHandler(false)
-      console.log('CHANGE LOADING STATE' )
     }
   }
   onEnded() {

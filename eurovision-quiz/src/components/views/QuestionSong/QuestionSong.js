@@ -30,11 +30,11 @@ const useStyles = makeStyles(theme => ({
     zIndex: 2,
   },
   playerLoader: {
-    ...theme.center.absolute,
+    ...theme.positioning.absoluteCenter,
     zIndex: 2,
     '&:before': {
       content: '""',
-      ...theme.center.absolute,
+      ...theme.positioning.absoluteCenter,
       ...theme.size.fullByDivice,
       background: '#000',
       opacity: 0.8,
@@ -157,7 +157,7 @@ const QuestionSong = (props) => {
 
   return(
     <div className={classes.component}> 
-      <Button className={classes.button} variant="outlined" color="primary" size="small" onClick={() => handler()}>skip</Button>
+      <Button className={classes.button} variant="outlined" color="primary" size="small" onClick={() => handler()}><ForwardIcon /></Button>
       <div className={classes.player}>
         <Player viewHandler={viewHandler} {...otherProps}/>
       </div>

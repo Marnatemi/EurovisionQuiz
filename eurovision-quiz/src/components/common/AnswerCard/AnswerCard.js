@@ -9,7 +9,6 @@ const useStyles = makeStyles(theme => ({
  cardContainer: {
    width: 220,
    height: 80,
-
    '&:hover': {
      '& figure:first-of-type': {
       background: '#dddedd',
@@ -25,11 +24,10 @@ const useStyles = makeStyles(theme => ({
    overflow: 'visible',
    '-moz-backface-visibility': 'hidden',
    '& figure' : {
-     ...theme.center.flexbox,   
+     ...theme.positioning.flexboxCenter,   
      ...theme.size.fullByPercent,
      position: 'absolute',
      margin: 0,
-     flexDirection: 'column',
      borderRadius: 4,
      boxShadow: 'inset -1px -1px 7px 0px #0000001f',
    },

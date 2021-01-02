@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     overflow: 'hidden',
   },
   hero: {
-    ...theme.center.absolute,
+    ...theme.positioning.absoluteCenter,
     height: '70%',
     maxHeight: '400px',
     display: 'flex',
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     background: '#414c4f',
     boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
     '&::after': {
-      ...theme.center.absolute,
+      ...theme.positioning.absoluteCenter,
       top: '37%',
       width: '90vw',
       height: '90vw',
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     },
     '&::before': {
       content: "''",
-      ...theme.center.absolute,
+      ...theme.positioning.absoluteCenter,
       top: '37%',
       width: '90vw',
       height: '90vw',
