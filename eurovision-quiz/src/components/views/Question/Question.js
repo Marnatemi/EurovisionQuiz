@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import useSound from 'use-sound';
 import CorrectAnswer from '../../features/CorrectAnswer/CorrectAnswer';
 import AnswerCard from '../../common/AnswerCard/AnswerCard.js';
@@ -117,9 +117,12 @@ const Question = ({text, level, question, period, questionNumber, scoreHandler, 
   const [playSuccesSound] = useSound(succesSound);
   const [playFailureSound] = useSound(failureSound);
   const [playCardSound] = useSound(cardSound);
-
-
   const [open, setOpen] = React.useState(false);
+  const [answerOptions, setOptions] = React.useState([]);
+
+  useEffect(() => {
+    setOptions(setLevelAnswers(level, question, period))
+  }, [level, question, period])
 
   const setLevelQuestion = () => {
     return text.levelQuestions[level];
@@ -146,8 +149,6 @@ const Question = ({text, level, question, period, questionNumber, scoreHandler, 
     setOpen(false);
   };
   
-  const answerOptions = setLevelAnswers(level, question, period)
-
   return (
       <Card className={[classes.card, "question"].join(' ')} >
         <CardHeader

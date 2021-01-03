@@ -4,7 +4,6 @@ const getRandomizedQuestionSongs = (from, to) => {
 
   const questions = [];
   const randomizedQuestions = [];
-
   for (let question of quizData){
     if(question.year <= to && question.year >= from){
       questions.push(question);

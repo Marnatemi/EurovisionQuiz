@@ -1,5 +1,4 @@
-import React from 'react';
-import {useEffect} from 'react';
+import React, {useEffect} from 'react';
 import useSound from 'use-sound';
 import {Button} from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
@@ -61,12 +60,12 @@ const useStyles = makeStyles(theme => ({
     animation: `$${button} 2s forwards`,
     animationDelay: '6s',
     opacity: 0,
-    //pointerEvents: "none"
+    pointerEvents: "none"
   },
   [`@keyframes ${button}`]: {
     '100%': {
       opacity: '1',
-      //pointerEvents: 'auto',
+      pointerEvents: 'auto',
     }
   },
   [`@keyframes ${wave}`]: {

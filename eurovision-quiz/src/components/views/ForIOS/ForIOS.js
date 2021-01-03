@@ -7,8 +7,12 @@ const dotAnim = 'dotAnim'
 const useStyles = makeStyles(theme => ({
   image: {
     width: '80%',
+    maxWidth: 400,
     borderRadius: '5%',
     animation: `$${imgAnim} 2.1s ease-in-out infinite`,
+    '@media (max-height:500px) and (orientation: landscape)': {
+      height: 0,
+    }
   },
   importantText: {
     ...theme.importantText,
