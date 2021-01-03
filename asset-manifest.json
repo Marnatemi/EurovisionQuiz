@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/EurovisionQuiz/static/css/main.57b603c1.chunk.css",
+    "main.js": "/EurovisionQuiz/static/js/main.0215913c.chunk.js",
+    "main.js.map": "/EurovisionQuiz/static/js/main.0215913c.chunk.js.map",
+    "runtime-main.js": "/EurovisionQuiz/static/js/runtime-main.05b8ae84.js",
+    "runtime-main.js.map": "/EurovisionQuiz/static/js/runtime-main.05b8ae84.js.map",
+    "static/js/2.52770d7e.chunk.js": "/EurovisionQuiz/static/js/2.52770d7e.chunk.js",
+    "static/js/2.52770d7e.chunk.js.map": "/EurovisionQuiz/static/js/2.52770d7e.chunk.js.map",
+    "static/js/3.4e7c298c.chunk.js": "/EurovisionQuiz/static/js/3.4e7c298c.chunk.js",
+    "static/js/3.4e7c298c.chunk.js.map": "/EurovisionQuiz/static/js/3.4e7c298c.chunk.js.map",
+    "index.html": "/EurovisionQuiz/index.html",
+    "precache-manifest.9eabda6e10aa1916386f42accd566d41.js": "/EurovisionQuiz/precache-manifest.9eabda6e10aa1916386f42accd566d41.js",
+    "service-worker.js": "/EurovisionQuiz/service-worker.js",
+    "static/css/main.57b603c1.chunk.css.map": "/EurovisionQuiz/static/css/main.57b603c1.chunk.css.map",
+    "static/js/2.52770d7e.chunk.js.LICENSE.txt": "/EurovisionQuiz/static/js/2.52770d7e.chunk.js.LICENSE.txt",
+    "static/js/3.4e7c298c.chunk.js.LICENSE.txt": "/EurovisionQuiz/static/js/3.4e7c298c.chunk.js.LICENSE.txt",
+    "static/media/Intro.mp3": "/EurovisionQuiz/static/media/Intro.793f08cf.mp3",
+    "static/media/SaxBeep.mp3": "/EurovisionQuiz/static/media/SaxBeep.47193629.mp3",
+    "static/media/SaxHonk.mp3": "/EurovisionQuiz/static/media/SaxHonk.c369277a.mp3",
+    "static/media/alert.mp3": "/EurovisionQuiz/static/media/alert.5b4a34e9.mp3",
+    "static/media/applause.mp3": "/EurovisionQuiz/static/media/applause.39dcd669.mp3",
+    "static/media/cardOpen.mp3": "/EurovisionQuiz/static/media/cardOpen.1c6e8102.mp3",
+    "static/media/click1.mp3": "/EurovisionQuiz/static/media/click1.30cd3bd5.mp3",
+    "static/media/click3.mp3": "/EurovisionQuiz/static/media/click3.3300ec64.mp3",
+    "static/media/coin.mp3": "/EurovisionQuiz/static/media/coin.fd446022.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05b8ae84.js",
+    "static/js/2.52770d7e.chunk.js",
+    "static/css/main.57b603c1.chunk.css",
+    "static/js/main.0215913c.chunk.js"
+  ]
+}
