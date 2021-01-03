@@ -1,7 +1,6 @@
 import countries from '../data/countries.json';
 import cities from '../data/cities.json';
 
-
 const translateCountriesNames = (questions, language) => {
 
   let countriesNamesforAnswers = []
