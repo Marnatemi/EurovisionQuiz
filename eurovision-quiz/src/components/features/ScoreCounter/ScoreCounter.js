@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { useEffect }  from 'react';
 import { makeStyles } from '@material-ui/styles';
 import useSound from 'use-sound';
-import clickSound from '../../../Sounds/coin.mp3';
-import {useEffect} from 'react';
-
+import clickSound from '../../../assets/Sounds/coin.mp3';
 
 const border = 'border';
 const counter = 'counter';
 const borderDraw = 'borderDraw';
 const total = 'total';
 const show = 'show';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -112,11 +109,7 @@ const ScoreCounter = (props) => {
   const classes = useStyles(props);
   const [playClickSound] = useSound(clickSound);
   const [isPlaying, setClickSoundsStatus] = React.useState(false);
-
-  
-
   let i = 0;
-
 
   useEffect(() => {
     setClickSoundsStatus(true)  
@@ -132,7 +125,6 @@ const ScoreCounter = (props) => {
       }, 280);
     }, 5000);
   }, [i, props.scoreNumber, playClickSound, isPlaying])
-
 
   return (
     <div className={classes.root}>

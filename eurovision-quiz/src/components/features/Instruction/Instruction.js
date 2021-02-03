@@ -1,7 +1,6 @@
 import React from 'react';
-import {CardContent, Typography} from '@material-ui/core';
+import { CardContent, Typography } from '@material-ui/core';
 import ModalCard from '../../common/ModalCard/ModalCard';
-
 
 const Instruction = ({text, message, button, handler}) => {
 

@@ -5,17 +5,15 @@ import AnswerCard from '../../common/AnswerCard/AnswerCard.js';
 import { makeStyles } from '@material-ui/styles';
 import {Card, CardContent, CardHeader,  Modal} from '@material-ui/core';
 import setLevelAnswers from '../../../utils/setLevelAnswers'; 
-import clickSound from '../../../Sounds/click3.mp3';
-import succesSound from '../../../Sounds/SaxBeep.mp3';
-import failureSound from '../../../Sounds/SaxHonk.mp3';
-import cardSound from '../../../Sounds/cardOpen.mp3';
-
+import clickSound from '../../../assets/Sounds/click3.mp3';
+import succesSound from '../../../assets/Sounds/SaxBeep.mp3';
+import failureSound from '../../../assets/Sounds/SaxHonk.mp3';
+import cardSound from '../../../assets/Sounds/cardOpen.mp3';
 
 const growFirst = 'growFirst';
 const growThird = 'growThird';
 const growSecond = 'growSecond';
 const appear = 'appear'
-
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -150,41 +148,41 @@ const Question = ({text, level, question, period, questionNumber, scoreHandler, 
   };
   
   return (
-      <Card className={[classes.card, "question"].join(' ')} >
-        <CardHeader
-              className={classes.header}
-              title={setLevelQuestion()}
-        />
-        <h4 className={classes.questionNumber}>
-          <span>{questionNumber}</span>/10
-        </h4>
-        <CardContent className={classes.answers}>
-          {answerOptions.map(answer => (
-            <div 
-            className={classes.answer}
-            key={answer}
-            onClick={() => handleClick(answer)}
-            >
-              <AnswerCard answer={answer}/>
-            </div>
-          ))}
-          <Modal
-            open={open}
-            onClose={handleClose}
-            disableBackdropClick={true}
-            disableEscapeKeyDown={true}
+    <Card className={[classes.card, "question"].join(' ')} >
+      <CardHeader
+        className={classes.header}
+        title={setLevelQuestion()}
+      />
+      <h4 className={classes.questionNumber}>
+        <span>{questionNumber}</span>/10
+      </h4>
+      <CardContent className={classes.answers}>
+        {answerOptions.map(answer => (
+          <div 
+          className={classes.answer}
+          key={answer}
+          onClick={() => handleClick(answer)}
           >
-            <div>
-              <CorrectAnswer 
-                text={text.correctAnswer}
-                message={answerMessage}
-                question={question}
-                {...otherProps}
-              />
-            </div>
-          </Modal>
-        </CardContent>
-      </Card>
+            <AnswerCard answer={answer}/>
+          </div>
+        ))}
+        <Modal
+          open={open}
+          onClose={handleClose}
+          disableBackdropClick={true}
+          disableEscapeKeyDown={true}
+        >
+          <div>
+            <CorrectAnswer 
+              text={text.correctAnswer}
+              message={answerMessage}
+              question={question}
+              {...otherProps}
+            />
+          </div>
+        </Modal>
+      </CardContent>
+    </Card>
   );
 };
 

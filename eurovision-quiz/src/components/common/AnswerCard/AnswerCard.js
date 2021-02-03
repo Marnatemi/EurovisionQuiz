@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardContent, Typography} from '@material-ui/core';
+import { Card, CardContent, Typography } from '@material-ui/core';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import { makeStyles } from '@material-ui/styles';
 
@@ -55,7 +55,6 @@ const useStyles = makeStyles(theme => ({
     }
   },
 }));
-
 
 const AnswerCard = ({answer}) => {
   const classes = useStyles();

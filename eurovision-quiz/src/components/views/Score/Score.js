@@ -1,22 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useSound from 'use-sound';
-import clickSound from '../../../Sounds/click3.mp3';
-import applause from '../../../Sounds/applause.mp3';
-
-import {useEffect} from 'react';
+import clickSound from '../../../assets/Sounds/click3.mp3';
+import applause from '../../../assets/Sounds/applause.mp3';
 import { makeStyles } from '@material-ui/styles';
 import { Divider, Button } from '@material-ui/core';
 import ScoreCounter from '../../features/ScoreCounter/ScoreCounter';
 import Confetti from 'react-confetti'
-
 
 const divider = "divider";
 const header = "header";
 const scoreTitle = "scoreTitle";
 const score = "score";
 const button = "button";
-
-
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -86,7 +81,6 @@ const useStyles = makeStyles(theme => ({
     animation: `$${score} 2s ease-in-out forwards`,
     animationDelay: '4.2s',
   },
-
   [`@keyframes ${divider}`]: {
     '20%': {
       width: 10, 
@@ -133,14 +127,13 @@ const useStyles = makeStyles(theme => ({
       transform: 'rotate(-25deg)',
     }
   },
-    //eslint-disable-next-line no-useless-computed-key
-    ['@media (max-height:500px) and (orientation: landscape)']: {
-      root: {
-        maxWidth: 700,
-      },
-     },
+  //eslint-disable-next-line no-useless-computed-key
+  ['@media (max-height:500px) and (orientation: landscape)']: {
+    root: {
+      maxWidth: 700,
+    },
+    },
 }));
-
 
 const Score = ({text, score, viewHandler, scoreHandler}) => {
   const classes = useStyles(score);
@@ -156,10 +149,9 @@ const Score = ({text, score, viewHandler, scoreHandler}) => {
     const timer = setTimeout(() => {
       setFinish(true)
     }, 5000);
+
     return () => clearTimeout(timer);
   }, [playApplause, isPlaying])
-  
-
 
   const resetQuiz = () => {
     playClickSound()
@@ -168,7 +160,6 @@ const Score = ({text, score, viewHandler, scoreHandler}) => {
       scoreHandler('reset')
     }, 500);
   }
-
 
   return (
     <div className={classes.component}>
@@ -186,7 +177,7 @@ const Score = ({text, score, viewHandler, scoreHandler}) => {
           <p>{text.subtitle}</p>
           <h1 className={classes.title}>{text.text}</h1>
         </div>
-        <Divider />
+        <Divider/>
         <div className={classes.score}>
           <ScoreCounter  
             scoreNumber={score}

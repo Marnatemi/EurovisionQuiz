@@ -1,6 +1,6 @@
 import React from 'react';
 import Player from '../../common/Player/Player';
-import {CardContent, Typography, Divider  } from '@material-ui/core';
+import { CardContent, Typography, Divider  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import ModalCard from '../../common/ModalCard/ModalCard';
 import correctVerbFormForArtist from '../../../utils/correctVerbFormForArtist';

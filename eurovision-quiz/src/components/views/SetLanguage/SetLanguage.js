@@ -4,10 +4,9 @@ import textData from '../../../data/appTexts.json';
 import { makeStyles } from '@material-ui/styles';
 import {Button, Collapse} from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
-import clickSound from '../../../Sounds/click3.mp3';
-import changeSound from '../../../Sounds/click1.mp3';
-import alertSound from '../../../Sounds/alert.mp3';
-
+import clickSound from '../../../assets/Sounds/click3.mp3';
+import changeSound from '../../../assets/Sounds/click1.mp3';
+import alertSound from '../../../assets/Sounds/alert.mp3';
 
 const useStyles = makeStyles(theme => ({
   component: {
@@ -19,8 +18,6 @@ const useStyles = makeStyles(theme => ({
       margin: 0,
       fontSize: '1.9rem'
     },
-    "& *":{
-    }
   },
   languages: {
     fontSize: '1.2em',
@@ -42,14 +39,14 @@ const useStyles = makeStyles(theme => ({
     minHeight: 70,
     letterSpacing: 0.8,
     margin: 0,
-    border: `2px dashed ${theme.palette.primary.light}` ,
+    border: `2px dashed ${theme.palette.primary.light}`,
     background: 'inherit',
     color: '#fff',
     position: 'relative',
     fontSize: '1em',  
     boxShadow: "0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)",    
     "&:focus": {
-      border: `2px dashed ${theme.palette.primary.main}` ,
+      border: `2px dashed ${theme.palette.primary.main}`,
       color: theme.palette.primary.main,
       width: 250,
       height: '31%',
@@ -70,7 +67,6 @@ const useStyles = makeStyles(theme => ({
     }
   },
 }));
-
 
 const SetLanguage = ({languageHandler, viewHandler}) => {
   const classes = useStyles();
@@ -118,29 +114,29 @@ const SetLanguage = ({languageHandler, viewHandler}) => {
           severity="info"
           color="warning" 
         >
-              {text.alertMessage}
+          {text.alertMessage}
         </Alert>
       </Collapse>
       <div className={classes.languages}>
         {text.languages.map(language => (
-        <Button tabIndex="0" className={classes.lgButton}
-          key={language.id}
-          onClick={() => optionHandler(language.id)}
-        >
+          <Button tabIndex="0" className={classes.lgButton}
+            key={language.id}
+            onClick={() => optionHandler(language.id)}
+          >
             <p>{language.name}</p>
             <img className={classes.image} alt="fingerprint-flag" src={language.imgSrc}/> 
-        </Button>
+          </Button>
         ))}
       </div>
-    <Button 
-      variant="outlined"
-      color="primary"
-      size="large"
-      onClick={() => buttonHandler()} >
-      OK
-    </Button>
+      <Button 
+        variant="outlined"
+        color="primary"
+        size="large"
+        onClick={() => buttonHandler()}>
+        OK
+      </Button>
     </div>
   )
 }
  
- export default SetLanguage;
+export default SetLanguage;

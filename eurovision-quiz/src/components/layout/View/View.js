@@ -7,50 +7,46 @@ import Intro from '../../views/Intro/Intro';
 import Level from './../../views/Level/Level';
 import Score from './../../views/Score/Score';
 import QuestionSong from '../../views/QuestionSong/QuestionSong';
-import introSound from '../../../Sounds/Intro.mp3';
+import introSound from '../../../assets/Sounds/Intro.mp3';
 
- 
-
-const View = ({text, language, languageHandler, level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
+const View = ({text, languageHandler, level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
+  const [playIntroSound, {stop}] = useSound(introSound);
   const ua = navigator.userAgent;
   const info = {
-          browser: /Edge\/\d+/.test(ua) ? 'ed' : /MSIE 9/.test(ua) ? 'ie9' : /MSIE 10/.test(ua) ? 'ie10' : /MSIE 11/.test(ua) ? 'ie11' : /MSIE\s\d/.test(ua) ? 'ie?' : /rv:11/.test(ua) ? 'ie11' : /Firefox\W\d/.test(ua) ? 'ff' : /Chrom(e|ium)\W\d|CriOS\W\d/.test(ua) ? 'gc' : /\bSafari\W\d/.test(ua) ? 'sa' : /\bOpera\W\d/.test(ua) ? 'op' : /\bOPR\W\d/i.test(ua) ? 'op' : typeof MSPointerEvent !== 'undefined' ? 'ie?' : '',
-          os: /Mac/.test(ua) ? "mac" : "",
+    browser: /Edge\/\d+/.test(ua) ? 'ed' : /MSIE 9/.test(ua) ? 'ie9' : /MSIE 10/.test(ua) ? 'ie10' : /MSIE 11/.test(ua) ? 'ie11' : /MSIE\s\d/.test(ua) ? 'ie?' : /rv:11/.test(ua) ? 'ie11' : /Firefox\W\d/.test(ua) ? 'ff' : /Chrom(e|ium)\W\d|CriOS\W\d/.test(ua) ? 'gc' : /\bSafari\W\d/.test(ua) ? 'sa' : /\bOpera\W\d/.test(ua) ? 'op' : /\bOPR\W\d/i.test(ua) ? 'op' : typeof MSPointerEvent !== 'undefined' ? 'ie?' : '',
+    os: /Mac/.test(ua) ? "mac" : "",
   };
 
-  const [playIntroSound, {stop}] = useSound(introSound);
   const displayLoaderforQS = (songIsLoading) => {
     let questionSongDisplay = 'flex'
     if (songIsLoading === false ) questionSongDisplay = 'none'
-    return questionSongDisplay;
+      return questionSongDisplay;
   }
 
-  if(info.os === "mac"){
+  if(info.os === "mac")
     return (
-    <ForIOS/>
+      <ForIOS/>
     );
-  }
-  else if (currentView === 'start'){
+  else if (currentView === 'start')
     return (
-      <SetLanguage viewHandler={viewHandler} languageHandler={languageHandler} />
+      <SetLanguage viewHandler={viewHandler} languageHandler={languageHandler}/>
     );
-  }
   else if (currentView === 'intro')
-  return (
-    <Intro text={text.intro} viewHandler={viewHandler} playBgMusic={playIntroSound} />
-  );
+    return (
+      <Intro text={text.intro} viewHandler={viewHandler} playBgMusic={playIntroSound}/>
+    );
   else if (currentView === 'level')
     return (
-      <Level text={text.level} viewHandler={viewHandler} levelHandler={levelHandler} periodHandler={periodHandler} quizHandler={quizHandler} stopBgMusic={stop} />
+      <Level text={text.level} viewHandler={viewHandler} levelHandler={levelHandler} periodHandler={periodHandler} quizHandler={quizHandler} stopBgMusic={stop}/>
     );
   else if (currentView === 'question song')
     return (
       <QuestionSong stopBgMusic={stop} displayLoader={displayLoaderforQS(questionSongIsLoading)} animHandler={animHandler} viewHandler={viewHandler} songId={currentQuestion.id} playerStart={currentQuestion.playerStart} playerEnd={currentQuestion.playerEnd}/>
       );
   else if (currentView === 'question')
-  return (
-    <Question text={text.question} level={level} period={period} question={currentQuestion} questionNumber={questionNumber} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}  />
-  );
+    return (
+      <Question text={text.question} level={level} period={period} question={currentQuestion} questionNumber={questionNumber} questionChangeHandler={questionChangeHandler} scoreHandler={scoreHandler}/>
+    );
   else if (currentView === 'score')
     return (
       <Score text={text.score} score={score} viewHandler={viewHandler} scoreHandler={scoreHandler}/>

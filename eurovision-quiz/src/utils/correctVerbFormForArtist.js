@@ -17,7 +17,7 @@ const correctVerbFormForArtist = (verb, artist) => {
       } else if (id === "they"){
         correctVerb = verb + "li"
       } else {
-        verb === setVerbForLanguage("polish", "Perform") ? correctVerb = verb + "ł zaspół" : correctVerb = verb + "ł" 
+        verb === setVerbForLanguage("polish", "Perform") ? correctVerb = verb + "ł zespół" : correctVerb = verb + "ł" 
       }
     } else if(verb === setVerbForLanguage("english", "Represent")){
       correctVerb = id +" "+ verb

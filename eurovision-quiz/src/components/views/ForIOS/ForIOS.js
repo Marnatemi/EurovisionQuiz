@@ -61,23 +61,21 @@ const useStyles = makeStyles(theme => ({
     '100%': {
       opacity: 1,
     },
-
   }
-
 }));
 
 const ForIOS = () => {
   const classes = useStyles();
 
   return (
-      <div className={classes.component}>
-        <img className={classes.image} src="https://i.postimg.cc/g2VDzyr5/absorbed-2409314-640.png" alt="working"/>
-        <h1 className={classes.importantText}>Work in progress<span className={classes.dot}>.</span><span className={classes.dot}>.</span><span className={classes.dot}>.</span></h1>
-        <h3 className={classes.message}>Avaiable for iOS very soon</h3>
-        <p className={classes.text}>please try an Windows or Android device</p>
-        <h2 className={classes.importantText}>Thanks!</h2>
-      </div> 
-    );
+    <div className={classes.component}>
+      <img className={classes.image} src="https://i.postimg.cc/g2VDzyr5/absorbed-2409314-640.png" alt="working"/>
+      <h1 className={classes.importantText}>Work in progress<span className={classes.dot}>.</span><span className={classes.dot}>.</span><span className={classes.dot}>.</span></h1>
+      <h3 className={classes.message}>Avaiable for iOS very soon</h3>
+      <p className={classes.text}>please try an Windows or Android device</p>
+      <h2 className={classes.importantText}>Thanks!</h2>
+    </div> 
+  );
 }
 
 export default ForIOS;

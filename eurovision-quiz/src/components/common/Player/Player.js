@@ -26,14 +26,12 @@ const useStyles = ({
 class Player extends React.Component {
   constructor(props) {
     super(props);
-  
     this.onReady = this.onReady.bind(this);
     this.onEnded = this.onEnded.bind(this);
     this.state = {
       isLoading: true
     }
   }
-
 
   render() {
     const { classes, playerStart, playerEnd, songId} = this.props;
@@ -51,13 +49,11 @@ class Player extends React.Component {
         showinfo: 0,
         rel: 1,
         origin: 'http://localhost:3000',
-        //widget_referrer:'http://localhost:3000',
       },
     };
 
     const setVideoId = () => {
       let videoId = "MB8cNvZ5ymQ" // from 1956 to 2017
-      
       if (songId === 62 || songId === 63){videoId = "GCIa80rd7sM"} // 2018, 2019
       return videoId
     }
@@ -69,7 +65,7 @@ class Player extends React.Component {
           <Skeleton variant="circle" width={40} height={40} />
           <Skeleton variant="rect" width={"100%"} height={118} />
         </div>
-      <YouTube videoId={setVideoId()} opts={opts} onReady={this.onReady} onEnd={this.onEnded} />
+        <YouTube videoId={setVideoId()} opts={opts} onReady={this.onReady} onEnd={this.onEnded} />
       </div>
     );
   }

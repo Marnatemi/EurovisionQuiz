@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import useSound from 'use-sound';
-import {Button} from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import Title from '../../common/Title/Title';
-import clickSound from '../../../Sounds/click3.mp3';
+import clickSound from '../../../assets/Sounds/click3.mp3';
+
 const wave = "wave";
 const button = "button";
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -52,7 +52,6 @@ const useStyles = makeStyles(theme => ({
       zIndex: 1,
       boxShadow: 'inset 0 0 50px rgba(0,0,0,.5)',
     },
-
   },
   button: {
     fontSize: '1.3rem',
@@ -102,7 +101,6 @@ const Intro = ({text, viewHandler, playBgMusic}) => {
   const [play] = useSound(clickSound);
   const [isPlaying, setBgMusicStatus] = React.useState(false);
 
-
   const clickHandler = () => {
     play()
     setTimeout(() => {
@@ -117,18 +115,18 @@ const Intro = ({text, viewHandler, playBgMusic}) => {
 
   return (
     <div className={classes.root}>
-    <header className={classes.wave} > 
-      <div className={classes.hero}>
-        <Title title={text.title} subtitle={text.subtitle} text={text.text} />
-        <Button className={classes.button}
-          variant="outlined"
-          color="primary"
-          size="large"
-          onClick={clickHandler}> 
-          {text.button}
-        </Button>
-      </div>
-    </header>
+      <header className={classes.wave} > 
+        <div className={classes.hero}>
+          <Title title={text.title} subtitle={text.subtitle} text={text.text} />
+          <Button className={classes.button}
+            variant="outlined"
+            color="primary"
+            size="large"
+            onClick={clickHandler}> 
+            {text.button}
+          </Button>
+        </div>
+      </header>
     </div>
   );
 }

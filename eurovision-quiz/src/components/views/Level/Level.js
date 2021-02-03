@@ -7,9 +7,9 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import LevelPicker from '../../features/LevelPicker/LevelPicker';
 import YearsPicker from '../../features/YearsPicker/YearsPicker';
 import Instruction from '../../features/Instruction/Instruction';
-import clickSound from '../../../Sounds/click3.mp3';
-import alertSound from '../../../Sounds/alert.mp3';
-import cardSound from '../../../Sounds/cardOpen.mp3';
+import clickSound from '../../../assets/Sounds/click3.mp3';
+import alertSound from '../../../assets/Sounds/alert.mp3';
+import cardSound from '../../../assets/Sounds/cardOpen.mp3';
 
 const appear = 'appear'
 
@@ -22,7 +22,6 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: 0.5,
     animation: `$${appear} .8s ease forwards`,
     opacity: 0,
-
     "&>h1": {
       ...theme.importantText,
       color: 'inherit',
@@ -51,7 +50,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-
 const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler}) => {
   const classes = useStyles();
   const [level, setLevel] = React.useState("easy");
@@ -61,7 +59,6 @@ const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler}) =>
   const [playButtonSound] = useSound(clickSound);
   const [playAlertSound] = useSound(alertSound);
   const [playCardSound] = useSound(cardSound);
-
 
   const handleModalClick = () => {
     setOpen(true);
@@ -76,6 +73,7 @@ const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler}) =>
   const setLevelHandler = (lv) => {
     setLevel(lv)
   }
+
   const setPeriodHandler = (period) => {
     setPeriod(period)
   }
@@ -97,35 +95,35 @@ const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler}) =>
 
   return (
     <div className={classes.root}>
-    <Modal
-      className={classes.modal}
-      open={open}
-      onClose={handleClose}
-      closeAfterTransition={true}
-    >
-      <div>
-        <Instruction message={text.modalTitle} text={text.instruction} button="OK" handler={handleClose}/>
-      </div>
-    </Modal>
-    <h1>{text.title} <HelpOutlineIcon className={classes.icon} onClick={() => handleModalClick()}/></h1>
-    <LevelPicker text={text.levelPicker} handler={setLevelHandler}/>
-    <Collapse in={openAlert} className={classes.alertWrapper}>
-      <Alert
-        action={
-          <Button color="inherit" size="small" onClick={() => {handleClose()}}>
-            {text.alert.button}
-          </Button>
-        }
-        className={classes.alert} 
-        variant="filled" 
-        severity="info"
-        color="warning" 
+      <Modal
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition={true}
       >
-            {text.alert.message}
-      </Alert>
-    </Collapse>
-    <YearsPicker  text={text.yearsPickerText} handler={setPeriodHandler}/>
-    <Button onClick={() => checkPeriod()} className={classes.button} variant="outlined" size="large" color="primary">{text.button}</Button>
+        <div>
+          <Instruction message={text.modalTitle} text={text.instruction} button="OK" handler={handleClose}/>
+        </div>
+      </Modal>
+      <h1>{text.title} <HelpOutlineIcon className={classes.icon} onClick={() => handleModalClick()}/></h1>
+      <LevelPicker text={text.levelPicker} handler={setLevelHandler}/>
+      <Collapse in={openAlert} className={classes.alertWrapper}>
+        <Alert
+          action={
+            <Button color="inherit" size="small" onClick={() => {handleClose()}}>
+              {text.alert.button}
+            </Button>
+          }
+          className={classes.alert} 
+          variant="filled" 
+          severity="info"
+          color="warning" 
+        >
+          {text.alert.message}
+        </Alert>
+      </Collapse>
+      <YearsPicker  text={text.yearsPickerText} handler={setPeriodHandler}/>
+      <Button onClick={() => checkPeriod()} className={classes.button} variant="outlined" size="large" color="primary">{text.button}</Button>
     </div>
   );
 }

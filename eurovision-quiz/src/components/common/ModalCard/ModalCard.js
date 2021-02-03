@@ -2,7 +2,7 @@ import React from 'react';
 import useSound from 'use-sound';
 import { Card, CardActions, CardHeader, Button, Divider  } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import clickSound from '../../../Sounds/click3.mp3';
+import clickSound from '../../../assets/Sounds/click3.mp3';
 
 const modal = "modal";
 
@@ -75,7 +75,6 @@ const ModalCard = ({ message, button, children, handler}) => {
         </Button>
       </CardActions>
     </Card>
-
   );
 }
 

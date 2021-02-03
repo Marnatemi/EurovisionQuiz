@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
-import {Paper} from  '@material-ui/core';
+import { Paper } from  '@material-ui/core';
 import quizData from '../../../data/quizData.json';
 
 const useStyles = makeStyles(theme => ({
@@ -40,7 +40,7 @@ function valuetext(value) {
   return `${value}`;
 }
 
- const YearsPicker = ({text, handler}) => {
+const YearsPicker = ({text, handler}) => {
   const classes = useStyles();
   const [value, setValue] = React.useState([erlierESCYear, lastESCYear]);
 
@@ -48,7 +48,6 @@ function valuetext(value) {
     setValue(newValue);
     handler(newValue)
   };
-
 
   return (
     <Paper className={classes.root}>

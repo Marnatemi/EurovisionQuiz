@@ -1,13 +1,11 @@
 import React from 'react';
 import useSound from 'use-sound';
-import { Box, Divider } from '@material-ui/core';
+import { Box, Divider, Paper } from '@material-ui/core';
 import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import Rating from '@material-ui/lab/Rating';
 import { makeStyles } from '@material-ui/styles';
-import {Paper} from  '@material-ui/core'
-import changeSound from '../../../Sounds/click1.mp3';
-
+import changeSound from '../../../assets/Sounds/click1.mp3';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,7 +43,6 @@ const labelsTopEng = {
   3: 'expert',
 };
 
-
 const LevelPicker = ({text, handler}) => {
   const [value, setValue] = React.useState(1);
   const [hover, setHover] = React.useState(-1);
@@ -57,7 +54,6 @@ const LevelPicker = ({text, handler}) => {
 
   return (
     <Paper className={classes.root}>
-
       <Box  component="fieldset" className={classes.box} mb={3} borderColor="transparent">
         <Rating
           className={classes.rating}
@@ -67,8 +63,8 @@ const LevelPicker = ({text, handler}) => {
           max={3}
           defaultValue={1}
           precision={1}
-          emptyIcon={<AudiotrackOutlinedIcon fontSize="inherit" />}
-          icon={<AudiotrackIcon fontSize="inherit" />}
+          emptyIcon={<AudiotrackOutlinedIcon fontSize="inherit"/>}
+          icon={<AudiotrackIcon fontSize="inherit"/>}
           onChange={(event, newValue) => {
             playChangeSound()
             setValue(newValue);
@@ -79,10 +75,10 @@ const LevelPicker = ({text, handler}) => {
           }}
         />
         {value !== null && <Box className={classes.labelsTop} ml={2}>{text.labelsTop[hover !== -1 ? hover : value]}</Box>}
-        <Divider variant="middle" />
+        <Divider variant="middle"/>
         {value !== null && <Box className={classes.labelsBottom} ml={2}>{text.labelsBottom[hover !== -1 ? hover : value]}</Box>}
       </Box>
-      </ Paper>
+    </ Paper>
   );
 }
 

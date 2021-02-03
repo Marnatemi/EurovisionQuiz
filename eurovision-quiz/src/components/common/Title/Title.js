@@ -9,7 +9,6 @@ const icon = "icon";
 const title = "title";
 const subtitle = "subtitle";
 
-
 const useStyles = makeStyles(theme => ({
   component: {
     ...theme.positioning.absoluteCenter,
@@ -63,8 +62,6 @@ const useStyles = makeStyles(theme => ({
     animationDelay: '0.7s',
     color: '#fff',
   },
-
-
   [`@keyframes ${hero}`]: {
     '10%': {
       transformOrigin: '0 0',

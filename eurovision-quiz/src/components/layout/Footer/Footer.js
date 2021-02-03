@@ -34,6 +34,7 @@ const useStyles = makeStyles(theme => ({
 
 const Footer = ({status}) => {
   const classes = useStyles();
+  
   if (status === false)
     return (
       null

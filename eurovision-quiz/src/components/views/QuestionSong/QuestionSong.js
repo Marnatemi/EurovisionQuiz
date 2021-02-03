@@ -1,5 +1,4 @@
-import React from 'react';
-import {useEffect} from 'react';
+import React, { useEffect }  from 'react';
 import useSound from 'use-sound';
 import { makeStyles } from '@material-ui/styles';
 import Player from '../../common/Player/Player';
@@ -7,16 +6,14 @@ import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import AudiotrackIcon from '@material-ui/icons/Audiotrack';
 import ForwardIcon from '@material-ui/icons/Forward';
 import {Button} from '@material-ui/core';
-import clickSound from '../../../Sounds/click3.mp3';
+import clickSound from '../../../assets/Sounds/click3.mp3';
 
 const dance = 'dance';
 const shadow = 'shadow';
 const appear = 'appear';
 const jump = 'jump';
 
-
 const useStyles = makeStyles(theme => ({
-  
   player: {
     opacity: 0,
     position: 'absolute',
@@ -64,11 +61,11 @@ const useStyles = makeStyles(theme => ({
         display: props.displayLoader,
       },
     //eslint-disable-next-line no-useless-computed-key
-    ['@media (max-height:500px) and (orientation: landscape)']: {
-      marginTop: 0,
-      width: '20vw',
+      ['@media (max-height:500px) and (orientation: landscape)']: {
+        marginTop: 0,
+        width: '20vw',
+      }
     }
-  }
   ),
   littleMan: {
     animation: `$${dance} 2s ease-in-out infinite`,
@@ -147,7 +144,6 @@ const QuestionSong = (props) => {
     stopBgMusic()
   })
 
-
   const handler = () => {
     playButtonSound()
     setTimeout(() => {
@@ -157,22 +153,20 @@ const QuestionSong = (props) => {
 
   return(
     <div className={classes.component}> 
-      <Button className={classes.button} variant="outlined" color="primary" size="small" onClick={() => handler()}><ForwardIcon /></Button>
+      <Button className={classes.button} variant="outlined" color="primary" size="small" onClick={() => handler()}><ForwardIcon/></Button>
       <div className={classes.player}>
         <Player viewHandler={viewHandler} {...otherProps}/>
       </div>
       <div className={classes.componentAnimation}> 
         <div className={classes.playerLoader}>
-          <AudiotrackOutlinedIcon />
-          <AudiotrackIcon />
-          <AudiotrackOutlinedIcon />
+          <AudiotrackOutlinedIcon/>
+          <AudiotrackIcon/>
+          <AudiotrackOutlinedIcon/>
         </div>
         <img className={classes.littleMan} alt='earphones' src="https://i.postimg.cc/B6MMMKck/earphones-152471-640.png"></img>
         <div className={classes.shadow}></div>
       </div>
     </div>
-    
-
   );
 }
 
