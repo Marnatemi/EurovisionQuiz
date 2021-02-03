@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
-
 body {
   margin: 0;
   padding: 0;
@@ -12,11 +11,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', 'Anton',  
-    monospace;
 }
 
 .App {
@@ -41,6 +35,7 @@ code {
 .App::-webkit-scrollbar {
   display: none;
 }
+
 *::-webkit-scrollbar {
   display: none;
 }
