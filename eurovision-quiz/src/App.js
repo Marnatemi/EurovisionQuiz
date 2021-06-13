@@ -189,7 +189,6 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
         <div className="App" >
           <div></div>
-          {console.log(this.state.questions)}
           <View 
             className="View"
             lastESCYear = {lastESCFinal}
