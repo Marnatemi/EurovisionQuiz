@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d28c6eb65ca88b16dc9d073baa0cc349",
+    "revision": "5ab15551edde3b2c765f9c7e659aa749",
     "url": "/EurovisionQuiz/index.html"
   },
   {
-    "revision": "fce1992ed9ecde55b7e8",
+    "revision": "1cdb991c20df7959084b",
     "url": "/EurovisionQuiz/static/css/main.417a1c8e.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EurovisionQuiz/static/js/3.eff14970.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fce1992ed9ecde55b7e8",
-    "url": "/EurovisionQuiz/static/js/main.1465e1e8.chunk.js"
+    "revision": "1cdb991c20df7959084b",
+    "url": "/EurovisionQuiz/static/js/main.cfc44d8c.chunk.js"
   },
   {
     "revision": "eeb46d41a8b975e44c80",
