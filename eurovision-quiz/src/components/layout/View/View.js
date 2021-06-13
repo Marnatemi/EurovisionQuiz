@@ -23,12 +23,11 @@ const View = ({lastESCYear, text, languageHandler, level, currentView, levelHand
       return questionSongDisplay;
   }
 
-  // if(info.os === "mac")
-  //   return (
-  //     <ForIOS/>
-  //   );
-  // else 
-  if (currentView === 'start')
+  if(info.os === "mac" && info.browser !== 'gc')
+    return (
+      <ForIOS/>
+  );
+  else if (currentView === 'start')
     return (
       <SetLanguage viewHandler={viewHandler} languageHandler={languageHandler}/>
     );
