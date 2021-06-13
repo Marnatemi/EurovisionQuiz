@@ -9,7 +9,7 @@ import Score from './../../views/Score/Score';
 import QuestionSong from '../../views/QuestionSong/QuestionSong';
 import introSound from '../../../assets/Sounds/Intro.mp3';
 
-const View = ({text, languageHandler, level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
+const View = ({lastESCYear, text, languageHandler, level, currentView, levelHandler, periodHandler, period, quizHandler, questionSongIsLoading, currentQuestion, questionNumber, viewHandler, animHandler, questionChangeHandler, scoreHandler, score}) => {
   const [playIntroSound, {stop}] = useSound(introSound);
   const ua = navigator.userAgent;
   const info = {
@@ -23,11 +23,12 @@ const View = ({text, languageHandler, level, currentView, levelHandler, periodHa
       return questionSongDisplay;
   }
 
-  if(info.os === "mac")
-    return (
-      <ForIOS/>
-    );
-  else if (currentView === 'start')
+  // if(info.os === "mac")
+  //   return (
+  //     <ForIOS/>
+  //   );
+  // else 
+  if (currentView === 'start')
     return (
       <SetLanguage viewHandler={viewHandler} languageHandler={languageHandler}/>
     );
@@ -37,7 +38,7 @@ const View = ({text, languageHandler, level, currentView, levelHandler, periodHa
     );
   else if (currentView === 'level')
     return (
-      <Level text={text.level} viewHandler={viewHandler} levelHandler={levelHandler} periodHandler={periodHandler} quizHandler={quizHandler} stopBgMusic={stop}/>
+      <Level text={text.level} lastESCYear={lastESCYear} viewHandler={viewHandler} levelHandler={levelHandler} periodHandler={periodHandler} quizHandler={quizHandler} stopBgMusic={stop}/>
     );
   else if (currentView === 'question song')
     return (

@@ -54,7 +54,7 @@ class Player extends React.Component {
 
     const setVideoId = () => {
       let videoId = "MB8cNvZ5ymQ" // from 1956 to 2017
-      if (songId === 62 || songId === 63){videoId = "GCIa80rd7sM"} // 2018, 2019
+      if (songId > 61 ){videoId = "PYiYrfwi2og"} // 2018, 2019, 2021
       return videoId
     }
     

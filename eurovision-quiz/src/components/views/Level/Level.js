@@ -50,10 +50,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler}) => {
+const Level = ({text, lastESCYear, levelHandler, viewHandler, periodHandler, quizHandler}) => {
   const classes = useStyles();
   const [level, setLevel] = React.useState("easy");
-  const [customPeriod, setPeriod] = React.useState([1999, 2019]);
+  const [customPeriod, setPeriod] = React.useState([lastESCYear - 20, lastESCYear]);
   const [open, setOpen] = React.useState(false);
   const [openAlert, setOpenAlert] = React.useState(false);
   const [playButtonSound] = useSound(clickSound);
@@ -122,7 +122,7 @@ const Level = ({text, levelHandler, viewHandler, periodHandler, quizHandler}) =>
           {text.alert.message}
         </Alert>
       </Collapse>
-      <YearsPicker  text={text.yearsPickerText} handler={setPeriodHandler}/>
+      <YearsPicker  text={text.yearsPickerText} lastESCYear={lastESCYear} handler={setPeriodHandler}/>
       <Button onClick={() => checkPeriod()} className={classes.button} variant="outlined" size="large" color="primary">{text.button}</Button>
     </div>
   );

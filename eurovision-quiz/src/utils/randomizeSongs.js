@@ -1,7 +1,7 @@
 import quizData from '../data/quizData.json';
 
 const getRandomizedQuestionSongs = (from, to) => {
-
+  console.log(from, to)
   const questions = [];
   const randomizedQuestions = [];
   for (let question of quizData){

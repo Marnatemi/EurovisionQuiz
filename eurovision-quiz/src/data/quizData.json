@@ -979,8 +979,8 @@
   {
   "id": 62,
   "songTitle": "Toy",
-  "playerStart": 183,
-  "playerEnd": 198,
+  "playerStart": 146,
+  "playerEnd": 159,
     "artist": 
     {
       "id": "she",
@@ -995,8 +995,8 @@
   {
   "id": 63,
   "songTitle": "Arcade",
-  "playerStart": 200,
-  "playerEnd": 218,
+  "playerStart": 167,
+  "playerEnd": 180,
     "artist": 
     {
       "id": "he",
@@ -1007,5 +1007,21 @@
   "place": "Tel Aviv",
   "easyQuestionOptions": ["Roberto Bellarosa", "Tomas Thordarson", "Duncan Laurence"],
   "mediumQuestionOptions": ["Ireland", "Sweden", "The Netherlands"]       
+  },
+  {
+    "id": 64,
+    "songTitle": "Zitti e buoni",
+    "playerStart": 189,
+    "playerEnd": 203,
+      "artist": 
+      {
+        "id": "group",
+        "name": "Måneskin"
+      },
+    "year": 2021,
+   "winnerCountry":  "Italy",
+    "place": "Rotterdam",
+    "easyQuestionOptions": ["Hatari", "Måneskin", "Lordi"],
+    "mediumQuestionOptions": ["Italy", "Moldova", "Cyprus"]       
   }
 ]

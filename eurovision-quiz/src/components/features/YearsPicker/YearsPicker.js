@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import { Paper } from  '@material-ui/core';
-import quizData from '../../../data/quizData.json';
+//import quizData from '../../../data/quizData.json';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,33 +17,32 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const firstESCYear = quizData[0].year
-const lastESCYear = quizData[quizData.length - 1].year
-const erlierESCYear = quizData[quizData.length - 21].year
-
-const marks = [
-  {
-    value: firstESCYear,
-    label: firstESCYear,
-  },
-  {
-    value: erlierESCYear,
-    label: erlierESCYear,
-  },
-  {
-    value: lastESCYear,
-    label: lastESCYear,
-  },
-];
-
 function valuetext(value) {
   return `${value}`;
 }
 
-const YearsPicker = ({text, handler}) => {
+const YearsPicker = ({text, lastESCYear, handler}) => {
   const classes = useStyles();
-  const [value, setValue] = React.useState([erlierESCYear, lastESCYear]);
+  const firstESCYear = 1956
+  const erlierESCYear = lastESCYear - 20
 
+  const [value, setValue] = React.useState([erlierESCYear, lastESCYear]);
+  
+  const marks = [
+    {
+      value: firstESCYear,
+      label: firstESCYear,
+    },
+    {
+      value: erlierESCYear,
+      label: erlierESCYear,
+    },
+    {
+      value: lastESCYear,
+      label: lastESCYear,
+    },
+  ];
+  
   const handleChange = (event, newValue) => {
     setValue(newValue);
     handler(newValue)

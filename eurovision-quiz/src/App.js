@@ -9,6 +9,7 @@ import View from './components/layout/View/View';
 import Footer from './components/layout/Footer/Footer';
 
 import './App.css';
+const lastESCFinal = quizData[quizData.length-1].year
 
 const theme = createMuiTheme({
   palette: {
@@ -81,8 +82,8 @@ class App extends React.Component {
       language: "polish",
       level: "easy",
       period: {
-        from: 1999, 
-        to: 2019
+        from: lastESCFinal-20, 
+        to: lastESCFinal
       },
       questions: [],
       currentQuestion: 0,
@@ -188,8 +189,10 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
         <div className="App" >
           <div></div>
+          {console.log(this.state.questions)}
           <View 
             className="View"
+            lastESCYear = {lastESCFinal}
             text={textData[language]}
             translateCountriesNames={this.translateCountriesNames}
             language={language}

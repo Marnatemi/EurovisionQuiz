@@ -203,5 +203,10 @@
     "polish": "Tel Awiw",
     "french": "Tel Aviv",
     "country": "Israel"
+  },
+  "Rotterdam":{
+    "polish": "Rotterdam",
+    "french": "Rotterdam",
+    "country": "The Netherlands"
   }
 }
