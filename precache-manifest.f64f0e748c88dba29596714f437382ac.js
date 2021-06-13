@@ -1,35 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f357269d39ed8b07d7b1fd59a191532d",
+    "revision": "d28c6eb65ca88b16dc9d073baa0cc349",
     "url": "/EurovisionQuiz/index.html"
   },
   {
-    "revision": "d09008310d26df4e8368",
-    "url": "/EurovisionQuiz/static/css/main.57b603c1.chunk.css"
+    "revision": "fce1992ed9ecde55b7e8",
+    "url": "/EurovisionQuiz/static/css/main.417a1c8e.chunk.css"
   },
   {
-    "revision": "d17f7d96da7fbfd9ee38",
-    "url": "/EurovisionQuiz/static/js/2.52770d7e.chunk.js"
+    "revision": "bd564f0bd3814bb939c2",
+    "url": "/EurovisionQuiz/static/js/2.ad8a1600.chunk.js"
   },
   {
     "revision": "943aec86c35bb3f39d18124af76a452f",
-    "url": "/EurovisionQuiz/static/js/2.52770d7e.chunk.js.LICENSE.txt"
+    "url": "/EurovisionQuiz/static/js/2.ad8a1600.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "41c501518f824d912048",
-    "url": "/EurovisionQuiz/static/js/3.4e7c298c.chunk.js"
+    "revision": "b429b2dffcf14a210010",
+    "url": "/EurovisionQuiz/static/js/3.eff14970.chunk.js"
   },
   {
     "revision": "287e48aeac3564a8b2b5685a67fb9216",
-    "url": "/EurovisionQuiz/static/js/3.4e7c298c.chunk.js.LICENSE.txt"
+    "url": "/EurovisionQuiz/static/js/3.eff14970.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d09008310d26df4e8368",
-    "url": "/EurovisionQuiz/static/js/main.0215913c.chunk.js"
+    "revision": "fce1992ed9ecde55b7e8",
+    "url": "/EurovisionQuiz/static/js/main.1465e1e8.chunk.js"
   },
   {
-    "revision": "37a312dae07c48276e10",
-    "url": "/EurovisionQuiz/static/js/runtime-main.05b8ae84.js"
+    "revision": "eeb46d41a8b975e44c80",
+    "url": "/EurovisionQuiz/static/js/runtime-main.bc4e93a7.js"
   },
   {
     "revision": "793f08cf8c7f6a2257eb11595985640e",
